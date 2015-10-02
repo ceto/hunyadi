@@ -1,18 +1,18 @@
-@import "common/_variables";
+@import "bits";
+@import "settings";
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
-@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/foundation/scss/normalize.scss";
+@import "../../bower_components/foundation/scss/foundation/components/_grid.scss";
+@import "../../bower_components/foundation/scss/foundation/components/_block-grid.scss";
+@import "../../bower_components/foundation/scss/foundation/components/_type.scss";
+@import "../../bower_components/foundation/scss/foundation/components/_visibility.scss";
+@import "../../bower_components/foundation/scss/foundation/components/_tabs.scss";
+@import "../../bower_components/foundation/scss/foundation/components/_accordion.scss";
+@import "../../bower_components/foundation/scss/foundation/components/_forms.scss";
+@import "../../bower_components/foundation/scss/foundation/components/_buttons.scss";
 // endbower
 
-@import "common/_global";
-@import "components/_buttons";
-@import "components/_comments";
-@import "components/_forms";
-@import "components/_grid";
-@import "components/_wp-classes";
-@import "layouts/_header";
-@import "layouts/_sidebar";
-@import "layouts/_footer";
-@import "layouts/_pages";
-@import "layouts/_posts";
+
+
