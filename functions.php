@@ -14,6 +14,7 @@ remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
 $sage_includes = [
+  'lib/soil/soil.php',             // Soil functions
   'lib/utils.php',                 // Utility functions
   'lib/init.php',                  // Initial theme setup and constants
   'lib/wrapper.php',               // Theme wrapper class
@@ -21,6 +22,8 @@ $sage_includes = [
   'lib/assets.php',                // Scripts and stylesheets
   'lib/titles.php',                // Page titles
   'lib/extras.php',                // Custom functions
+  'lib/custom.php',                // Custom functions
+
 ];
 
 foreach ($sage_includes as $file) {

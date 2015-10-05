@@ -4,15 +4,11 @@
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 @import "../../bower_components/foundation/scss/normalize.scss";
-@import "../../bower_components/foundation/scss/foundation/components/_grid.scss";
-@import "../../bower_components/foundation/scss/foundation/components/_block-grid.scss";
-@import "../../bower_components/foundation/scss/foundation/components/_type.scss";
-@import "../../bower_components/foundation/scss/foundation/components/_visibility.scss";
-@import "../../bower_components/foundation/scss/foundation/components/_tabs.scss";
-@import "../../bower_components/foundation/scss/foundation/components/_accordion.scss";
-@import "../../bower_components/foundation/scss/foundation/components/_forms.scss";
-@import "../../bower_components/foundation/scss/foundation/components/_buttons.scss";
+@import "../../bower_components/foundation/scss/foundation.scss";
 // endbower
-
+@import "fonts";
+@import "mixins";
+@import "base";
+@import "page";
 
 

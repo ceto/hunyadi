@@ -1,0 +1,159 @@
+/*********************
+COLORS
+********************/
+$gray-extralight: #f3f3f3;
+$gray-light: #e2e2e2;
+$green: #336600;
+$green-light:#55aa00;
+
+
+$onePx: 0.0625em;
+
+$primary-color:   $green; //hunyadi zold
+$secondary-color:   #787c7e; //Light Grey
+$tertiary-color:  #38393a; //middle grey - headlines
+$quaternary-color:  #1f2223; //Cool Dark Grey
+
+$default-font-color: black;
+
+$menu-color: $green;
+$side-nav-color: #808080;
+$menu-mobile-bg: #34393b;
+
+$link-color:    $primary-color;
+
+
+$tw-color: #4099ff;
+$fb-color: #0f3f7a;
+$ig-color: #77665c;
+$in-color: #4875b4;
+$gp-color: #db4c3f;
+
+
+/*********************
+TYPOGRAPHY
+*********************/
+
+$sans-serif:  "Proxima Nova", "Gibson", sans-serif;
+$serif:       "ff-tisa-web-pro",serif;
+$icons:       "icons", sans-serif;
+
+
+
+/* --------------------------------------------
+
+  VARIABLES ARE IN FOUNDATION/_VARIABLES.SCSS
+  BUT SHOULD BE REDEFINED HERE INSTEAD
+
+----------------------------------------------- */
+
+
+$body-bg: $gray-light;
+$body-font-color: $default-font-color;
+$body-font-family: $sans-serif;
+
+$border-thin: solid 1px lighten($secondary-color, 40%);
+
+$default-radius: 3px;
+
+$default-transition-time:0.4s;
+
+$small-screen: 30em;//480px
+
+$medium-screen: 48em;// - $onePx;//767px
+$large-screen: 64em;// - $onePx;//1023px
+$xlarge-screen: 90em;// - $onePx;//1440px
+$xxlarge-screen: 120em;// - $onePx;//1920px
+
+$small-range: (0, $medium-screen) !default;
+$medium-range: ($medium-screen + $onePx, $large-screen) !default;
+$large-range: ($large-screen + $onePx, $xlarge-screen) !default;
+$xlarge-range: ($xlarge-screen + $onePx, $xxlarge-screen) !default;
+$xxlarge-range: ($xxlarge-screen + $onePx) !default;
+
+$screen: "only screen";
+
+$landscape: "#{$screen} and (orientation: landscape)";
+$portrait: "#{$screen} and (orientation: portrait)";
+
+/*$small-up: $screen !default;
+$small-only: "#{$screen} and (max-width: #{($small-screen - $onePx)})";
+
+$medium-up: "#{$screen} and (min-width: #{$medium-screen})";
+$medium-only: "#{$screen} and (min-width: #{($medium-screen - $onePx)}) and (max-width: #{$medium-screen})";
+
+$large-up: "#{$screen} and (min-width: #{$large-screen - $onePx})";
+$large-only: "#{$screen} and (min-width: #{$large-screen - $onePx}) and (max-width: #{$large-screen})";
+
+$xlarge-up: "#{$screen} and (min-width: #{$xlarge-screen - $onePx})";
+$xlarge-only: "#{$screen} and (min-width: #{$xlarge-screen - $onePx}) and (max-width: #{$xlarge-screen})";
+
+$xxlarge-up: "#{$screen} and (min-width: #{$xxlarge-screen - $onePx})";
+$xxlarge-only: "#{$screen} and (min-width: #{$xxlarge-screen - $onePx}) and (max-width: #{$xxlarge-screen})";//*/
+
+$small-up: $screen;
+$small-only: "#{$screen} and (max-width: #{($medium-screen - $onePx)})";
+
+$medium-up: "#{$screen} and (min-width: #{$medium-screen})";
+$medium-only: "#{$screen} and (min-width: #{($medium-screen)}) and (max-width: #{($large-screen - $onePx)})";
+
+$large-up: "#{$screen} and (min-width: #{$large-screen})";
+$large-only: "#{$screen} and (min-width: #{$large-screen}) and (max-width: #{($xlarge-screen - $onePx)})";
+
+$xlarge-up: "#{$screen} and (min-width: #{$xlarge-screen})";
+$xlarge-only: "#{$screen} and (min-width: #{$xlarge-screen}) and (max-width: #{($xxlarge-screen - $onePx)})";
+
+$xxlarge-up: "#{$screen} and (min-width: #{$xxlarge-screen})";
+$xxlarge-only: "#{$screen} and (min-width: #{$xxlarge-screen})";
+
+//*/
+// $row-width: em-calc(1000);
+// $column-gutter: em-calc(30);
+// $total-columns: 12;
+
+$header-font-family: $sans-serif;
+//$header-font-family-small: $sans-serif-small;
+
+$button-font-weight: 700;
+
+
+
+// We use these to control the left/right nav styles
+
+$orbit-nav-bg: none !default;
+$orbit-nav-bg-hover: none !default;
+$orbit-nav-arrow-color: #fff !default;
+$orbit-nav-arrow-color-hover: $primary-color !default;
+
+
+// We use these to control the timer styles
+/*
+$orbit-timer-bg: rgba(255,255,255,0.3) !default;
+$orbit-timer-show-progress-bar: true !default;
+*/
+
+// We use these to control the bullet nav styles
+$orbit-bullet-nav-color: #ccc !default;
+$orbit-bullet-nav-color-active: $primary-color !default;
+$orbit-bullet-radius: 0.75em !default;
+
+// We use these to controls the style of slide numbers
+/*
+$orbit-slide-number-bg: rgba(0,0,0,0) !default;
+$orbit-slide-number-font-color: #fff !default;
+$orbit-slide-number-padding: rem-calc(5) !default;
+*/
+
+
+/* Forms */
+
+$input-border-radius: $default-radius;
+$input-font-color: darken($body-bg, 2%);
+$input-border-width: 2px;
+$input-border-color:lighten($secondary-color, 40%);
+$input-bg-color: lighten($secondary-color, 55%);
+$input-focus-bg-color: white;
+$input-focus-border-color:lighten($secondary-color, 20%);
+$input-include-glowing-effect: false;
+$input-box-shadow: none;
+$include-open-sans: false;

@@ -1,0 +1,134 @@
+b, strong {
+  font-weight: 600;
+}
+
+.homebanner {
+  padding:.333em;
+  background-color: $menu-color;
+  background-image: url('../images/boys.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  .row {
+    max-width: none;
+
+  }
+}
+.hometile {
+  margin:.333em;
+  background-color: rgba($green,.875);
+  height:12em;
+  padding:1em;
+  color:white;
+  .medium-4 & {
+   background-color: rgba($green-light,.875);
+  }
+  h2 {
+    color:inherit;
+    margin-bottom: 0;
+    text-transform: uppercase;
+
+  }
+  p {
+    margin-top: 0;
+  }
+  @media #{$medium} {
+    height:12em;
+  }
+  @media #{$large} {
+    height:14em;
+  }
+}
+.pagesection {
+  @include clearfix();
+  padding-top:4em;
+  padding-bottom: 4em;
+  border-bottom: 1px solid $gray-extralight;
+  &:nth-of-type(2n+1) {
+    background-color: white;
+  }
+  &.pagesection--darken {
+    background-color: $gray-light;
+  }
+  &.pagesection--lighten {
+    background-color: white;
+  }
+}
+
+[class*=block-grid-] {
+  margin-top: 2em;
+}
+.subpageslist {
+  li > a {
+    //font-size: 1em;
+    font-weight: 700;
+    line-height: 1.125;
+  }
+}
+
+.refsquare {
+  background-color: white;
+  border:1px solid $gray-extralight;
+  padding:1em;
+  width:100%;
+}
+.refsquare__title {
+  margin-bottom: 0;
+  font-size: rem-calc(18);
+}
+.refsquare__descr {
+  font-size: rem-calc(14);
+}
+
+.termsquare {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  padding:1em;
+  &:before {
+    z-index:0;
+    content:'';
+    position: absolute;
+    left:2px;
+    width:100%;
+    top:2px;
+    height:100%;
+    border-bottom: 2px solid $green-light;
+    border-right: 2px solid $green-light;
+  }
+}
+.termsquare__title {
+  margin-bottom: 0;
+  font-size: rem-calc(22);
+  font-weight: 600;
+  color:black;
+}
+.termsquare__descr {
+  font-size: rem-calc(14);
+}
+
+
+.filterlist {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  text-align: center;
+  line-height: 1;
+  //font-size: 1em;
+  //font-weight: 700;
+  //text-transform: uppercase;
+  li {
+    display: inline-block;
+    > a {
+      display: inline-block;
+      background-color: $green-light;
+      color:white;
+      padding:.5em .666em;
+      margin:0 .25em .333em 0;
+      &:hover, &.active {
+        background-color: $green;
+      }
+    }
+  }
+
+
+}

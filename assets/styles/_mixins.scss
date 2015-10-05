@@ -1,0 +1,76 @@
+/******************************************************************
+
+Stylesheet: Mixins
+
+******************************************************************/
+
+
+
+/* Don't forget to set the proper path to your font file */
+@mixin at-font-face($font-family, $font-file, $font-weight: "normal", $font-style: "normal") {
+	@font-face {
+		font-family: "#{$font-family}";
+		src:url('../fonts/#{$font-file}.eot');
+		src:url('../fonts/#{$font-file}.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/#{$font-file}.woff') format('woff'),
+		url('../fonts/#{$font-file}.ttf') format('truetype'),
+		url('../fonts/#{$font-file}.svg##{$font-family}') format('svg');
+		font-weight: #{$font-weight};
+		font-style: #{$font-weight};
+	}
+}
+
+@mixin placeholder {
+	// These can't just be extended
+	@each $prefix in "::-webkit-input", ":moz", "::-moz", ":-ms-input" {
+		#{$prefix}-placeholder {
+			@content;
+		}
+	}
+}
+
+@mixin breakpoint($point) {
+	@if $point == large{
+		@media (min-width: $large-screen) { @content; }
+	}
+	@else if $point == medium {
+		@media (min-width: $medium-screen) { @content; }
+	}
+	@else if $point == small {
+		@media (min-width: $small-screen)  { @content; }
+	}
+	@else if $point == xsmall {
+		@media (max-width: $small-screen - 1)  { @content; }
+	}
+	@else if $point{
+		@media  (min-width: $point)  { @content; }
+	}
+}
+
+@mixin ie-only {
+	@media screen and (min-width:0\0) { @content; }
+}
+
+@mixin simple-transition($trans-property,$trans-time:$default-transition-time){
+	transition-property: $trans-property;
+	transition-duration: $trans-time;
+}
+
+
+@mixin keyframes($name) {
+	@keyframes #{$name} { @content; }
+	@-moz-keyframes #{$name} { @content; }
+	@-webkit-keyframes #{$name} { @content; }
+	@-o-keyframes #{$name} { @content; }
+	@-ms-keyframes #{$name} { @content; }
+	@-khtml-keyframes #{$name} { @content; }
+}
+
+@mixin animation($suffix, $value) {
+	animation-#{$suffix}: #{$value};
+	-moz-animation-#{$suffix}: #{$value};
+	-webkit-animation-#{$suffix}: #{$value};
+	-o-animation-#{$suffix}: #{$value};
+	-ms-animation-#{$suffix}: #{$value};
+	-khtml-animation-#{$suffix}: #{$value};
+}

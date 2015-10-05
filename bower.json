@@ -17,14 +17,7 @@
     "foundation": {
       "main": [
         "./scss/normalize.scss",
-        "./scss/foundation/components/_grid.scss",
-        "./scss/foundation/components/_block-grid.scss",
-        "./scss/foundation/components/_type.scss",
-        "./scss/foundation/components/_visibility.scss",
-        "./scss/foundation/components/_tabs.scss",
-        "./scss/foundation/components/_accordion.scss",
-        "./scss/foundation/components/_forms.scss",
-        "./scss/foundation/components/_buttons.scss",
+        "./scss/foundation.scss",
         "./js/foundation.js"
       ]
     }
