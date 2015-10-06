@@ -1,4 +1,4 @@
-<section class="pagesection pagesection--darken pagesection__refs">
+<section class="pagesection pagesection--darken pagesection--refs">
   <div class="row">
     <div class="columns medium-10 columns medium-centered">
     <h2>Referencia</h2>
@@ -9,7 +9,7 @@
             <h3 class="refsquare__title">JABIL Csarnok</h3>
             <p class="refsquare__city">Tiszaújváros</p>
             <p class="refsquare__descr">2.7 Mvar 14%-os fojtási tényezővel SIEMENS szekrényekben</p>
-            <a class="refsquare__more" href="#">Részletek</a>
+            <a class="refsquare__more" href="<?= get_permalink(46); ?>">Részletek</a>
           </div>
         </li>
         <li>
@@ -17,7 +17,7 @@
             <h3 class="refsquare__title">Richter Gedeon Zrt</h3>
             <p class="refsquare__city">Budapest</p>
             <p class="refsquare__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elits.</p>
-            <a class="refsquare__more" href="#">Részletek</a>
+            <a class="refsquare__more" href="<?= get_permalink(46); ?>">Részletek</a>
           </div>
         </li>
         <li>
@@ -25,7 +25,7 @@
             <h3 class="refsquare__title">JABIL Csarnok</h3>
             <p class="refsquare__city">Tiszaújváros</p>
             <p class="refsquare__descr">2.7 Mvar 14%-os fojtási tényezővel SIEMENS szekrényekben</p>
-            <a class="refsquare__more" href="#">Részletek</a>
+            <a class="refsquare__more" href="<?= get_permalink(46); ?>">Részletek</a>
           </div>
         </li>
       </ul>

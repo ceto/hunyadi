@@ -15,24 +15,43 @@ use Roots\Sage\Wrapper;
       </div>
     <![endif]-->
 
-    <div id="main-nav">
-      <?php do_action('get_header'); get_template_part('templates/header'); ?>
-    </div>
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
 
-    <div id="container" class="container" role="document">
+        <div id="main-nav">
+          <?php do_action('get_header'); get_template_part('templates/header'); ?>
+        </div>
 
-      <?php include Wrapper\template_path(); ?>
+        <div id="container" class="container" role="document">
+          <a class="right-off-canvas-toggle button" href="#">Ajánlat kérése</a>
 
-      <?php /*if (Config\display_sidebar()) : ?>
-        <aside class="sidebar" role="complementary">
-          <?php include Wrapper\sidebar_path(); ?>
-        </aside><!-- /.sidebar -->
-      <?php endif; */?>
+          <?php include Wrapper\template_path(); ?>
 
-      <?php do_action('get_footer'); get_template_part('templates/footer'); ?>
+          <?php /*if (Config\display_sidebar()) : ?>
+            <aside class="sidebar" role="complementary">
+              <?php include Wrapper\sidebar_path(); ?>
+            </aside><!-- /.sidebar -->
+          <?php endif; */?>
 
-    </div><!-- /.container -->
+          <?php do_action('get_footer'); get_template_part('templates/footer'); ?>
 
-    <?php wp_footer(); ?>
+        </div><!-- /.container -->
+
+
+        <!-- Off Canvas Contact Form -->
+        <aside class="right-off-canvas-menu">
+
+
+          <?php get_template_part('templates/contact','form');  ?>
+        </aside>
+
+        <a class="exit-off-canvas"></a>
+      </div><!-- /.inner-wrap -->
+    </div><!-- /.off-canvas-wrap -->
+
+
+          <?php wp_footer(); ?>
+
+
   </body>
 </html>

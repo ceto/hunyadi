@@ -1,5 +1,27 @@
 <?php
 
+function hu_referencia_init() {
+  $args = array(
+    'public' => true,
+    'label'  => 'Referencia',
+    'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' )
+  );
+  register_post_type( 'referencia', $args );
+}
+add_action( 'init', 'hu_referencia_init' );
+
+function hu_termek_init() {
+  $args = array(
+    'public' => true,
+    'label'  => 'Termék',
+    'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' )
+  );
+  register_post_type( 'termek', $args );
+}
+add_action( 'init', 'hu_termek_init' );
+
+
+
 
 /**
  * Get the bootstrap!

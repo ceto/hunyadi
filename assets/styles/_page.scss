@@ -40,19 +40,44 @@ b, strong {
 }
 .pagesection {
   @include clearfix();
+  position: relative;
   padding-top:4em;
   padding-bottom: 4em;
   border-bottom: 1px solid $gray-extralight;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   &:nth-of-type(2n+1) {
     background-color: white;
   }
-  &.pagesection--darken {
-    background-color: $gray-light;
-  }
-  &.pagesection--lighten {
-    background-color: white;
+
+}
+.pagesection--darken {
+  background-color: $gray-light;
+  &:nth-of-type(2n+1) {
+    background-color: inherit;
   }
 }
+
+.pagesection--lighten {
+  background-color: white;
+  &:nth-of-type(2n+1) {
+    background-color: inherit;
+  }
+}
+
+.pagesection--berendezesek-0, .pagesection--termekek {
+  background-image: url('../images/nature.jpg')
+}
+
+.pagesection--refs {
+  background-image: url('../images/aramtorony.jpg');
+  h2 {
+    color:white;
+
+  }
+}
+
 
 [class*=block-grid-] {
   margin-top: 2em;
@@ -60,7 +85,8 @@ b, strong {
 .subpageslist {
   li > a {
     //font-size: 1em;
-    font-weight: 700;
+    //color:$green-light;
+    font-weight: 600;
     line-height: 1.125;
   }
 }
@@ -83,7 +109,7 @@ b, strong {
   position: relative;
   z-index: 1;
   background-color: white;
-  padding:1em;
+  padding:1em 1em 2em;
   &:before {
     z-index:0;
     content:'';
@@ -105,7 +131,10 @@ b, strong {
 .termsquare__descr {
   font-size: rem-calc(14);
 }
-
+.termsquare__more {
+  position: absolute;
+  bottom:.75em;
+}
 
 .filterlist {
   list-style-type: none;

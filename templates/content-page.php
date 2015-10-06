@@ -11,7 +11,7 @@
 <?php
   $children = get_pages('child_of='.$post->ID);
   if( count( $children ) != 0 ) : ?>
-    <section class="pagesection pagesection--lighten">
+    <section class="pagesection pagesection--details">
       <div class="row">
         <div class="columns medium-8 columns medium-centered">
         <h2>A szolgáltatás részletei</h2>
@@ -28,7 +28,7 @@
   $sections = get_post_meta( get_the_ID(), 'page_repeat_group', true );
   foreach ( (array) $sections as $key => $entry ) {
   if ( isset( $entry['content'] ) ) : ?>
-  <section class="pagesection">
+  <section class="pagesection pagesection--<?= sanitize_title(get_the_title()) .'-'.$key; ?>">
     <div class="row">
       <div class="columns <?= $entry['class']==''?'medium-8 medium-centered':$entry['class'] ?>">
         <?= wpautop( $entry['content'] ) ?>

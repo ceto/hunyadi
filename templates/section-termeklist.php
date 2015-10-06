@@ -1,4 +1,4 @@
-<section class="pagesection pagesection--darken pagesection__termekek">
+<section class="pagesection pagesection--darken pagesection--termekek">
   <div class="row">
     <div class="columns medium-10 columns medium-centered">
     <h2>Kapcsolódó termékek</h2>
