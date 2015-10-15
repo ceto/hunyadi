@@ -41,8 +41,8 @@ function hu_metaboxes() {
      * Initiate the metabox
      */
     $cmb_page = new_cmb2_box( array(
-        'id'            => 'test_metabox',
-        'title'         => __( 'Test Metabox', 'cmb2' ),
+        'id'            => 'content_metabox',
+        'title'         => __( 'Függőleges tartalmi sávok', 'cmb2' ),
         'object_types'  => array( 'page', ), // Post type
         'context'       => 'normal',
         'priority'      => 'high',
@@ -55,20 +55,35 @@ function hu_metaboxes() {
     $group_field_id = $cmb_page->add_field( array(
         'id'          => 'page_repeat_group',
         'type'        => 'group',
-        'description' => __( 'Repeatable page section', 'cmb2' ),
+        'description' => __( 'Szerkeszthető oldalsávok', 'cmb2' ),
         'options'     => array(
-            'group_title'   => __( 'Section {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
-            'add_button'    => __( 'Add Another section', 'cmb2' ),
-            'remove_button' => __( 'Remove Section', 'cmb2' ),
+            'group_title'   => __( 'Oldalsáv {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
+            'add_button'    => __( 'Új oldalsáv hozzáadása', 'cmb2' ),
+            'remove_button' => __( 'Oldalsáv törlése', 'cmb2' ),
             'sortable'      => true, // beta
         ),
     ) );
 
     $cmb_page->add_group_field( $group_field_id, array(
-        'name' => 'Osztály',
-        'id'   => 'class',
-        'type' => 'text',
+        'name' => 'Szélesség',
+        'id'   => 'width',
+        'type' => 'radio_inline',
+        'options'          => array(
+          'normal' => __( 'Normál', 'cmb' ),
+          'wide' => __( 'Széles', 'cmb' ),
+        ),
     ) );
+
+    $cmb_page->add_group_field( $group_field_id, array(
+        'name' => 'Megjelenés',
+        'id'   => 'colwidth',
+        'type' => 'radio_inline',
+        'options'          => array(
+          'full' => __( 'Egy oszlopos', 'cmb' ),
+          'half' => __( 'Két oszlopos', 'cmb' ),
+        ),
+    ) );
+
 
     $cmb_page->add_group_field( $group_field_id, array(
         'name' => 'Tartalom',
@@ -76,6 +91,60 @@ function hu_metaboxes() {
         'id'   => 'content',
         'type' => 'wysiwyg',
     ) );
+
+    $cmb_page->add_group_field( $group_field_id, array(
+        'name' => 'Tartalom 2',
+        'description' => '2. oszlop szöveges tartalma',
+        'id'   => 'content2',
+        'type' => 'wysiwyg',
+    ) );
+
+
+    $cmb_related = new_cmb2_box( array(
+        'id'            => 'related_metabox',
+        'title'         => __( 'Kapcsolódó írások, termékek, referencia', 'cmb2' ),
+        'object_types'  => array( 'page', ), // Post type
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        // 'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+
+    $cmb_related->add_field( array(
+        'id'          => 'related_posts',
+        'name'         => __( 'Kapcsolódó írások', 'cmb2' ),
+        'type'  => 'multicheck_inline',
+        'options' => array(
+          'check1' => 'Check One',
+          'check2' => 'Check Two',
+          'check3' => 'Check Three',
+        )
+    ) );
+
+    $cmb_related->add_field( array(
+        'id'          => 'related_references',
+        'name'         => __( 'Kapcsolódó referenciák', 'cmb2' ),
+        'type'  => 'multicheck_inline',
+        'options' => array(
+          'check1' => 'Check One',
+          'check2' => 'Check Two',
+          'check3' => 'Check Three',
+        )
+    ) );
+
+    $cmb_related->add_field( array(
+        'id'          => 'related_products',
+        'name'         => __( 'Kapcsolódó termékek', 'cmb2' ),
+        'type'  => 'multicheck_inline',
+        'options' => array(
+          'check1' => 'Check One',
+          'check2' => 'Check Two',
+          'check3' => 'Check Three',
+        )
+    ) );
+
 
 
 }
