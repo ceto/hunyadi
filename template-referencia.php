@@ -23,7 +23,7 @@
       <div class="row">
 
         <div class="columns medium-10 columns medium-centered">
-          <ul class="small-block-grid-2 medium-block-grid-3 large-block-block-4">
+          <ul class="small-block-grid-2 medium-block-grid-3 large-block-block-4 referenciagrid">
             <?php for ($i=0; $i < 20 ; $i++) : ?>
               <li>
                 <?php get_template_part( 'templates/referencia', 'square' ); ?>

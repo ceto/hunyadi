@@ -152,7 +152,7 @@ textarea {
 		background-position: .75em center;
 		background-size: auto 50%;
 		@media #{$large} {
-			width: 100%;
+			width: 10rem;
 			padding:4em 0 0;
 			background-image: url('../images/logo.png');
 			background-repeat:no-repeat;

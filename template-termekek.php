@@ -21,12 +21,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="columns medium-10 columns medium-centered">
-          <ul class="small-block-grid-2">
-            <?php for ($i=0; $i < 20 ; $i++) : ?>
-              <li>
-                <?php get_template_part( 'templates/termek', 'square' ); ?>
-              </li>
+        <div class="columns medium-10 medium-centered">
+          <ul class="small-block-grid-2 termekgrid">
+            <?php for ($i=0; $i < 5 ; $i++) : ?>
+              <?php get_template_part( 'templates/termek', 'square' ); ?>
             <?php endfor; ?>
           </ul>
         </div>

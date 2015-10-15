@@ -40,6 +40,7 @@
 <?php
   $children = get_pages('child_of='.$post->ID);
   if( count( $children ) != 0 ) : ?>
+    <?php get_template_part('templates/section','postlist'); ?>
     <?php get_template_part('templates/section','reflist'); ?>
   <?php else: ?>
     <?php get_template_part('templates/section','termeklist'); ?>
