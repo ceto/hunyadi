@@ -20,15 +20,24 @@
           </ul>
         </div>
       </div>
-      <div class="row">
 
+      <?php
+        $args = array(
+          'post_type' => array('referencia'),
+          'order'               => 'ASC',
+          'orderby'             => 'date',
+          'posts_per_page'         => 1000,
+          'posts_per_archive_page' => 10,
+        );
+        $the_refs = new WP_Query( $args );
+      ?>
+      <div class="row">
         <div class="columns medium-10 columns medium-centered">
           <ul class="small-block-grid-2 medium-block-grid-3 large-block-block-4 referenciagrid">
-            <?php for ($i=0; $i < 20 ; $i++) : ?>
-              <li>
-                <?php get_template_part( 'templates/referencia', 'square' ); ?>
-              </li>
-            <?php endfor; ?>
+            <?php while ($the_refs->have_posts()) : $the_refs->the_post(); ?>
+              <li><?php get_template_part( 'templates/referencia', 'square' ); ?></li>
+              <li><?php get_template_part( 'templates/referencia', 'square' ); ?></li>
+            <?php endwhile ?>
           </ul>
         </div>
       </div>

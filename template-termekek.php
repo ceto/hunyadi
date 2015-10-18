@@ -20,12 +20,27 @@
           </ul>
         </div>
       </div>
+      <?php
+        $args = array(
+          'post_type' => array('termek'),
+          'order'               => 'ASC',
+          'orderby'             => 'date',
+          'posts_per_page'         => 1000,
+          'posts_per_archive_page' => 10,
+        );
+        $the_prods = new WP_Query( $args );
+      ?>
       <div class="row">
-        <div class="columns medium-10 medium-centered">
+        <div class="columns medium-10 columns medium-centered">
           <ul class="small-block-grid-2 termekgrid">
-            <?php for ($i=0; $i < 5 ; $i++) : ?>
-              <?php get_template_part( 'templates/termek', 'square' ); ?>
-            <?php endfor; ?>
+            <?php while ($the_prods->have_posts()) : $the_prods->the_post(); ?>
+              <li><?php get_template_part( 'templates/termek', 'square' ); ?></li>
+              <li><?php get_template_part( 'templates/termek', 'square' ); ?></li>
+              <li><?php get_template_part( 'templates/termek', 'square' ); ?></li>
+              <li><?php get_template_part( 'templates/termek', 'square' ); ?></li>
+              <li><?php get_template_part( 'templates/termek', 'square' ); ?></li>
+              <li><?php get_template_part( 'templates/termek', 'square' ); ?></li>
+            <?php endwhile ?>
           </ul>
         </div>
       </div>

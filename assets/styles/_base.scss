@@ -51,6 +51,15 @@ textarea {
 	min-height: 14em;
 }
 
+
+blockquote {
+	> * {
+		font-size: 133.333%;
+	}
+	p {
+		line-height: 1.2;
+	}
+}
 .fake-dd {
 	color: $body-bg;
 	background-color: rgba($quaternary-color, 0.015);
@@ -410,11 +419,12 @@ nav ul {
 	}
 }
 
-#banner {
+.banner {
 	background-color: $menu-color;
 	background-image: url('../images/headerbg.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position:center center;
 	position: relative;
 	max-height: 28.9em;
 	overflow: hidden;
@@ -477,7 +487,7 @@ nav ul {
 				}
 			}
 
-			.banner__parentlink {
+			.banner__updated, .banner__parentlink {
 				//text-transform: uppercase;
 				color:$gray-light;
 				font-weight: 300;

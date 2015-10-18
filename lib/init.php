@@ -28,6 +28,15 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
 
+  add_image_size ( 'banner_small', '768', '256', true );
+  add_image_size ( 'banner_medium', '1281', '427', true );
+  add_image_size ( 'banner', '1920', '640', true );
+
+  update_option( 'thumbnail_size_w', 768 );
+  update_option( 'thumbnail_size_h', 256 );
+  update_option( 'thumbnail_crop', 1 );
+
+
   // Add post formats
   // http://codex.wordpress.org/Post_Formats
   add_theme_support('post-formats', ['aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio']);

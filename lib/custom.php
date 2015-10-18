@@ -10,6 +10,7 @@ function hu_referencia_init() {
 }
 add_action( 'init', 'hu_referencia_init' );
 
+
 function hu_termek_init() {
   $args = array(
     'public' => true,
@@ -20,6 +21,34 @@ function hu_termek_init() {
 }
 add_action( 'init', 'hu_termek_init' );
 
+
+function hu_create_field_tax() {
+  register_taxonomy(
+    'field',
+    array('termek','referencia'),
+    array(
+      'label' => 'Szakterület',
+      'show_admin_column' => true,
+      'rewrite' => array( 'slug' => 'szakterulet' ),
+      'hierarchical' => true,
+    )
+  );
+}
+add_action( 'init', 'hu_create_field_tax' );
+
+/***** Create list of references, posts and products  ******/
+function hu_optionlist($post_type ) {
+  $the_cucc = new WP_Query(array (
+      'post_type' => $post_type,
+      'posts_per_page' => -1,
+    )
+  );
+  $reflist = array();
+  while ($the_cucc->have_posts()) : $the_cucc->the_post();
+    $reflist[get_the_ID()] = get_the_title();
+  endwhile;
+  return $reflist;
+}
 
 
 
@@ -43,7 +72,7 @@ function hu_metaboxes() {
     $cmb_page = new_cmb2_box( array(
         'id'            => 'content_metabox',
         'title'         => __( 'Függőleges tartalmi sávok', 'cmb2' ),
-        'object_types'  => array( 'page', ), // Post type
+        'object_types'  => array( 'page','referencia' ), // Post type
         'context'       => 'normal',
         'priority'      => 'high',
         'show_names'    => true, // Show field names on the left
@@ -116,33 +145,21 @@ function hu_metaboxes() {
         'id'          => 'related_posts',
         'name'         => __( 'Kapcsolódó írások', 'cmb2' ),
         'type'  => 'multicheck_inline',
-        'options' => array(
-          'check1' => 'Check One',
-          'check2' => 'Check Two',
-          'check3' => 'Check Three',
-        )
+        'options' => hu_optionlist('post')
     ) );
 
     $cmb_related->add_field( array(
         'id'          => 'related_references',
         'name'         => __( 'Kapcsolódó referenciák', 'cmb2' ),
         'type'  => 'multicheck_inline',
-        'options' => array(
-          'check1' => 'Check One',
-          'check2' => 'Check Two',
-          'check3' => 'Check Three',
-        )
+        'options' => hu_optionlist('referencia')
     ) );
 
     $cmb_related->add_field( array(
         'id'          => 'related_products',
         'name'         => __( 'Kapcsolódó termékek', 'cmb2' ),
         'type'  => 'multicheck_inline',
-        'options' => array(
-          'check1' => 'Check One',
-          'check2' => 'Check Two',
-          'check3' => 'Check Three',
-        )
+        'options' => hu_optionlist('termek')
     ) );
 
 

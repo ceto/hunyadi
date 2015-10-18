@@ -96,7 +96,7 @@ b, strong {
   }
 }
 .pagesection {
-  @include clearfix();
+  //@include clearfix();
   position: relative;
   padding-top:4em;
   padding-bottom: 4em;
@@ -123,6 +123,25 @@ b, strong {
   }
 }
 
+.pagesection--inverse {
+  background-color: rgba($green,.25);
+  background-image: url('../images/nature.jpg');
+  background-position: center bottom;
+  color:$gray-extralight;
+  h2 {
+    color:inherit;
+  }
+  a {
+    color:inherit;
+    &:hover, &:focus {
+      color:$white;
+    }
+  }
+  &:nth-of-type(2n+1) {
+    background-color: inherit;
+  }
+}
+
 .pagesection--berendezesek-0, .pagesection--termekek {
   background-image: url('../images/nature.jpg')
 }
@@ -141,7 +160,7 @@ b, strong {
 }
 .subpageslist {
   li > a {
-    //font-size: 1em;
+    font-size: 1.25em;
     //color:$green-light;
     font-weight: 600;
     line-height: 1.125;
@@ -189,12 +208,11 @@ b, strong {
 }
 .termsquare {
   position: relative;
-  z-index: 1;
   background-color: white;
   padding:1rem 1rem;
   margin: 1rem 0;
   &:before {
-    z-index:0;
+    z-index:-1;
     content:'';
     position: absolute;
     left:2px;
@@ -257,21 +275,30 @@ b, strong {
 .postsquare {
   position: relative;
   z-index: 1;
-  margin: 2rem 0;
+  margin: 2rem auto;
+  max-width: em-calc(480);
 }
 .postsquare__fig {
   margin:0 0 1rem;
   padding:0;
 }
 
+.postsquare__updated {
+
+}
 .postsquare__title {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.25rem;
 }
-.postsquare__descr {
+.postsquare__summary {
+  p {
+    font-size: .875rem;
+  }
+}
 
-  font-size: .875rem;
+.postsquare__more {
+  margin-top: $paragraph-margin-bottom;
 }
 
 .filterlist {

@@ -11,7 +11,7 @@
   <main class="main" role="main">
     <section class="pagesection">
       <div class="row">
-        <div class="columns medium-8 columns medium-centered">
+        <div class="columns medium-10 columns medium-centered">
           <div class="row">
             <div class="small-6 medium-6 columns">
               <h3>Székhely, központ</h3>
