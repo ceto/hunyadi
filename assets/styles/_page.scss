@@ -2,13 +2,17 @@ dl {
   @include clearfix();
   line-height: 1.2;
   font-size: .875rem;
+  margin-bottom: 0;
+
   dt {
-    padding:1rem;
+    padding:.75rem .75rem .75rem 0;
     width: 33.333%;
     float:left;
     clear:both;
-    border-top: 1px solid gray;
     margin:0;
+    &:not(:first-of-type) {
+      border-top: 1px solid $gainsboro;
+    }
 
   }
 
@@ -16,9 +20,11 @@ dl {
     clear:right;
     float:right;
     margin:0;
-    border-top: 1px solid gray;
-    padding:1rem 1rem 1rem 1rem;
+    padding:.75rem 0 .75rem .75rem;
     width: 66.666%;
+    &:not(:first-of-type) {
+      border-top: 1px solid $gainsboro;
+    }
 
   }
 }
