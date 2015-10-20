@@ -66,7 +66,7 @@ b, strong {
 }
 
 .homebanner {
-  padding:.333em;
+  padding:0;
   background-color: $menu-color;
   background-image: url('../images/boys.jpg');
   background-size: cover;
@@ -77,28 +77,46 @@ b, strong {
   }
 }
 .hometile {
-  margin:.333em;
-  background-color: rgba($green,.875);
+  position: relative;
+  margin:0;
+  background-color: rgba(darken($green,10),.5);
   height:12em;
   padding:1em;
   color:white;
-  .medium-4 & {
-   background-color: rgba($green-light,.875);
+  &.light {
+    background-color: rgba(darken($green,10),.875);
   }
+  &.light2 {
+    background-color: rgba(darken($green,10),.66);
+  }
+  &.light3 {
+    background-color: rgba(darken($green,10),.666);
+  }
+
+  &:hover {
+    background-color: rgba($green-light,.875);
+  }
+
   h2 {
     color:inherit;
     margin-bottom: 0;
     text-transform: uppercase;
-
+    @media #{$medium} {
+      font-size:4vh;
+      max-width: 9em;
+    }
+    a {
+      color:inherit;
+    }
   }
   p {
     margin-top: 0;
   }
   @media #{$medium} {
-    height:12em;
+   height:33.333vh;
   }
   @media #{$large} {
-    height:14em;
+    height:33.333vh;
   }
 }
 .pagesection {
@@ -146,6 +164,13 @@ b, strong {
   &:nth-of-type(2n+1) {
     background-color: inherit;
   }
+}
+
+.pagesection--intro {
+  p {
+    font-size: 1.125rem;
+  }
+
 }
 
 .pagesection--berendezesek-0, .pagesection--termekek {
@@ -249,7 +274,6 @@ b, strong {
   padding-top: 1rem;
   margin-bottom: 0;
   //font-size: rem-calc(22);
-  font-weight: 600;
   color:black;
   @media #{$small} {
     border-top:none;
@@ -294,8 +318,10 @@ b, strong {
 }
 .postsquare__title {
   text-transform: uppercase;
-  font-weight: 600;
   font-size: 1.25rem;
+  a {
+    color:inherit;
+  }
 }
 .postsquare__summary {
   p {

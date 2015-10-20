@@ -15,8 +15,6 @@
       <ul class="small-block-grid-2 medium-block-grid-3">
         <?php while ($the_relprods->have_posts()) : $the_relprods->the_post(); ?>
           <li><?php get_template_part( 'templates/termek', 'square' ); ?></li>
-          <li><?php get_template_part( 'templates/termek', 'square' ); ?></li>
-          <li><?php get_template_part( 'templates/termek', 'square' ); ?></li>
         <?php endwhile; ?>
       </ul>
       <a href="<?= get_permalink(18) ?>" class="button">Teljes termékkatalógus itt</a>

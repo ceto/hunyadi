@@ -4,7 +4,7 @@
   </section>
   <main class="main" role="main">
 
-    <section class="pagesection">
+    <section class="pagesection pagesection--intro">
       <div class="row">
         <div class="columns medium-8 medium-centered">
           <?php the_content(); ?>
@@ -33,18 +33,53 @@
                   <?php endif; ?>
                 </div>
                 <div class="columns medium-8 <?= ($key%2!=0)?'medium-pull-4':'' ?>">
-                  <div class="prodvarian__content">
+                  <div class="prodvariant__content">
                     <h2><?= $entry['name'] ?></h2>
-                    <?= wpautop($entry['description']); ?>
+                    <?php if ( $entry['subtitle']!= '' ) : ?>
+                    <p class="prodvariant__subtitle"><?= $entry['subtitle']; ?></p>
+                    <?php endif; ?>
 
-                    <h3><a href="#">Adatlap</a></h3>
-                    <?= adatlaposit($entry['params']); ?>
-                    <h3><a href="#">Letölthető anyagok</a></h3>
-                    <?php $dlfiles = $entry['dlfiles']; ?>
-                    <?php foreach ( $dlfiles as $csat_id => $csat_url ) : ?>
-                        <?php $csat=get_post( $csat_id ) ?>
-                       <a class="dlfile" href="<?= $csat_url; ?>"><?= $csat->post_title; ?></a>
-                    <?php endforeach; ?>
+
+                    <ul class="accordion" data-accordion>
+
+
+                      <li class="accordion-navigation">
+                        <a href="#descrpanel-<?= $key ?>">Leírás</a>
+                        <div id="descrpanel-<?= $key ?>" class="content prodvariant__descr">
+                          <?= wpautop($entry['description']); ?>
+                        </div>
+                      </li>
+
+                      <?php if ( $entry['details']!= '' ) : ?>
+                      <li class="accordion-navigation">
+                        <a href="#detailspanel-<?= $key ?>">Részletek</a>
+                        <div id="detailspanel-<?= $key ?>" class="content prodvariant__details">
+                          <?= wpautop($entry['details']); ?>
+                        </div>
+                      </li>
+                      <?php endif; ?>
+
+                      <?php if ( $entry['params']!= '' ) : ?>
+                      <li class="accordion-navigation">
+                        <a href="#paramspanel-<?= $key ?>">Adatlap</a>
+                        <div id="paramspanel-<?= $key ?>" class="content prodvariant__params">
+                          <?= adatlaposit($entry['params']); ?>
+                        </div>
+                      </li>
+                      <?php endif; ?>
+
+                      <?php if ( $entry['dlfiles']!= '' ) : ?>
+                      <li class="accordion-navigation">
+                        <a href="#dlfilespanel-<?= $key ?>">Letölthető anyagok</a>
+                        <div id="dlfilespanel-<?= $key ?>" class="content prodvariant__dlfiles">
+                          <?php foreach ( $entry['dlfiles'] as $csat_id => $csat_url ) : ?>
+                            <?php $csat=get_post( $csat_id ) ?>
+                            <a class="dlfile" href="<?= $csat_url; ?>"><?= $csat->post_title; ?></a>
+                          <?php endforeach; ?>
+                        </div>
+                      </li>
+                      <?php endif; ?>
+                    </ul>
 
                   </div>
                 </div>

@@ -3,7 +3,7 @@
     <?php get_template_part('templates/refpage', 'header'); ?>
   </section>
   <main class="main" role="main">
-    <section class="pagesection">
+    <section class="pagesection pagesection--intro">
       <div class="row">
         <div class="columns medium-8 medium-centered">
           <?php the_content(); ?>

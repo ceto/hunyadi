@@ -426,30 +426,27 @@ nav ul {
 	background-repeat: no-repeat;
 	background-position:center center;
 	position: relative;
-	max-height: 28.9em;
+	max-height: 18rem;
 	overflow: hidden;
-	@media screen and (max-height: 56em) {
-		& {
-			max-height: 23em;
-		}
-	}
+
 
 	&:after {
 		content: '';
 		display: block;
 		width: 100%;
-		padding-bottom: 41.33333%;
-		max-height: 28.9em;
+		padding-bottom: 52%;
+		max-height: 18rem;
 		overflow: hidden;
 		background-image: linear-gradient(to top, rgba(black,.75) 0, rgba(black,.1) 66.666% );
-
-
 	}
-	@media screen and (max-height: 56em) {
-			&:after {
-				max-height: 23em;
-			}
+
+	@media only screen and (min-height:56em) {
+		max-height: 22rem;
+		&:after {
+			max-height: 22rem;
 		}
+	}
+
 	.img {
 		position: absolute;
 		top: 0;
@@ -472,7 +469,6 @@ nav ul {
 				text-transform: uppercase;
 
 				color: $gray-extralight;
-				font-weight:300;
 				//font-size: rem-calc(60);
 				margin: 0;
 				line-height: 1;

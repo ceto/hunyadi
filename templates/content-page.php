@@ -1,4 +1,4 @@
-<section class="pagesection">
+<section class="pagesection pagesection--intro">
   <div class="row">
     <div class="columns medium-8 columns medium-centered">
       <?php the_content(); ?>

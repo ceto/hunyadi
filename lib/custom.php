@@ -193,6 +193,11 @@ function hu_metaboxes() {
       'id'   => 'name',
       'type' => 'text',
     ) );
+    $cmb_product->add_group_field( $product_group_field_id, array(
+      'name' => 'Mi ez?',
+      'id'   => 'subtitle',
+      'type' => 'text',
+    ) );
 
     $cmb_product->add_group_field( $product_group_field_id, array(
       'name' => 'Leírás',
@@ -208,6 +213,16 @@ function hu_metaboxes() {
       'name' => 'Termékfotó',
       'id'   => 'prodphoto',
       'type' => 'file',
+    ) );
+
+    $cmb_product->add_group_field( $product_group_field_id, array(
+      'name' => 'Részletek',
+      'description' => 'A termékvariáns részleteinek leírása',
+      'id'   => 'details',
+      'type' => 'wysiwyg',
+      'options' => array(
+        'textarea_rows' => '10',
+      )
     ) );
 
     $cmb_product->add_group_field( $product_group_field_id, array(
