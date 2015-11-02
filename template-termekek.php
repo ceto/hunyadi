@@ -9,25 +9,59 @@
     <?php get_template_part('templates/listpage', 'header'); ?>
   </section>
   <main class="main" role="main">
-    <section class="pagesection">
+
+  <?php
+
+    $szakteruletek = get_terms( 'field');
+    //print_r($szakteruletek);
+
+   $szakteruletek = get_terms( 'field' );
+   if ( ! empty( $szakteruletek ) && ! is_wp_error( $szakteruletek ) ) : ?>
+    <ul>
+      <?php foreach ( $szakteruletek as $field ) :?>
+        <li>
+        <a href="<?php echo get_term_link( $field, 'field' ); ?>">
+          <?= $field->name ?>
+        </a>
+        </li>
+      <?php endforeach; ?>
+    </ul>
+    <?php reset($szakteruletek); ?>
+
+    <?php foreach ( $szakteruletek as $field ) :?>
+
+    <section class="pagesection pagesection--termekblokk">
       <div class="row">
         <div class="columns medium-10 medium-centered">
           <div class="row">
-            <div class="columns medium-4">
-              <h3>Szűrés szakterületre</h3>
-            </div>
-            <div class="medium-8 columns">
-              <ul class="filterlist">
-                <li><a href="#" class="active">Mutasd mindet</a></li>
-                <li><a href="#">Fázisjavítás</a></li>
-                <li><a href="#">Energetika</a></li>
-                <li><a href="#">Mérés</a></li>
+            <div class="columns medium-12">
+              <h2><?= $field->name; ?></h2>
+              <p><?= term_description( $field->term_id,'field') ?></p>
+
+              <ul class="block-grid-1 small-block-grid-2 xxlarge-block-grid-3 miniprodblock">
+                <li class="miniprod">
+                  <h3 class="miniprod__title"><a href="<?= get_the_permalink(62) ?>">Hálózat analizátorok</a></h3>
+                  <ul class="miniprod__list">
+                    <li><a href="<?= get_the_permalink(62) ?>">Janitza UMG 604</a></li>
+                    <li><a href="<?= get_the_permalink(62) ?>">Janitza UMG 605</a></li>
+                    <li><a href="<?= get_the_permalink(62) ?>">Janitza UMG 508</a></li>
+                    <li><a href="<?= get_the_permalink(62) ?>">Janitza UMG 511</a></li>
+                  </ul>
+                  <a class="miniprod__more" href="<?= get_the_permalink(62) ?>">Részletek</a>
+                </li>
+
               </ul>
             </div>
           </div>
         </div>
       </div>
-    </section>
+
+    <?php endforeach; ?>
+
+
+    <?php endif; ?>
+
+
 
 
     <section class="pagesection pagesection--termekblokk">
