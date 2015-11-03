@@ -19,7 +19,18 @@
 .miniprod {
 
 }
+
+.miniprod__fig {
+  margin:0 0 1rem;
+  padding:0;
+  img {
+    //max-width: 75%;
+  }
+}
+
 .miniprod__title {
+  font-size: 1.333rem;
+  text-transform: uppercase;
   a {
     color:inherit;
   }
@@ -28,8 +39,9 @@
 .miniprod__list {
   list-style-type: none;
   margin: 0 0 .25rem;
-  font-size: .875em;
+  font-size: 1rem;
   line-height: 1.4;
+  font-weight: 600;
 
   li {
     padding:0;
@@ -45,8 +57,11 @@
   }
 }
 
+
+
+
 .miniprod__more {
-  font-size: .875rem;
+  font-size: 1rem;
 }
 
 .accordion .accordion-navigation {
@@ -78,3 +93,4 @@
     content:'- ';
   }
 }
+
