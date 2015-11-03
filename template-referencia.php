@@ -36,7 +36,6 @@
           <ul class="small-block-grid-2 medium-block-grid-3 large-block-block-4 referenciagrid">
             <?php while ($the_refs->have_posts()) : $the_refs->the_post(); ?>
               <li><?php get_template_part( 'templates/referencia', 'square' ); ?></li>
-              <li><?php get_template_part( 'templates/referencia', 'square' ); ?></li>
             <?php endwhile ?>
           </ul>
         </div>
