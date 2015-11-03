@@ -26,11 +26,7 @@
 
 <?php get_template_part('templates/page', 'sections' ); ?>
 
-<?php
-  $children = get_pages('child_of='.$post->ID);
-  if( count( $children ) != 0 ) : ?>
-    <?php get_template_part('templates/section','postlist'); ?>
-    <?php get_template_part('templates/section','reflist'); ?>
-  <?php else: ?>
-    <?php get_template_part('templates/section','termeklist'); ?>
-  <?php endif; ?>
+<?php get_template_part('templates/section','relatedprods'); ?>
+<?php get_template_part('templates/section','postlist'); ?>
+<?php get_template_part('templates/section','reflist'); ?>
+

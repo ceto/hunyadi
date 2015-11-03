@@ -41,13 +41,14 @@ function hu_optionlist($post_type ) {
   $the_cucc = new WP_Query(array (
       'post_type' => $post_type,
       'posts_per_page' => -1,
+      'nopaging' => true
     )
   );
-  $reflist = array();
+  $options = array();
   while ($the_cucc->have_posts()) : $the_cucc->the_post();
-    $reflist[get_the_ID()] = get_the_title();
+    $options[get_the_ID()] = get_the_title();
   endwhile;
-  return $reflist;
+  return $options;
 }
 
 
@@ -140,18 +141,19 @@ function hu_metaboxes() {
       // 'closed'     => true, // Keep the metabox closed by default
     ) );
 
-
     $cmb_related->add_field( array(
-      'id'          => 'related_posts',
-      'name'         => __( 'Kapcsolódó írások', 'cmb2' ),
+      'id' => 'related_posts',
+      'name' => __( 'Kapcsolódó írások', 'cmb2' ),
       'type'  => 'multicheck_inline',
+      'select_all_button' => false,
       'options' => hu_optionlist('post')
     ) );
 
     $cmb_related->add_field( array(
-      'id'          => 'related_references',
-      'name'         => __( 'Kapcsolódó referenciák', 'cmb2' ),
-      'type'  => 'multicheck_inline',
+      'id' => 'related_references',
+      'name' => __( 'Kapcsolódó referenciák', 'cmb2' ),
+      'type' => 'multicheck_inline',
+      'select_all_button' => false,
       'options' => hu_optionlist('referencia')
     ) );
 
@@ -159,6 +161,7 @@ function hu_metaboxes() {
       'id'          => 'related_products',
       'name'         => __( 'Kapcsolódó termékek', 'cmb2' ),
       'type'  => 'multicheck_inline',
+      'select_all_button' => false,
       'options' => hu_optionlist('termek')
     ) );
 

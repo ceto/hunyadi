@@ -56,8 +56,7 @@
           <div class="columns medium-10 medium-centered">
             <div class="row">
               <div class="columns">
-
-                <h2><?= $field->name; ?></h2>
+                <h2 class="termekblokk__title"><?= $field->name; ?></h2>
                 <p><?= term_description( $field->term_id,'field') ?></p>
 
                 <?php
@@ -77,27 +76,7 @@
                 <?php if ($the_prods->post_count>0) : ?>
                   <ul class="block-grid-1 small-block-grid-2 xxlarge-block-grid-3 miniprodblock">
                     <?php while ($the_prods->have_posts()) : $the_prods->the_post(); ?>
-                      <li class="miniprod">
-                        <figure class="miniprod__fig">
-                          <a href="<?php the_permalink() ?>">
-                            <?php the_post_thumbnail('thumbnail'); ?>
-                          </a>
-                        </figure>
-                        <h3 class="miniprod__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-                        <?php if ( get_post_meta( get_the_ID(), 'product_repeat_group', true ) ) : ?>
-                          <ul class="miniprod__list">
-                            <?php $prod_variants = get_post_meta( get_the_ID(), 'product_repeat_group', true );
-                              foreach ( (array) $prod_variants as $key => $entry ) : ?>
-                                <li>
-                                  <a href="<?= get_the_permalink().'#'.sanitize_title( $entry['name'] ); ?>">
-                                    <?= $entry['name']; ?>
-                                  </a>
-                                </li>
-                              <?php endforeach; ?>
-                          </ul>
-                        <?php endif ?>
-                        <a class="miniprod__more" href="<?php the_permalink() ?>">Részletek</a>
-                      </li>
+                      <?php get_template_part('templates/mini', 'prod' ); ?>
                     <?php endwhile; ?>
                   </ul>
                 <?php endif; ?>
