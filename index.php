@@ -2,13 +2,19 @@
   <?php get_template_part('templates/page', 'header'); ?>
 </section>
 <main class="main" role="main">
-  <div class="row">
-    <div class="columns medium-10 medium-centered">
+
+
       <?php if (!have_posts()) : ?>
-        <div class="alert alert-warning">
-          <?php _e('Sorry, no results were found.', 'sage'); ?>
-        </div>
-        <?php get_search_form(); ?>
+         <section class="pagesection">
+          <div class="row">
+            <div class="columns medium-8 medium-centered">
+              <div class="alert alert-warning">
+                <?php _e('Sorry, no results were found.', 'sage'); ?>
+              </div>
+              <?php get_search_form(); ?>
+            </div>
+          </div>
+        </section>
       <?php endif; ?>
 
       <?php while (have_posts()) : the_post(); ?>

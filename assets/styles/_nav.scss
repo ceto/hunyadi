@@ -1,0 +1,72 @@
+.menu, .sub-menu {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+}
+
+
+.nav--side {
+
+
+}
+
+.menu--pri {
+  margin:25% 0;
+  > li {
+    //margin-bottom: .5rem;
+    > a {
+      display: block;
+      text-transform: uppercase;
+      padding:.666rem 0;
+      font-size: .875rem;
+      line-height: 1.2;
+
+
+
+    }
+
+
+    &.active .sub-menu {
+      display: block;
+    }
+  }
+
+
+  .sub-menu {
+    margin:0 0 1.25rem 0;
+    display:none;
+    > li {
+      > a {
+        display: block;
+        padding:.25rem 0;
+        font-size: .75rem;
+        line-height: 1.2;
+        text-transform: none;
+      }
+    }
+
+
+
+  }
+
+}
+
+
+.menu--sec {
+  border-top: 1px solid $gainsboro;
+  margin:25% 0 0;
+  padding:25% 0 0;
+  > li {
+    > a {
+      display: block;
+      padding:.5rem 0;
+      font-size: .875rem;
+      line-height: 1.2;
+
+    }
+
+
+  }
+}
+
+

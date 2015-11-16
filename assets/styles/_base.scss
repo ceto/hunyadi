@@ -107,7 +107,7 @@ blockquote {
 	Navigation
 -------------------------------- */
 
-#main-nav {
+.theleftside {
 	background: $gray-extralight;
 	height: 64px;
 	overflow: hidden;
@@ -145,8 +145,7 @@ blockquote {
 
 }
 
-.name {
-	a {
+.sitename {
 		display: block;
 		line-height: 1;
 		color: $menu-color;
@@ -172,9 +171,6 @@ blockquote {
 
 	}
 
-
-}
-
 .menu-toggle {
 	position: absolute;
 	right: 15px;
@@ -182,21 +178,19 @@ blockquote {
 	width: 80px;
 	height: 44px;
 
-	a {
-    text-align: right;
-    width: 100%;
-    height: 2.05em;
-    display: block;
-    line-height: 1;
-    padding: 0;
-    color: $green;
+  text-align: right;
+  width: 100%;
+  height: 2.05em;
+  display: block;
+  line-height: 1;
+  padding: 0;
+  color: $green;
 
-		span {
-			width: 0;
-			height: 0;
-			font-size: 1.7em;
-			vertical-align: top;
-		}
+	span {
+		width: 0;
+		height: 0;
+		font-size: 1.7em;
+		vertical-align: top;
 	}
 
 	@media #{$large} {
@@ -205,216 +199,37 @@ blockquote {
 
 }
 
-nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-#mm {
-	z-index: 4;
-	position: relative;
-
-	li {
-		display: block;
-		width: 100%;
-		position: relative;
-	}
-
-	a {
-		display: block;
-		padding: 1.333em 1.75em;
-		line-height: 1.25;
-		background-color: $gray-light;
-		border-bottom: solid 1px $gray-extralight;
-		color: $menu-color;
-		font-size: 1em;
-		text-transform: uppercase;
-		font-family: $sans-serif;
-		font-weight: 400;
-
-		&:before {
-			content: '';
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			z-index: 1;
-
-			@include breakpoint($large-screen) {
-				display: none;
-			}
-		}
-
-		&:hover {
-			color: black;
-			background-color: lighten($gray-light, 5%);
-		}
-
-	}
-
-	.current-menu-item a, .current-page-parent a {
-	//, .single-careers & #menu-item-32 a,.single-post & #menu-item-34 a,.author & #menu-item-28 a*/ {
-		color: black;
-	}
-
-	.sub-menu a {
-		padding-left: 1.5em;
-		background-color: darken(black, 10%);
-	}
 
 
-	@media #{$large} {
-		height: auto;
-		float: none;
-
-		li {
-			display: block;
-			height: auto;
-		}
-
-		a {
-			padding:.666em 0;
-			border-bottom: none;
-			background-color:transparent;
-			&:hover {
-				background-color:transparent;
-				color:black;
-			}
-
-		}
-
-		.sub-menu {
-			display: none;
-			a {
-				padding:.75em 0;
-				color: $green;
-				font-weight: 400;
-				font-family: $sans-serif;
-			}
-
-			.current-menu-item a {
-				color: black;
-			}
-		}
-
-		}
-
-
-}
-
-.sub-menu {
-	height: 0;
-	overflow: hidden;
-	margin-left: 0;
-	background-color: black;
-
-	&:before {
-		@extend %icon;
-		content: "\e609";
-		position: absolute;
-		top: 0;
-		right: 0;
-		top: 1.3333em;
-		right: 1.3333em;
-		color: $body-bg;
-
-		@include breakpoint($medium-screen) {
-			display: none;
-		}
-	}
-
-	&.on {
-		height: auto;
-
-		&:before {
-			content: "\e60a";
-		}
-	}
-
-	@media #{$medium-only} {
-		& {
-			display: none;
-		}
-	}
-
-
-	@media #{$large} {
-		display: none;
-		background-color: transparent;
-		position: relative;
-		height: auto;
-		text-align: left;
-		margin-left: 1em;
-		margin-bottom: .666em;
-		top: 0;
-		padding: 0;
-
-		a {
-			text-transform: none !important;
-			font-weight: 400 !important;
-			font-size: .875em !important;
-			background-color: transparent !important;
-			padding:.333em 0 !important;
-
-			&:hover {
-				color: black !important;
-			}
-
-		}
-
-		li {
-			height: auto;
-			line-height: 1.25;
-		}
-
-		#mm .current_page_item &,
-		#mm .current-page-ancestor & {
-			display: block;
-		}
-	}
-}
-
-
-
-
-
-@media #{$medium} {
-
-	#container {
-		position: relative;
-		overflow-x: hidden;
-	}
-
-
-}
-
-
-@media #{$large} {
-
-	#container {
-		width: 79%;
-		margin-left: 21%;
-		overflow-x: visible;
-	}
-
-
-
-
-}
 
 
 /* --------------------------------
 	Layout
 -------------------------------- */
 
+
+.container {
+	@media #{$medium} {
+		position: relative;
+		overflow-x: hidden;
+	}
+
+	@media #{$large} {
+		width: 79%;
+		margin-left: 21%;
+		overflow-x: visible;
+	}
+
+}
+
+
+
 .no-banner {
-	#container {
+	.container {
 		padding-top: 2.25em;
 	}
-	&.blog #container,
-	&.single-post #container {
+	&.blog .container,
+	&.single-post .container {
 		padding-top: 0;
 	}
 }
@@ -592,7 +407,7 @@ nav ul {
 		}
 	}
 
-	.no-banner #container, .single-post.no-banner #container {
+	.no-banner .container, .single-post.no-banner .container {
 		padding-top: 5.25em;
 	}
 

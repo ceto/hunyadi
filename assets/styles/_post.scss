@@ -1,0 +1,20 @@
+.post__fig {
+  margin:0 0 1rem;
+  padding:0;
+}
+
+.post__summary {
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+.postsquare__more {
+  margin-bottom: 0;
+}
+
+.postfooter__updated {
+  .post & {
+   font-size: .875rem;
+   font-weight: $font-weight-bold;
+  }
+}

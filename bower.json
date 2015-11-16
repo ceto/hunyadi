@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "modernizr": "2.8.2",
+    "modernizr": "2.8.3",
     "foundation": "~5.5.2",
     "Ionicons": "https://github.com/driftyco/ionicons.git#~2.0.1"
   },

@@ -17,10 +17,7 @@ use Roots\Sage\Wrapper;
 
     <div class="off-canvas-wrap" data-offcanvas>
       <div class="inner-wrap">
-
-        <div id="main-nav">
-          <?php do_action('get_header'); get_template_part('templates/header'); ?>
-        </div>
+        <?php do_action('get_header'); get_template_part('templates/header'); ?>
 
         <div id="container" class="container" role="document">
           <a class="right-off-canvas-toggle button" href="#">Ajánlat kérése</a>

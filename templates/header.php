@@ -1,18 +1,21 @@
-<header class="clearfix">
-  <ul class="title-area">
-    <li class="name">
-      <a href="<?= esc_url(home_url('/')); ?>" class="icon-flipp" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
-    </li>
-    <li class="menu-toggle"><a href="#" data-menu-toggle="#main-nav"><span class="icon-menu"></span>MENÜ</a></li>
-  </ul>
+<header class="theleftside">
+  <div class="titlearea">
+    <a href="<?= esc_url(home_url('/')); ?>" class="sitename" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
+    <a href="#" class="menu-toggle" data-menu-toggle="#main-nav"><span class="icon-menu"></span>MENÜ</a>
+  </div>
 
-  <nav id="mm" class="main-navigation atop-bar" role="navigation">
-    <div class="menu-main-nav-container">
+  <nav class="nav nav-side" role="navigation">
       <?php
       if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
+        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu menu--pri']);
       endif;
       ?>
-    </div>
+
+      <?php
+      if (has_nav_menu('secondary_navigation')) :
+        wp_nav_menu(['theme_location' => 'secondary_navigation', 'menu_class' => 'menu menu--sec']);
+      endif;
+      ?>
+
   </nav>
 </header>
