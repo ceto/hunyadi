@@ -8,7 +8,7 @@
   $the_relprods = new WP_Query( $args );
 ?>
 
-<section class="pagesection pagesection--darken pagesection--termekek">
+<section class="pagesection pagesection--termekek">
   <div class="row">
     <div class="columns medium-10 columns medium-centered">
     <h2>Kapcsolódó termékek</h2>

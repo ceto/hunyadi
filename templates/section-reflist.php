@@ -12,7 +12,7 @@
   ?>
 
   <?php if ($the_relrefs->post_count>0) : ?>
-    <section class="pagesection pagesection--darken pagesection--refs">
+    <section class="pagesection pagesection--refs">
       <div class="row">
         <div class="columns medium-10 columns medium-centered">
         <h2>Kapcsolódó munkáink</h2>

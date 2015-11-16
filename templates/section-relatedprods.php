@@ -16,7 +16,7 @@
 
   <?php if ($the_relprods->post_count>0) : ?>
 
-  <section class="pagesection pagesection--darken pagesection--termekblokk">
+  <section class="pagesection pagesection--termekblokk">
     <div class="row">
       <div class="columns medium-10 columns medium-centered">
         <h2 class="termekblokk__title">Műszerek és berendezések</h2>
