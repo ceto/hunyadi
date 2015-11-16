@@ -17,5 +17,5 @@
         <?php endforeach; ?>
     </ul>
   <?php endif ?>
-  <a class="miniprod__more" href="<?php the_permalink() ?>">Részletek</a>
+  <a class="miniprod__more button tiny" href="<?php the_permalink() ?>">Mutassd mindet</a>
 </li>

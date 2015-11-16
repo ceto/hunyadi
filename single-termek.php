@@ -128,7 +128,7 @@
 
 
 
-    <?php get_template_part('templates/section','termeklist'); ?>
+  <?php get_template_part('templates/section','relatedprods'); ?>
 
   </main><!-- /.main -->
 <?php endwhile; ?>

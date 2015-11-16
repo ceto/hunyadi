@@ -130,41 +130,6 @@ function hu_metaboxes() {
     ) );
 
 
-    $cmb_related = new_cmb2_box( array(
-      'id'            => 'related_metabox',
-      'title'         => __( 'Kapcsolódó írások, termékek, referencia', 'cmb2' ),
-      'object_types'  => array( 'page', ), // Post type
-      'context'       => 'normal',
-      'priority'      => 'high',
-      'show_names'    => true, // Show field names on the left
-      // 'cmb_styles' => false, // false to disable the CMB stylesheet
-      // 'closed'     => true, // Keep the metabox closed by default
-    ) );
-
-    $cmb_related->add_field( array(
-      'id' => 'related_posts',
-      'name' => __( 'Kapcsolódó írások', 'cmb2' ),
-      'type'  => 'multicheck_inline',
-      'select_all_button' => false,
-      'options' => hu_optionlist('post')
-    ) );
-
-    $cmb_related->add_field( array(
-      'id' => 'related_references',
-      'name' => __( 'Kapcsolódó referenciák', 'cmb2' ),
-      'type' => 'multicheck_inline',
-      'select_all_button' => false,
-      'options' => hu_optionlist('referencia')
-    ) );
-
-    $cmb_related->add_field( array(
-      'id'          => 'related_products',
-      'name'         => __( 'Kapcsolódó termékek', 'cmb2' ),
-      'type'  => 'multicheck_inline',
-      'select_all_button' => false,
-      'options' => hu_optionlist('termek')
-    ) );
-
 
     /********* Termék oldali mezők ******/
 
@@ -251,6 +216,45 @@ function hu_metaboxes() {
         //   'remove_text' => 'Replacement', // default: "Remove"
         ),
     ) );
+
+
+
+    /******* Related Items ******/
+    $cmb_related = new_cmb2_box( array(
+      'id'            => 'related_metabox',
+      'title'         => __( 'Kapcsolódó írások, termékek, referencia', 'cmb2' ),
+      'object_types'  => array( 'page', 'termek', 'post' ), // Post type
+      'context'       => 'normal',
+      'priority'      => 'high',
+      'show_names'    => true, // Show field names on the left
+      // 'cmb_styles' => false, // false to disable the CMB stylesheet
+      // 'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    $cmb_related->add_field( array(
+      'id' => 'related_posts',
+      'name' => __( 'Kapcsolódó írások', 'cmb2' ),
+      'type'  => 'multicheck_inline',
+      'select_all_button' => false,
+      'options' => hu_optionlist('post')
+    ) );
+
+    $cmb_related->add_field( array(
+      'id' => 'related_references',
+      'name' => __( 'Kapcsolódó referenciák', 'cmb2' ),
+      'type' => 'multicheck_inline',
+      'select_all_button' => false,
+      'options' => hu_optionlist('referencia')
+    ) );
+
+    $cmb_related->add_field( array(
+      'id'          => 'related_products',
+      'name'         => __( 'Kapcsolódó termékek', 'cmb2' ),
+      'type'  => 'multicheck_inline',
+      'select_all_button' => false,
+      'options' => hu_optionlist('termek')
+    ) );
+
 
 }
 

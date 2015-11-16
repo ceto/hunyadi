@@ -17,4 +17,75 @@
    font-size: .875rem;
    font-weight: $font-weight-bold;
   }
+  .banner__text & {
+    display: inline-block;
+    color:$white;
+    font-size: 1.125rem;
+    margin-bottom: .875rem;
+    padding-bottom: .25rem;
+    border-bottom: 1px solid currentColor;
+    text-transform: uppercase;
+  }
+}
+
+
+
+/***** post quare *****/
+
+.postsquare {
+  position: relative;
+  z-index: 1;
+  margin: 2rem auto;
+  max-width: em-calc(480);
+}
+.postsquare__fig {
+  margin:0 0 1rem;
+  padding:0;
+}
+
+.postsquare__updated {
+  font-size: .75rem;
+
+}
+.postsquare__title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  a {
+    color:inherit;
+  }
+}
+.postsquare__summary {
+  p {
+    font-size: .875rem;
+  }
+}
+
+.postsquare__more {
+  margin-top: $paragraph-margin-bottom;
+}
+
+.filterlist {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  text-align: right;
+  line-height: 1;
+  //font-size: 1em;
+  //font-weight: 700;
+  //text-transform: uppercase;
+  li {
+    display: inline-block;
+    > a {
+      display: inline-block;
+      background-color: $primary-color;
+      color:white;
+      padding:.5em .666em;
+      margin:0 .25em .333em 0;
+      &:hover, &.active {
+        //background-color: $anchor-hover-bg;
+      }
+    }
+  }
+
+
 }

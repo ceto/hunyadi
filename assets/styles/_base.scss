@@ -107,27 +107,37 @@ blockquote {
 	Navigation
 -------------------------------- */
 
-.theleftside {
-	background: $gray-extralight;
-	height: 64px;
-	overflow: hidden;
-	width: 100%;
-	z-index: 3;
+.move-right  {
+	> .inner-wrap {
+  	@media #{$large} {
+ 	 		transform: translate3d(0,0,0);
+ 		}
+ 	}
+ 	.exit-off-canvas {
+ 		//box-shadow: -4px 0 4px rgba(0,0,0,.5),4px 0 4px rgba(0,0,0,.5);
+ 		@media #{$large} {
+ 	 		display: none;
+ 		}
 
-	@media only screen and (max-width: $large-screen) {
-		&.on {
-			height: auto;
-		}
-	}
+ 	}
+}
 
+.left-off-canvas-menu {
+	//background-color: $gainsboro;
 	@media #{$large} {
-		width: 21%;
+		width:23%;
+		height:100%;
 		position: fixed;
-		top: 0;
-		left: 0;
-		height: 100%;
-		padding: 5% 4% 0;
-	}
+	  transform: translate3d(0,0,0);
+  }
+}
+.theleftside {
+
+	//overflow: hidden;
+	//width: 100%;
+	//height: 100vh;
+	padding: 15% 20% 0;
+	margin-top: 5vh;
 }
 
 
@@ -138,74 +148,55 @@ blockquote {
 	padding: 0;
 	margin: 0;
 	color: white;
-
-	@media #{$large} {
-			margin-bottom: 3em;
-	}
-
 }
 
 .sitename {
 		display: block;
 		line-height: 1;
-		color: $menu-color;
-		width: 75%;
+		color: $white;
 		padding: .875em 0 .875em 2.5em;
 		font-size: emCalc(22px);
-		font-weight: 700;
+		font-weight: $font-weight-bold;
 		text-transform: uppercase;
 		margin: 0;
+		width: 10rem;
+		padding:4em 0 0;
 		background-image: url('../images/logo.png');
 		background-repeat:no-repeat;
-		background-position: .75em center;
-		background-size: auto 50%;
-		@media #{$large} {
-			width: 10rem;
-			padding:4em 0 0;
-			background-image: url('../images/logo.png');
-			background-repeat:no-repeat;
-			background-position: center top;
-			background-size: 33% auto;
+		background-position: center top;
+		background-size: 33% auto;
+		&:hover, &:focus {
+			color:rgba($white,.5);
 		}
-
-
-	}
-
-.menu-toggle {
-	position: absolute;
-	right: 15px;
-	top: 15px;
-	width: 80px;
-	height: 44px;
-
-  text-align: right;
-  width: 100%;
-  height: 2.05em;
-  display: block;
-  line-height: 1;
-  padding: 0;
-  color: $green;
-
-	span {
-		width: 0;
-		height: 0;
-		font-size: 1.7em;
-		vertical-align: top;
-	}
-
-	@media #{$large} {
-		display: none;
-	}
-
 }
-
-
 
 
 
 /* --------------------------------
 	Layout
 -------------------------------- */
+.container {
+  position: relative;
+}
+.container {
+  > .right-off-canvas-toggle {
+    position: absolute;
+    right:.75em;
+    top:.75em;
+    z-index: 1;
+  }
+
+  > .left-off-canvas-toggle {
+    position: absolute;
+    left:.75em;
+    top:.75em;
+    z-index: 1;
+    @media #{$large} {
+			display: none;
+    }
+  }
+}
+
 
 
 .container {
@@ -215,8 +206,9 @@ blockquote {
 	}
 
 	@media #{$large} {
-		width: 79%;
-		margin-left: 21%;
+		width: 77%;
+		float:right;
+		//margin-left: 21%;
 		overflow-x: visible;
 	}
 
@@ -251,7 +243,7 @@ blockquote {
 		width: 100%;
 		padding-bottom: 52%;
 		max-height: 18rem;
-		background-image: linear-gradient(to top, rgba(black,.75) 0, rgba(black,.25) 66.666% );
+		background-image: linear-gradient(to top, rgba($primary-color,.75) 0, rgba($primary-color,.25) 66.666% );
 	}
 
 	@media only screen and (min-height:56em) {

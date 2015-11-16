@@ -12,11 +12,11 @@
   ?>
 
   <?php if ($the_relrefs->post_count>0) : ?>
-    <section class="pagesection pagesection--refs">
+    <aside class="pagesection pagesection--refs">
       <div class="row">
         <div class="columns medium-10 columns medium-centered">
         <h2>Kapcsolódó munkáink</h2>
-          <ul class="small-block-grid-2 medium-block-grid-3">
+          <ul class="block-grid-1 small-block-grid-2 medium-block-grid-3">
             <?php while ($the_relrefs->have_posts()) : $the_relrefs->the_post(); ?>
             <li><?php get_template_part( 'templates/referencia', 'square' ); ?></li>
             <?php endwhile; ?>
@@ -24,7 +24,7 @@
           <a href="<?= get_permalink(19) ?>" class="button">Teljes referencialista itt</a>
         </div>
       </div>
-    </section>
+    </aside>
     <?php wp_reset_query(); ?>
   <?php endif; ?>
 

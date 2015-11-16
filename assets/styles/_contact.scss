@@ -1,15 +1,7 @@
 select {
   box-sizing:border-box;
 }
-.container {
-  position: relative;
-}
-.container > .right-off-canvas-toggle {
-  position: absolute;
-  right:.75em;
-  top:.75em;
-  z-index: 1;
-}
+
 
 .right-off-canvas-menu {
   @media #{$small} {

@@ -2,8 +2,6 @@
   <?php get_template_part('templates/page', 'header'); ?>
 </section>
 <main class="main" role="main">
-
-
       <?php if (!have_posts()) : ?>
          <section class="pagesection">
           <div class="row">
@@ -22,6 +20,4 @@
       <?php endwhile; ?>
 
       <?php the_posts_navigation(); ?>
-    </div>
-  </div>
 </main><!-- /.main -->

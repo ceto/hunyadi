@@ -17,10 +17,12 @@ use Roots\Sage\Wrapper;
 
     <div class="off-canvas-wrap" data-offcanvas>
       <div class="inner-wrap">
-        <?php do_action('get_header'); get_template_part('templates/header'); ?>
-
+        <aside class="left-off-canvas-menu">
+          <?php do_action('get_header'); get_template_part('templates/header'); ?>
+        </aside>
         <div id="container" class="container" role="document">
-          <a class="right-off-canvas-toggle button" href="#">Ajánlat kérése</a>
+          <a class="right-off-canvas-toggle button tiny" href="#">Ajánlat kérése</a>
+          <a class="left-off-canvas-toggle button tiny" href="#">Menü</a>
 
           <?php include Wrapper\template_path(); ?>
 
@@ -37,8 +39,6 @@ use Roots\Sage\Wrapper;
 
         <!-- Off Canvas Contact Form -->
         <aside class="right-off-canvas-menu">
-
-
           <?php get_template_part('templates/contact','form');  ?>
         </aside>
 

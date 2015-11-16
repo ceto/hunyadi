@@ -115,6 +115,8 @@ $font-weight-bold: 600;
 // $jet         : #222222;
 // $black       : #000000;
 
+$primary-color: #041219;
+$secondary-color: #041219;
 // We use these as default colors throughout
 // $primary-color: #008CBA;
 // $secondary-color: #e7e7e7;
@@ -466,7 +468,7 @@ $include-xl-html-block-grid-classes: true;
 // We use these to control button border styles.
 // $button-border-width: 0;
 // $button-border-style: solid;
-$button-bg-color: $green-light;
+$button-bg-color: $primary-color;
 // $button-bg-hover: $green;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
@@ -858,7 +860,7 @@ $input-box-shadow: inset 0 0 5px rgba(0,0,0,.2);
 
 // Off Canvas Menu Variables
 $off-canvas-width: rem-calc(280);
-$off-canvas-bg: $gray-light;
+$off-canvas-bg: $secondary-color;
 // $off-canvas-bg-hover: scale-color($tabbar-bg, $lightness: -30%);
 // $off-canvas-bg-active: scale-color($tabbar-bg, $lightness: -30%);
 
