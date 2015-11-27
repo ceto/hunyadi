@@ -6,9 +6,9 @@
 
 .nav--side {
   a {
-    color:$white;
+    color:rgba($white,.75);
     &:hover, &:focus {
-      color:rgba($white,.75)
+      color:$white;
     }
   }
 }
@@ -23,12 +23,21 @@
       padding:.666rem 0;
       font-size: .875rem;
       line-height: 1.2;
+      font-weight: $font-weight-bold;
+      color:rgba($white,.75);
     }
 
 
     &.active .sub-menu {
       display: block;
     }
+
+    &.active {
+      > a {
+        color:$secondary-color;
+      }
+    }
+
   }
 
 
@@ -41,9 +50,23 @@
         padding:.333rem 0 .333rem 1rem;
         font-size: .875rem;
         line-height: 1.2;
+        color:$white;
         text-transform: none;
+        &:hover, &:focus {
+          color:rgba($white,.75);
+        }
+      }
+
+
+
+      &.active {
+        > a {
+         color:rgba($white,.75);
+        }
       }
     }
+
+
 
 
 
@@ -60,9 +83,16 @@
     > a {
       display: block;
       padding:.5rem 0;
-      font-size: .875rem;
+      font-size: .75rem;
       line-height: 1.2;
+      text-transform: uppercase;
+       font-weight: $font-weight-bold;
 
+    }
+    &.active {
+      > a {
+       color:rgba($secondary-color,1);
+      }
     }
 
 

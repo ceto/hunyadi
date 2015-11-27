@@ -18,6 +18,9 @@
 
 .miniprod {
   margin-bottom: 1rem;
+  .page-template-template-termekek & {
+    margin-bottom: 0;
+  }
 }
 
 .miniprod__fig {
@@ -38,6 +41,11 @@
 
   a {
     color:inherit;
+  }
+
+  .page-template-template-termekek & {
+    text-transform: none;
+    font-size: 1.25rem;
   }
 }
 
@@ -63,6 +71,10 @@
       color:inherit;
     }
   }
+
+  .page-template-template-termekek &  {
+    display: none;
+  }
 }
 
 
@@ -70,6 +82,9 @@
 
 .miniprod__more {
   margin-top: 1rem;
+  .page-template-template-termekek &{
+    display: none;
+  }
 }
 
 .accordion .accordion-navigation {

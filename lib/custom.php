@@ -25,11 +25,11 @@ add_action( 'init', 'hu_termek_init' );
 function hu_create_field_tax() {
   register_taxonomy(
     'field',
-    array('termek','referencia'),
+    array('termek'),
     array(
-      'label' => 'Szakterület',
+      'label' => 'Terület',
       'show_admin_column' => true,
-      'rewrite' => array( 'slug' => 'szakterulet' ),
+      'rewrite' => array( 'slug' => 'terulet' ),
       'hierarchical' => true,
     )
   );

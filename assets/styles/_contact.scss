@@ -1,6 +1,10 @@
-select {
-  box-sizing:border-box;
+input:not([type]), input[type=number], input[type=search], input[type=text], input[type=password], input[type=date], input[type=datetime], input[type=datetime-local], input[type=month], input[type=week], input[type=email], input[type=tel], input[type=time], input[type=url], input[type=color], textarea {
+  font-weight: $font-weight-bold;
 }
+
+// select {
+//   box-sizing:border-box;
+// }
 
 
 .right-off-canvas-menu {
@@ -30,6 +34,27 @@ select {
 .contactwrap {
   padding-top:1em;
   padding-right: 1em;
+  color:$white;
+
+  h2 {
+    font-size: 3.25rem;
+    color:inherit;
+    text-transform: uppercase;
+    text-align: center;
+    color:$white;
+    line-height: 1;
+    span {
+      display: block;
+      font-size: 66.666%;
+      color:$secondary-color;
+    }
+    margin-bottom: 1rem;
+  }
+  p {
+    text-align: center;
+    font-weight: $font-weight-bold;
+    opacity:.75;
+  }
   .row {
     width:95%;
   }

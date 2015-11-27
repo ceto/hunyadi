@@ -69,8 +69,8 @@
       <div class="contactwrap">
         <div class="row">
           <div class="large-12 columns">
-            <h2><?php _e('Ajánlat kérés','hu'); ?></h2>
-            <p>Hívjon telefonon a <a href="tel:+36 70 770 5653">(+36) 70 770-5653</a> számon, vagy töltse ki az alábbi űrlapot. Munkatársaink rövid időn belül válaszolnak.</p>
+            <h2><?php _e('Várjuk <span>megkeresését</span>','hu'); ?></h2>
+            <p>Hívjon a <a href="tel:+36 70 770 5653">(+36) 70 770-5653</a> számon, vagy töltse ki az űrlapot. Munkatársaink rövid időn belül válaszolnak.</p>
           </div>
         </div>
 
@@ -115,7 +115,7 @@
           <div class="row">
             <div class="large-12 columns">
               <label for="message_text"><?php _e('Üzenet','hu'); ?>*</label>
-              <textarea placeholder="<?php _e('Ha kérdése van itt felteheti ...','hu'); ?>" rows="7" id="message_text" name="message_text"><?php if ($_POST['message_text']!='') {
+              <textarea placeholder="<?php _e('Ha kérdése van itt felteheti ...','hu'); ?>" rows="5" id="message_text" name="message_text"><?php if ($_POST['message_text']!='') {
                   echo $_POST['message_text']; }?></textarea>
             </div>
           </div>
@@ -126,7 +126,7 @@
               <input type="hidden" name="message_page" value="<?php the_title(); ?>">
               <input type="hidden" name="message_human" value="2">
               <input type="hidden" name="submitted" value="1">
-              <button type="submit" class="button expand"><?php _e('Jelentkezem','hu'); ?></button>
+              <button type="submit" class="button small"><?php _e('Mehet','hu'); ?></button>
               <div id="infopan"><?php echo $response; ?></div>
               </div>
             </div>

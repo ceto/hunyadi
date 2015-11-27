@@ -95,28 +95,29 @@ $row-width: rem-calc(1400);
 $font-weight-normal: 300;
 $font-weight-bold: 600;
 
-// $white       : #FFFFFF;
+$white       : #FFFFFF;
 // $ghost       : #FAFAFA;
 // $snow        : #F9F9F9;
 // $vapor       : #F6F6F6;
 // $white-smoke : #F5F5F5;
 // $silver      : #EFEFEF;
-// $smoke       : #EEEEEE;
-// $gainsboro   : #DDDDDD;
+$smoke       : #EEEEEE;
+$gainsboro   : #DDDDDD;
 // $iron        : #CCCCCC;
 // $base        : #AAAAAA;
-// $aluminum    : #999999;
+$aluminum    : #999999;
 // $jumbo       : #888888;
 // $monsoon     : #777777;
-// $steel       : #666666;
+$steel       : #666666;
 // $charcoal    : #555555;
 // $tuatara     : #444444;
 // $oil         : #333333;
 // $jet         : #222222;
 // $black       : #000000;
 
-$primary-color: #041219;
-$secondary-color: #041219;
+$primary-color: #041219; //dark-blue
+//$secondary-color: #336600; //green
+$secondary-color:#448800; //light-green
 // We use these as default colors throughout
 // $primary-color: #008CBA;
 // $secondary-color: #e7e7e7;
@@ -142,7 +143,7 @@ $secondary-color: #041219;
 // $last-child-float: $opposite-direction;
 
 // We use these to make sure border radius matches unless we want it different.
-// $global-radius: 3px;
+$global-radius: 3px;
 // $global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
@@ -274,7 +275,7 @@ $h4-font-size: rem-calc(16);
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-// $anchor-font-color: $primary-color;
+$anchor-font-color: $secondary-color;
 // $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 
 // We use these to style the <hr> element
@@ -468,7 +469,7 @@ $include-xl-html-block-grid-classes: true;
 // We use these to control button border styles.
 // $button-border-width: 0;
 // $button-border-style: solid;
-$button-bg-color: $primary-color;
+$button-bg-color: $secondary-color;
 // $button-bg-hover: $green;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
@@ -639,7 +640,7 @@ $button-bg-color: $primary-color;
 // $include-html-form-classes: $include-html-classes;
 
 // We use this to set the base for lots of form spacing and positioning styles
-$form-spacing: rem-calc(18);
+$form-spacing: rem-calc(20);
 
 // We use these to style the labels in different ways
 // $form-label-pointer: pointer;
@@ -650,15 +651,15 @@ $form-spacing: rem-calc(18);
 // $form-label-small-transform: capitalize;
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
-$input-font-color: rgba(0,0,0,0.875);
-// $input-font-size: rem-calc(14);
-// $input-bg-color: $white;
-// $input-focus-bg-color: scale-color($white, $lightness: -2%);
-$input-border-color: $gray;
-$input-focus-border-color: $green-light;
+$input-font-color: rgba($white,0.75);
+$input-font-size: rem-calc(14);
+$input-bg-color: rgba($white,.125);
+$input-focus-bg-color: rgba($white,.175);
+$input-border-color: rgba($white,.125);
+$input-focus-border-color: rgba($secondary-color,.5);
 // $input-border-style: solid;
-// $input-border-width: 1px;
-// $input-border-radius: $global-radius;
+$input-border-width: 0;
+$input-border-radius: 3px;
 // $input-disabled-bg: $gainsboro;
 // $input-disabled-cursor: $cursor-default-value;
 $input-box-shadow: inset 0 0 5px rgba(0,0,0,.2);
@@ -860,7 +861,7 @@ $input-box-shadow: inset 0 0 5px rgba(0,0,0,.2);
 
 // Off Canvas Menu Variables
 $off-canvas-width: rem-calc(280);
-$off-canvas-bg: $secondary-color;
+$off-canvas-bg: $primary-color;
 // $off-canvas-bg-hover: scale-color($tabbar-bg, $lightness: -30%);
 // $off-canvas-bg-active: scale-color($tabbar-bg, $lightness: -30%);
 

@@ -17,48 +17,17 @@
     ));
     //print_r($szakteruletek);
 
-   $szakteruletek = get_terms( 'field' );
+   //$szakteruletek = get_terms( 'field' );
    if ( ! empty( $szakteruletek ) && ! is_wp_error( $szakteruletek ) ) : ?>
-
-    <nav class="pagesection pagesection--darken">
-      <div class="row">
-        <div class="columns medium-10 medium-centered">
-          <div class="row">
-            <div class="columns medium-4">
-              <h2>Termékkategóriák</h2>
-            </div>
-            <div class="columns medium-8">
-              <ul class="filterlist">
-                <?php foreach ( $szakteruletek as $field ) :?>
-                  <li>
-                  <a href="#termekblokk--<?= sanitize_title( $field->name ); ?>">
-                    <?= $field->name ?>
-                  </a>
-                  </li>
-                <?php endforeach; ?>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-
-
-
-
-
-    <?php reset($szakteruletek); ?>
 
     <?php foreach ( $szakteruletek as $field ) :?>
       <section id="termekblokk--<?= sanitize_title( $field->name ); ?>" class="pagesection pagesection--termekblokk">
         <div class="row">
-          <div class="columns medium-10 medium-centered">
+          <div class="columns medium-8 medium-centered">
             <div class="row">
               <div class="columns">
                 <h2 class="termekblokk__title"><?= $field->name; ?></h2>
                 <p><?= term_description( $field->term_id,'field') ?></p>
-
                 <?php
                   $the_prods = new WP_Query ( array (
                     'post_type' => 'termek',
@@ -74,12 +43,15 @@
                   ));
                 ?>
                 <?php if ($the_prods->post_count>0) : ?>
-                  <ul class="block-grid-1 small-block-grid-2 xxlarge-block-grid-3 miniprodblock">
+                  <hr>
+                  <ul class="block-grid-1 medium-block-grid-2 miniprodblock">
                     <?php while ($the_prods->have_posts()) : $the_prods->the_post(); ?>
                       <?php get_template_part('templates/mini', 'prod' ); ?>
                     <?php endwhile; ?>
                   </ul>
                 <?php endif; ?>
+                <br>
+                <a href="<?= get_term_link($field); ?>" class="button small">Mutasd a részleteket: <?= $field->name; ?></a>
 
               </div>
             </div>
