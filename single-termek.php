@@ -1,7 +1,7 @@
 <?php while (have_posts()) : the_post(); ?>
-  <section class="banner" role="banner" id="banner">
+  <header class="banner" role="banner" id="banner">
     <?php get_template_part('templates/page', 'header'); ?>
-  </section>
+  </header>
   <main class="main" role="main">
 
     <section class="pagesection pagesection--intro">
@@ -74,7 +74,7 @@
                         <div id="dlfilespanel-<?= $key ?>" class="content prodvariant__dlfiles">
                           <?php foreach ( $entry['dlfiles'] as $csat_id => $csat_url ) : ?>
                             <?php $csat=get_post( $csat_id ) ?>
-                            <a class="dlfile" href="<?= $csat_url; ?>"><?= $csat->post_title; ?></a>
+                            <a class="dlfile" href="<?= $csat_url; ?>"><?= $csat->post_title; ?> <i class="ion ion-ios-download-outline"></i></a>
                           <?php endforeach; ?>
                         </div>
                       </li>

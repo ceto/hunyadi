@@ -21,9 +21,7 @@ use Roots\Sage\Wrapper;
           <?php do_action('get_header'); get_template_part('templates/header'); ?>
         </aside>
         <div id="container" class="container" role="document">
-          <a class="right-off-canvas-toggle button tiny" href="#">Ajánlat kérése</a>
-          <a class="left-off-canvas-toggle button tiny" href="#">Menü</a>
-
+          <?php  get_template_part('templates/header','mobile')?>
           <?php include Wrapper\template_path(); ?>
 
           <?php /*if (Config\display_sidebar()) : ?>

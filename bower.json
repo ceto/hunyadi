@@ -9,7 +9,7 @@
   "dependencies": {
     "modernizr": "2.8.3",
     "foundation": "~5.5.2",
-    "Ionicons": "https://github.com/driftyco/ionicons.git#~2.0.1"
+    "Ionicons": "ionicons#~2.0.1"
   },
   "overrides": {
     "modernizr": {
@@ -20,6 +20,11 @@
         "./scss/normalize.scss",
         "./scss/foundation.scss",
         "./js/foundation.js"
+      ]
+    },
+    "Ionicons": {
+      "main": [
+        "scss/ionicons.scss"
       ]
     }
   }

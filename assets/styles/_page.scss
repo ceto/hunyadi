@@ -79,22 +79,24 @@ b, strong {
 .hometile {
   position: relative;
   margin:0;
-  background-color: rgba(darken($primary-color,10),.5);
+  background-color: rgba(scale-color($primary-color,$lightness:-10%),.5);
   height:12em;
   padding:1em;
-  color:white;
+  color:rgba($white,.85);
+  transition: all .4s linear;
   &.light {
-    background-color: rgba(darken($primary-color,10),.875);
+    background-color: rgba(scale-color($primary-color,$lightness:-10%),.875);
   }
   &.light2 {
-    background-color: rgba(darken($primary-color,10),.66);
+    background-color: rgba(scale-color($primary-color,$lightness:-10%),.66);
   }
   &.light3 {
-    background-color: rgba(darken($primary-color,10),.666);
+    background-color: rgba(scale-color($primary-color,$lightness:-10%),.666);
   }
 
   &:hover {
-    background-color: rgba(lighten($primary-color,25),.75);
+    background-color: rgba( scale-color($secondary-color,$lightness:0),.875);
+    //color:rgba(scale-color($secondary-color, $lightness:85%),1);
     //color:$primary-color;
   }
 

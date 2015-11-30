@@ -2,7 +2,14 @@
   margin:0 0 1rem;
   padding:0;
 }
-
+.post__title {
+  a {
+    color:inherit;
+     &:hover, &:focus {
+      color:$secondary-color;
+    }
+  }
+}
 .post__summary {
   p:last-of-type {
     margin-bottom: 0;
@@ -30,7 +37,7 @@
 
 
 
-/***** post quare *****/
+/***** post square *****/
 
 .postsquare {
   position: relative;
