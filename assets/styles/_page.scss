@@ -67,7 +67,7 @@ b, strong {
 
 .homebanner {
   padding:0;
-  background-color: $menu-color;
+  background-color: $black;
   background-image: url('../images/boys.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -127,34 +127,34 @@ b, strong {
   position: relative;
   padding-top:4em;
   padding-bottom: 4em;
-  border-bottom: 1px solid $gray-extralight;
+  border-bottom: 1px solid $silver;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  &:nth-of-type(2n+1) {
-    background-color: white;
+  &:nth-of-type(2n) {
+    background-color: $ghost;
   }
 
 }
 .pagesection--darken {
-  background-color: $gray-light;
-  &:nth-of-type(2n+1) {
-    background-color: inherit;
+  background-color: $ghost;
+  &:nth-of-type(2n) {
+   background-color: $ghost;
   }
 }
 
 .pagesection--lighten {
-  background-color: white;
-  &:nth-of-type(2n+1) {
-    background-color: inherit;
+  background-color: $white;
+  &:nth-of-type(2n) {
+    background-color: $white;
   }
 }
 
 .pagesection--inverse {
-  background-color: rgba($green,.25);
+  background-color: rgba($primary-color,.98);
   background-image: url('../images/nature.jpg');
   background-position: center bottom;
-  color:$gray-extralight;
+  color:$snow;
   h2 {
     color:inherit;
   }
@@ -164,8 +164,8 @@ b, strong {
       color:$white;
     }
   }
-  &:nth-of-type(2n+1) {
-    background-color: inherit;
+  &:nth-of-type(2n) {
+     background-color: rgba($primary-color,.98);
   }
 }
 
@@ -207,7 +207,7 @@ b, strong {
 }
 .refsquare {
   background-color: white;
-  border:1px solid $gray-extralight;
+  border:1px solid $gainsboro;
   padding:1rem;
   width:100%;
 }
@@ -253,8 +253,8 @@ b, strong {
     width:100%;
     top:2px;
     height:100%;
-    border-bottom: 2px solid $green-light;
-    border-right: 2px solid $green-light;
+    border-bottom: 2px solid $secondary-color;
+    border-right: 2px solid $secondary-color;
   }
 }
 

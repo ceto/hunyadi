@@ -20,7 +20,7 @@
     <div class="row">
       <div class="columns medium-10 columns medium-centered">
         <h2 class="termekblokk__title"><a href="<?= get_permalink(18) ?>">Kapcsolódó műszerek, berendezések</a></h2>
-        <ul class="block-grid-1 small-block-grid-2 medium-block-grid-3 miniprodblock">
+        <ul class="block-grid-1 small-block-grid-2 medium-block-grid-3 xlarge-block-grid-3 miniprodblock">
           <?php while ($the_relprods->have_posts()) : $the_relprods->the_post(); ?>
             <?php get_template_part('templates/mini', 'prod' ); ?>
           <?php endwhile; ?>

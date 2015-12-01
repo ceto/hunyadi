@@ -23,11 +23,11 @@
     <?php foreach ( $szakteruletek as $field ) :?>
       <section id="termekblokk--<?= sanitize_title( $field->name ); ?>" class="pagesection pagesection--termekblokk">
         <div class="row">
-          <div class="columns medium-8 medium-centered">
+          <div class="columns medium-10 medium-centered">
             <div class="row">
               <div class="columns">
                 <h2 class="termekblokk__title"><?= $field->name; ?></h2>
-                <p><?= term_description( $field->term_id,'field') ?></p>
+                <p class="lead"><?= term_description( $field->term_id,'field') ?></p>
                 <?php
                   $the_prods = new WP_Query ( array (
                     'post_type' => 'termek',

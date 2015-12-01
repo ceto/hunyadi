@@ -26,12 +26,14 @@
     }
   }
 }
-
+.miniprodblock {
+  //margin-top: 2rem;
+}
 .miniprod {
-  margin-bottom: 1rem;
-  .page-template-template-termekek & {
-    margin-bottom: 0;
-  }
+    //margin-top: 0;
+  // .page-template-template-termekek & {
+  //   margin-bottom: 0;
+  // }
 }
 
 .miniprod__fig {
@@ -43,12 +45,14 @@
 }
 
 .miniprod__title {
-  font-size: 1.333rem;
+  // font-size: 1.333rem;
   //text-transform: uppercase;
+  margin-top: 0;
   color:inherit;
-  .pagesection--relatedprods & {
-    font-size: 1.125rem;
-  }
+
+  // .pagesection--relatedprods & {
+  //   font-size: 1.125rem;
+  // }
 
   a {
     color:inherit;
@@ -80,8 +84,13 @@
     margin:0;
     display: inline;
     &:not(:first-child):before {
-      content: ' | ';
-      font-weight: $font-weight-bold;
+      content:'';
+      display: inline-block;
+      width:.333em;
+      background-color: $secondary-color;
+      height:.333em;
+      margin:0 .25rem;
+      transform:translateY(-.125rem);
     }
 
     a {
@@ -123,8 +132,12 @@
     padding-right:0;
     &:after {
       position: absolute;
-      content:'+';
-      right: 0;
+      content: "\f218";
+      right: .5rem;
+      top:1rem;
+
+      display: inline-block; font-family: "Ionicons"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; text-rendering: auto; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+
     }
     &:hover {
       //color:$secondary-color;

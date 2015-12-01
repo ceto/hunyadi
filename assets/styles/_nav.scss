@@ -16,7 +16,7 @@
 .menu--pri {
   margin:15% 0;
   > li {
-    //margin-bottom: .5rem;
+    margin-bottom: 0;
     > a {
       display: block;
       text-transform: uppercase;
@@ -45,6 +45,7 @@
     margin:0 0 .5rem 0;
     display:none;
     > li {
+      margin-bottom: 0;
       > a {
         display: block;
         padding:.333rem 0 .333rem 1rem;
@@ -80,6 +81,7 @@
   margin:15% 0 0;
   padding:15% 0 0;
   > li {
+    margin-bottom: 0;
     > a {
       display: block;
       padding:.5rem 0;

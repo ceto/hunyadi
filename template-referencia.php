@@ -10,17 +10,6 @@
   </section>
   <main class="main" role="main">
     <section class="pagesection pagesection--darken">
-      <div class="row">
-        <div class="medium-8 medium-centered columns">
-          <ul class="filterlist">
-            <li><a href="#" class="active">Mutasd mindet</a></li>
-            <li><a href="#">Fázisjavítás</a></li>
-            <li><a href="#">Energetika</a></li>
-            <li><a href="#">Kivitelezés</a></li>
-          </ul>
-        </div>
-      </div>
-
       <?php
         $args = array(
           'post_type' => array('referencia'),
@@ -38,6 +27,13 @@
               <li><?php get_template_part( 'templates/referencia', 'square' ); ?></li>
             <?php endwhile ?>
           </ul>
+        </div>
+      </div>
+    </section>
+    <section class="pagesection pagesection--lighten">
+      <div class="row">
+        <div class="columns medium-8 medium-centered">
+          <?php the_content(); ?>
         </div>
       </div>
     </section>

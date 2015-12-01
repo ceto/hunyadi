@@ -43,7 +43,7 @@ Stylesheet: Mixins
 		@media (max-width: $small-screen - 1)  { @content; }
 	}
 	@else if $point{
-		@media  (min-width: $point)  { @content; }
+		@media  (min-width: 30em)  { @content; }
 	}
 }
 
