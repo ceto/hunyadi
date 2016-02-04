@@ -9,7 +9,9 @@
   "dependencies": {
     "modernizr": "2.8.3",
     "foundation": "~5.5.2",
-    "Ionicons": "ionicons#~2.0.1"
+    "Ionicons": "ionicons#~2.0.1",
+    "jquery.fitvids": "fitvids#^1.1.0",
+    "magnific-popup": "^1.0.1"
   },
   "overrides": {
     "modernizr": {

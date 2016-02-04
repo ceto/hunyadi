@@ -6,7 +6,7 @@
       'post__in' => get_post_meta( get_the_ID(), 'related_products', true ),
       'order' => 'ASC',
       'orderby' => 'date',
-      'nopaging' => 'false',
+      'nopaging' => FALSE,
       'posts_per_page'  => 4
     );
     $the_relprods = new WP_Query( $prodargs );

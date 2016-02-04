@@ -114,20 +114,23 @@
   }
 }
 
-.right-off-canvas-toggle {
+.roctl {
   position: absolute;
-  right:.75rem;
+  right:3.75rem;
   top:.666rem;
   z-index: 1;
   padding:.5rem .5rem !important;
   margin:0;
+  //background-color: $secondary-color;
   @media #{$medium} {
-    right:1rem;
+    //right:1rem;
     top:.333rem;
     //padding:1rem .875rem !important;
+
   }
   @media #{$large} {
     //right:-9%;
+    display: none;
     top:.75rem;
     padding:.875rem 1rem !important;
     font-size: .875rem !important;
@@ -139,7 +142,7 @@
   position: absolute;
   display: inline-block;
   color:$white;
-  right:7rem;
+  right:1.25rem;
   top:.666rem;
   padding:.125rem .5rem 0 .5rem;
   color:$secondary-color;

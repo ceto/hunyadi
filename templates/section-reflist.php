@@ -6,6 +6,7 @@
       'post__in' => get_post_meta( get_the_ID(), 'related_references', true ),
       'order' => 'DESC',
       'orderby' => 'date',
+      'nopaging' => FALSE,
       'posts_per_page'  => 3
     );
     $the_relrefs = new WP_Query( $relargs );

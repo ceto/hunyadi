@@ -6,6 +6,7 @@
       'post__in' => get_post_meta( get_the_ID(), 'related_posts', true ),
       'order' => 'DESC',
       'orderby' => 'date',
+      'nopaging' => FALSE,
       'posts_per_page'  => 3,
     );
     $the_relposts = new WP_Query( $postargs );

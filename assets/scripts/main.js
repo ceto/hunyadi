@@ -178,3 +178,28 @@ jQuery(document).foundation();
 jQuery('[data-menu-toggle]').click(function(e) {
   jQuery('#main-nav').toggleClass('on');
 });
+
+
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    $('.entry-content-asset').fitVids();
+
+    $('.gallery').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      tLoading: 'Loading image #%curr%...',
+      mainClass: 'mfp-img-mobile',
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      },
+      image: {
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        titleSrc: function(item) {
+          return item.el.children('img').attr('alt') + '<small>hunyadi.hu</small>';
+        }
+      }
+    });
+
+  });

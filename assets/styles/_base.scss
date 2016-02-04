@@ -184,3 +184,12 @@ blockquote {
 		color: $primary-color;
 	}
 }
+figure {
+	margin-left:0;
+	margin-right: 0;
+}
+figcaption {
+	font-size: .875rem;
+	margin-top: .5em;
+	font-style: italic;
+}

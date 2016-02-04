@@ -25,7 +25,7 @@
     content: '';
     display: block;
     width: 100%;
-    padding-bottom: 52%;
+    padding-bottom: 33%;
     max-height: 18rem;
     background-image: linear-gradient(to top, rgba($primary-color,.875) 0, rgba($primary-color,.5) 66.666% );
   }
@@ -41,7 +41,7 @@
 
 .banner__text {
     position: absolute;
-    bottom:15%;
+    bottom:20%;
     left:0;
     width:100%;
     .banner__title {
@@ -63,18 +63,28 @@
     }
 
     .banner__updated, .banner__parentlink {
-      //text-transform: uppercase;
+      position: relative;
+      text-transform: uppercase;
       color:$snow;
-      font-weight: 300;
-      font-size: 1.333em;
+      font-weight: $font-weight-bold;
+      font-size: 1.25rem;
       line-height: 1;
-      display: inline-block;
+      display: block;
       margin-bottom: .75em;
       padding-bottom: .25em;
-      border-bottom: 1px solid currentColor;
+      //border-bottom: 1px solid currentColor;
 
       &:hover {
         color:white;
+      }
+      &:after {
+        position: absolute;
+        bottom:-.125rem;
+        content:'';
+        display: block;
+        background-color: currentColor;
+        width:2rem;
+        height: 2px;
       }
     }
 

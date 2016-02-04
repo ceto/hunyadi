@@ -1,8 +1,11 @@
+
 <section class="pagesection pagesection--intro">
   <div class="row">
     <div class="columns medium-8 columns medium-centered">
       <?php the_content(); ?>
-      <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
+      <br>
+      <a class="right-off-canvas-toggle button small" href="#">Ajánlat kérése</a>
+
     </div>
   </div>
 </section>
