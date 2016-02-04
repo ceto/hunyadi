@@ -70,6 +70,55 @@ function hu_metaboxes() {
     /**
      * Initiate the metabox
      */
+
+
+
+    // Home page tiles
+    $cmb_homepage = new_cmb2_box( array(
+      'id'            => 'homecontent_metabox',
+      'title'         => __( 'Nyitóldali elemek', 'cmb2' ),
+      'object_types'  => array( 'page'), // Post type
+      'show_on'      => array( 'key' => 'page-template', 'value' => 'template-home.php' ),
+      'context'       => 'normal',
+      'priority'      => 'high',
+      'show_names'    => true, // Show field names on the left
+      // 'cmb_styles' => false, // false to disable the CMB stylesheet
+      'closed'     => false, // Keep the metabox closed by default
+    ) );
+
+
+    $homegroup_field_id = $cmb_homepage->add_field( array(
+      'id'          => 'homepage_repeat_group',
+      'type'        => 'group',
+      'description' => __( 'Csempék', 'cmb2' ),
+      'options'     => array(
+          'group_title'   => __( 'Csempe {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
+          'add_button'    => __( 'Új csempe hozzáadása', 'cmb2' ),
+          'remove_button' => __( 'Csempe törlése', 'cmb2' ),
+          'sortable'      => true, // beta
+      ),
+    ) );
+
+    $cmb_homepage->add_group_field( $homegroup_field_id, array(
+      'id' => 'ht_title',
+      'name' => 'Csempe címe',
+      'type' => 'text_medium',
+    ) );
+    $cmb_homepage->add_group_field( $homegroup_field_id, array(
+      'id' => 'ht_text',
+      'name' => 'Csempe szövege',
+      'type' => 'textarea_small',
+    ) );
+    $cmb_homepage->add_group_field( $homegroup_field_id, array(
+      'id' => 'ht_url',
+      'name' => 'Csempe linkje',
+      'type' => 'text_url',
+    ) );
+
+
+
+    // Vertical content blocks on pages
+
     $cmb_page = new_cmb2_box( array(
       'id'            => 'content_metabox',
       'title'         => __( 'Függőleges tartalmi sávok', 'cmb2' ),
@@ -80,7 +129,6 @@ function hu_metaboxes() {
       // 'cmb_styles' => false, // false to disable the CMB stylesheet
       'closed'     => true, // Keep the metabox closed by default
     ) );
-
 
     $group_field_id = $cmb_page->add_field( array(
       'id'          => 'page_repeat_group',
@@ -133,6 +181,28 @@ function hu_metaboxes() {
 
     /********* Termék oldali mezők ******/
 
+    $cmb_product_side = new_cmb2_box( array(
+      'id'            => 'product_sidemetabox',
+      'title'         => __( 'Univerzális', 'cmb2' ),
+      'object_types'  => array( 'termek' ), // Post type
+      'context'       => 'side',
+      'priority'      => 'high',
+      'show_names'    => true, // Show field names on the left
+      // 'cmb_styles' => false, // false to disable the CMB stylesheet
+      // 'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    $cmb_product_side->add_field( array(
+      'name' => 'Thumbnail',
+      'desc' => 'Kis négyzetes termék fotó fehér kifutóval (min.: 640x640)',
+      'id' => 'prodthumb',
+      'type'    => 'file',
+      'options' => array(
+          'url' => false, // Hide the text input for the url
+          'add_upload_file_text' => 'Add File' // Change upload button text. Default: "Add or Upload File"
+      ),
+    ) );
+
     $cmb_product = new_cmb2_box( array(
       'id'            => 'product_metabox',
       'title'         => __( 'Termékvariánsok', 'cmb2' ),
@@ -143,6 +213,9 @@ function hu_metaboxes() {
       // 'cmb_styles' => false, // false to disable the CMB stylesheet
       // 'closed'     => true, // Keep the metabox closed by default
     ) );
+
+
+
 
     $product_group_field_id = $cmb_product->add_field( array(
       'id'          => 'product_repeat_group',

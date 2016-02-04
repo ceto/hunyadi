@@ -11,7 +11,7 @@
 <aside class="pagesection pagesection--termekek">
   <div class="row">
     <div class="columns medium-10 columns medium-centered">
-    <h2>Kapcsolódó termékek</h2>
+    <h2 class="pagesection__title">Kapcsolódó termékek</h2>
       <ul class="block-grid-1 small-block-grid-2 medium-block-grid-3">
         <?php while ($the_relprods->have_posts()) : $the_relprods->the_post(); ?>
           <li><?php get_template_part( 'templates/termek', 'square' ); ?></li>

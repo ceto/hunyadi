@@ -6,8 +6,8 @@
       'post__in' => get_post_meta( get_the_ID(), 'related_products', true ),
       'order' => 'ASC',
       'orderby' => 'date',
-      'nopaging' => 'true',
-      'posts_per_page'  => -1
+      'nopaging' => 'false',
+      'posts_per_page'  => 4
     );
     $the_relprods = new WP_Query( $prodargs );
   ?>
@@ -19,13 +19,13 @@
   <section class="pagesection pagesection--relatedprods">
     <div class="row">
       <div class="columns medium-10 columns medium-centered">
-        <h2 class="termekblokk__title"><a href="<?= get_permalink(18) ?>">Kapcsolódó műszerek, berendezések</a></h2>
-        <ul class="block-grid-1 small-block-grid-2 medium-block-grid-3 xlarge-block-grid-3 miniprodblock">
+        <h2 class="pagesection__title termekblokk__title"><a href="<?= get_permalink(18) ?>">Kapcsolódó műszerek, berendezések</a></h2>
+        <ul class="block-grid-1 small-block-grid-2 medium-block-grid-2 xlarge-block-grid-3 miniprodblock">
           <?php while ($the_relprods->have_posts()) : $the_relprods->the_post(); ?>
             <?php get_template_part('templates/mini', 'prod' ); ?>
           <?php endwhile; ?>
         </ul>
-        <a href="<?= get_permalink(18) ?>">Teljes termékkatalógus itt</a>
+        <a class="pagesection__readmore" href="<?= get_permalink(18) ?>">Teljes termékkatalógus itt</a>
       </div>
     </div>
   </section>

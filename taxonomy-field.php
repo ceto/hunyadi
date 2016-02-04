@@ -16,7 +16,7 @@
   <section class="pagesection pagesection--termekblokk">
     <div class="row">
       <div class="columns medium-10 medium-centered">
-        <ul class="block-grid-1 small-block-grid-2 xxlarge-block-grid-3 miniprodblock">
+        <ul class="block-grid-1 small-block-grid-2 large-block-grid-3 miniprodblock">
           <?php while (have_posts()) : the_post(); ?>
             <?php get_template_part('templates/mini', 'prod' ); ?>
           <?php endwhile; ?>

@@ -65,63 +65,7 @@ b, strong {
   font-weight: 600;
 }
 
-.homebanner {
-  padding:0;
-  background-color: $black;
-  background-image: url('../images/boys.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  .row {
-    max-width: none;
 
-  }
-}
-.hometile {
-  position: relative;
-  margin:0;
-  background-color: rgba(scale-color($primary-color,$lightness:-10%),.5);
-  height:12em;
-  padding:1em;
-  color:rgba($white,.85);
-  transition: all .4s linear;
-  &.light {
-    background-color: rgba(scale-color($primary-color,$lightness:-10%),.875);
-  }
-  &.light2 {
-    background-color: rgba(scale-color($primary-color,$lightness:-10%),.66);
-  }
-  &.light3 {
-    background-color: rgba(scale-color($primary-color,$lightness:-10%),.666);
-  }
-
-  &:hover {
-    background-color: rgba( scale-color($secondary-color,$lightness:0),.875);
-    //color:rgba(scale-color($secondary-color, $lightness:85%),1);
-    //color:$primary-color;
-  }
-
-  h2 {
-    color:inherit;
-    margin-bottom: 0;
-    text-transform: uppercase;
-    @media #{$medium} {
-      font-size:4vh;
-      max-width: 9em;
-    }
-    a {
-      color:inherit;
-    }
-  }
-  p {
-    margin-top: 0;
-  }
-  @media #{$medium} {
-   height:33.333vh;
-  }
-  @media #{$large} {
-    height:33.333vh;
-  }
-}
 .pagesection {
   //@include clearfix();
   position: relative;
@@ -152,7 +96,7 @@ b, strong {
 
 .pagesection--inverse {
   background-color: rgba($primary-color,.98);
-  background-image: url('../images/nature.jpg');
+  //background-image: url('../images/nature.jpg');
   background-position: center bottom;
   color:$snow;
   h2 {
@@ -169,6 +113,12 @@ b, strong {
   }
 }
 
+.pagesection__title {
+  text-transform: uppercase;
+}
+.pagesection__readmore {
+  font-style: italic;
+}
 .pagesection--intro {
   p {
     font-size: 1.125rem;
@@ -181,9 +131,9 @@ b, strong {
 }
 
 .pagesection--refs {
-  background-image: url('../images/aramtorony.jpg');
+  //background-image: url('../images/aramtorony.jpg');
   h2 {
-    color:white;
+    //color:white;
 
   }
 }
@@ -193,11 +143,31 @@ b, strong {
   margin-top: 2em;
 }
 .subpageslist {
+  list-style-type: none;
+  margin:1rem 0 0;
+  li {
+    &:not(:last-child) {
+      border-bottom: 1px solid $aluminum;
+    }
+  }
   li > a {
+    position: relative;
+    display: block;
+    padding:.5rem 0 .875rem;
     font-size: 1.25em;
-    //color:$green-light;
+    //color:$secondary-color;
     font-weight: 600;
     line-height: 1.125;
+    &:after {
+      display: block;
+      position: absolute;
+      right:0;
+      top:.5rem;
+      content:'-->';
+    }
+    &:hover, &:focus {
+      color:$secondary-color;
+    }
   }
 }
 
@@ -301,5 +271,11 @@ b, strong {
   //display: none;
 }
 
-
+.pagesection--relatedprods {
+  @media #{$xlarge} {
+    .miniprod:nth-of-type(4n) {
+      display: none;
+    }
+  }
+}
 

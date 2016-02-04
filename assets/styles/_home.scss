@@ -1,0 +1,90 @@
+.homebanner {
+  padding:0;
+  background-color: $primary-color;
+  background-image: url('../images/nature.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  .row {
+    max-width: none;
+
+  }
+}
+.hometile {
+  position: relative;
+  overflow: hidden;
+  margin:0;
+  background-color: rgba(scale-color($primary-color,$lightness:-10%),.5);
+  min-height:14em;
+  width:50%;
+  float:left;
+  padding:1rem;
+  color:rgba($white,.85);
+  transition: all .4s linear;
+  &:hover {
+    background-color: rgba( scale-color($secondary-color,$lightness:0),.75);
+  }
+
+  @media #{$medium} {
+   height:33.333vh;
+   width:33.333%;
+   float:left;
+  }
+  @media #{$large} {
+   padding:1.5rem;
+  }
+  @media #{$xlarge} {
+    padding:2vw;
+  }
+
+  h2 {
+    color:inherit;
+    margin: 0 0 .125em;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    @media #{$medium} {
+      font-size:3vw;
+    }
+    @media #{$large} {
+      font-size:2vw;
+    }
+    @media #{$xlarge} {
+      font-size:2.5vw;
+    }
+    a {
+      color:inherit;
+    }
+  }
+  p {
+    margin: 0;
+    font-size: .875rem;
+    line-height: 1.125rem;
+    @media #{$medium} {
+      font-size:1rem;
+    }
+  }
+}
+
+/*** meret kivételek ****/
+.hometile--1, .hometile--4 {
+  @media #{$medium} {
+    width:66.666%;
+    h2, p {
+      max-width: 50%;
+    }
+  }
+}
+
+/**** szín változatok ***/
+
+
+.hometile--2, .hometile--5, .hometile--7 {
+  background-color: rgba(scale-color($primary-color,$lightness:-10%),.75);
+}
+.hometile--3, .hometile--6 {
+  background-color: rgba(scale-color($primary-color,$lightness:-10%),.666);
+}
+
+.hometile--4 {
+  background-color: rgba(scale-color($primary-color,$lightness:-10%),.875);
+}

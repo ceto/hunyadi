@@ -1,9 +1,17 @@
 <li class="miniprod">
-<!--   <figure class="miniprod__fig">
+  <figure class="miniprod__fig">
     <a href="<?php the_permalink() ?>">
-      <?php the_post_thumbnail('thumbnail'); ?>
+      <?php if (get_post_meta( get_the_ID(), 'prodthumb_id', true )) :?>
+        <?php
+          $imci_s = wp_get_attachment_image_src( get_post_meta( get_the_ID(), 'prodthumb_id', true ), 'medium11');
+        ?>
+        <img src="<?= $imci_s['0']; ?>" alt="<?php the_title(); ?>">
+      <?php else: ?>
+        <img src="http://placehold.it/640x640" alt="<?php the_title(); ?>">
+      <?php endif; ?>
     </a>
-  </figure> -->
+  </figure>
+
   <h3 class="miniprod__title">
     <a href="<?php the_permalink() ?>">
       <?php the_title(); ?>
@@ -21,5 +29,5 @@
         <?php endforeach; ?>
     </ul>
   <?php endif ?>
-  <a class="miniprod__more button tiny" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+  <a class="miniprod__more" href="<?php the_permalink() ?>"><?php _e('Részletek','hu') ?></a>
 </li>

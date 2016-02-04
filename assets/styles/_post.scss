@@ -16,9 +16,7 @@
     margin-bottom: 0;
   }
 }
-.postsquare__more {
-  margin-bottom: 0;
-}
+
 
 .postfooter__updated {
   .post & {
@@ -66,12 +64,20 @@
 .postsquare__summary {
   p {
     font-size: .875rem;
+    &::last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
+
 .postsquare__more {
-  margin-top: $paragraph-margin-bottom;
+  margin-top: 1rem;
+  display: block;
+  font-style: italic;
+  font-size: .875rem;
 }
+
 
 .filterlist {
   list-style-type: none;

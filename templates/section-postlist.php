@@ -23,7 +23,7 @@
           </ul>
 
           <div class="row">
-            <div class="columns"><a href="<?= get_permalink(39) ?>">További írások a tudástárban</a></div>
+            <div class="columns"><a class="pagesection__readmore" href="<?= get_permalink(39) ?>">További írások a tudástárban</a></div>
           </div>
 
         </div>

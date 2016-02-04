@@ -5,10 +5,20 @@
 ?>
 
 <?php while (have_posts()) : the_post(); ?>
+
   <section class="banner" role="banner" id="banner">
     <?php get_template_part('templates/listpage', 'header'); ?>
   </section>
   <main class="main" role="main">
+
+    <section class="pagesection pagesection--intro">
+      <div class="row">
+        <div class="columns medium-8 columns medium-centered">
+          <?php the_content(); ?>
+          <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
+        </div>
+      </div>
+    </section>
     <section class="pagesection pagesection--darken">
       <?php
         $args = array(
@@ -30,12 +40,10 @@
         </div>
       </div>
     </section>
-    <section class="pagesection pagesection--lighten">
-      <div class="row">
-        <div class="columns medium-8 medium-centered">
-          <?php the_content(); ?>
-        </div>
-      </div>
-    </section>
+    <?php wp_reset_query(); ?>
+    <?php get_template_part('templates/page', 'sections' ); ?>
+
+
+
   </main><!-- /.main -->
 <?php endwhile; ?>
