@@ -69,8 +69,8 @@ b, strong {
 .pagesection {
   //@include clearfix();
   position: relative;
-  padding-top:4em;
-  padding-bottom: 4em;
+  padding-top:4rem;
+  padding-bottom: 4rem;
   border-bottom: 1px solid $silver;
   background-repeat: no-repeat;
   background-position: center center;
@@ -78,7 +78,11 @@ b, strong {
   &:nth-of-type(2n) {
     background-color: $ghost;
   }
+}
 
+.pagesection--narrow {
+  padding-top:1.5rem;
+  padding-bottom: 1.5rem;
 }
 .pagesection--darken {
   background-color: $ghost;

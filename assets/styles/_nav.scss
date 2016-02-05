@@ -101,4 +101,35 @@
   }
 }
 
+.catnav {
+  h2 {
+    font-size: 1.25rem;
+    margin:.333rem 0;
+  }
+}
+.menu--cat {
+
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  @media #{$medium} {
+    //text-align: right;
+  }
+  > li {
+    display: inline-block;
+    margin:0 .5rem 0 0;
+    padding:0;
+    > a {
+      display: inline-block;
+      padding:.5rem 0;
+      font-size: 1rem;
+      line-height: 1.2;
+      color:$primary-color;
+    }
+    &:not(:last-child) {
+      padding-right: .5rem;
+      border-right: 1px solid $gainsboro;
+    }
+  }
+}
 

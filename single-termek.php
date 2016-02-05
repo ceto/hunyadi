@@ -47,8 +47,8 @@
               </div>
               <!-- ALSO tabos blokk -->
               <div class="row">
-                <div class="columns">
-                    <ul class="tabs" data-tab>
+                <div class="columns medium-8 <?= ($key%2==0)?'medium-push-4':'' ?>">
+                    <ul class="tabs prodvariant__tabs" data-tab>
                       <?php if ( $entry['details']!= '' ) : ?>
                         <li class="tab-title"><a href="#detailspanel-<?= $key ?>">Részletek</a></li>
                       <?php endif; ?>
@@ -59,8 +59,10 @@
                         <li class="tab-title"><a href="#dlfilespanel-<?= $key ?>">Letöltés</a></li>
                       <?php endif; ?>
                     </ul>
-
-
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="columns">
                     <div class="tabs-content">
                       <?php if ( $entry['details']!= '' ) : ?>
                         <div id="detailspanel-<?= $key ?>" class="content prodvariant__details">
@@ -76,9 +78,10 @@
 
                       <?php if ( $entry['dlfiles']!= '' ) : ?>
                         <div id="dlfilespanel-<?= $key ?>" class="content prodvariant__dlfiles">
+                          <h3>Letölthető fájlok</h3>
                           <?php foreach ( $entry['dlfiles'] as $csat_id => $csat_url ) : ?>
                             <?php $csat=get_post( $csat_id ) ?>
-                            <a class="dlfile" href="<?= $csat_url; ?>"><?= $csat->post_title; ?> <i class="ion ion-ios-download-outline"></i></a>
+                            <a class="dlfile" target="_blank" href="<?= $csat_url; ?>"><?= $csat->post_title; ?> <i class="ion ion-ios-download-outline"></i></a>
                           <?php endforeach; ?>
                         </div>
                       <?php endif; ?>
