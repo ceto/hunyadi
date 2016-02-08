@@ -333,7 +333,7 @@ function hu_metaboxes() {
 
 
 function adatlaposit($content) {
-  $newhtml = str_replace('<p>', '<dt>', wpautop($content));
+  $newhtml = str_replace('<p>', '<dt>', apply_filters( 'the_content', $content));
   $newhtml= str_replace('</p>', '</dd>', $newhtml);
   $newhtml= str_replace('|', '</dt><dd>', $newhtml);
   return '<dl>'.$newhtml.'</dl>';

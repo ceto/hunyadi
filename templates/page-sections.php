@@ -7,12 +7,12 @@
       <div class="columns <?= $entry['width']=='wide'?'medium-10':'medium-8' ?> medium-centered">
         <?php if ($entry['colwidth']=='half') : ?>
           <div class="row">
-            <div class="columns medium-6"><?= wpautop( $entry['content'] ) ?></div>
-            <div class="columns medium-6"><?= wpautop( $entry['content2'] ) ?></div>
+            <div class="columns medium-6"><?= apply_filters( 'the_content', $entry['content']  ) ?></div>
+            <div class="columns medium-6"><?= apply_filters( 'the_content', $entry['content2'] ) ?></div>
           </div>
         <?php else : ?>
-          <?= wpautop( $entry['content'] ) ?>
-          <?= wpautop( $entry['content2'] ) ?>
+          <?= apply_filters( 'the_content', $entry['content'] )  ?>
+          <?= apply_filters( 'the_content', $entry['content2'] ) ?>
         <?php endif; ?>
       </div>
     </div>

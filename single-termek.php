@@ -40,7 +40,7 @@
                     <?php endif; ?>
 
                     <?php if ( $entry['description']!= '' ) : ?>
-                      <div class="prodvariant__descr"><?= wpautop($entry['description']); ?></div>
+                      <div class="prodvariant__descr"><?= apply_filters( 'the_content', $entry['description']); ?></div>
                     <?php endif; ?>
                   </div>
                 </div>
@@ -52,7 +52,7 @@
                       <?php if ( $entry['details']!= '' ) : ?>
                         <li class="tab-title"><a href="#detailspanel-<?= $key ?>">Részletek</a></li>
                       <?php endif; ?>
-                      <?php if ( $entry['param']!= '' ) : ?>
+                      <?php if ( $entry['params']!= '' ) : ?>
                         <li class="tab-title"><a href="#paramspanel-<?= $key ?>">Adatlap</a></li>
                       <?php endif; ?>
                       <?php if ( $entry['dlfiles']!= '' ) : ?>
@@ -66,7 +66,7 @@
                     <div class="tabs-content">
                       <?php if ( $entry['details']!= '' ) : ?>
                         <div id="detailspanel-<?= $key ?>" class="content prodvariant__details">
-                          <?= wpautop($entry['details']); ?>
+                          <?= apply_filters( 'the_content', $entry['details']); ?>
                         </div>
                       <?php endif; ?>
 
