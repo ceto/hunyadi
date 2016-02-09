@@ -13,57 +13,24 @@
 
     <?php get_template_part('templates/page', 'sections' ); ?>
 
-    <section class="pagesection">
+    <?php if ($datagrids = get_post_meta( get_the_ID(), 'referencia_repeat_group', true )) : ?>
+    <section class="pagesection pagesection--refparams">
       <div class="row">
         <div class="columns medium-10 columns medium-centered">
-          <h2>Alkalmazott technológia</h2>
-          <ul class="medium-block-grid-3 params">
-            <li>
-              <div class="params__item">
-                <h3 class="params__name">Műszerek</h3>
-                <div class="params__data">
-                  <p><strong>UMG 605</strong><br># 52.16.027 8 eszköz</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="params__item">
-                <h3 class="params__name">Kommunikáció</h3>
-                <div class="params__data">
-                  <p><strong>Ethernet</strong><br>UMG 605</p>
-                  <p><strong>Modbus, RS485</strong><br>Az UMG 605-ök között</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="params__item">
-                <h3 class="params__name">Szoftver</h3>
-                <div class="params__data">
-                  <p><strong>GridVis és UMG605 webes riport</strong><br>Beállítások, adatok gyűjtése, tárolása, grafikus megjelenítése, reportok készítése, online UMG605 adatok figyelése</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="params__item">
-                <h3 class="params__name">Lorem ipsum</h3>
-                <div class="params__data">
-                  <p><strong>UMG 605</strong><br># 52.16.027 8 eszköz</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="params__item">
-                <h3 class="params__name">Dolor sit amet</h3>
-                <div class="params__data">
-                  <p><strong>Modbus, RS485</strong><br>Az UMG 605-ök között</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-
-        </div>
+          <h2 class="pagesection__title">Alkalmazott technológia</h2>
+          <ul class="small-block-grid-2 medium-block-grid-3 params">
+            <?php
+              foreach ( (array) $datagrids as $key => $entry ) {
+              if ( isset( $entry['datagrid'] ) ) : ?>
+                <li>
+                  <div class="params__item"><?= apply_filters( 'the_content', $entry['datagrid']  ) ?></div>
+                </li>
+              <?php endif;  } ?>
+            </ul>
+          </div>
       </div>
     </section>
+    <?php endif; ?>
 
 
     <?php get_template_part('templates/section','reflist'); ?>

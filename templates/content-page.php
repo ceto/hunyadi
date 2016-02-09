@@ -3,7 +3,6 @@
   <div class="row">
     <div class="columns medium-8 columns medium-centered">
       <?php the_content(); ?>
-      <br>
       <a class="right-off-canvas-toggle button small" href="#">Ajánlat kérése</a>
 
     </div>

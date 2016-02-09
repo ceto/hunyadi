@@ -27,7 +27,7 @@ function hu_create_field_tax() {
     'field',
     array('termek'),
     array(
-      'label' => 'Terület',
+      'label' => 'Termékkategória',
       'show_admin_column' => true,
       'rewrite' => array( 'slug' => 'terulet' ),
       'hierarchical' => true,
@@ -122,7 +122,7 @@ function hu_metaboxes() {
     $cmb_page = new_cmb2_box( array(
       'id'            => 'content_metabox',
       'title'         => __( 'Függőleges tartalmi sávok', 'cmb2' ),
-      'object_types'  => array( 'page','referencia', 'termek' ), // Post type
+      'object_types'  => array( 'post', 'page','referencia', 'termek' ), // Post type
       'context'       => 'normal',
       'priority'      => 'core',
       'show_names'    => true, // Show field names on the left
@@ -288,6 +288,42 @@ function hu_metaboxes() {
         //   'file_download_text' => 'Replacement', // default: "Download"
         //   'remove_text' => 'Replacement', // default: "Remove"
         ),
+    ) );
+
+
+    /******* Referencia details grid *********/
+
+    $cmb_referencia = new_cmb2_box( array(
+      'id'            => 'referencia_metabox',
+      'title'         => __( 'Műszaki paraméterek, részletek', 'cmb2' ),
+      'object_types'  => array( 'referencia' ), // Post type
+      'context'       => 'normal',
+      'priority'      => 'low',
+      'show_names'    => true, // Show field names on the left
+      // 'cmb_styles' => false, // false to disable the CMB stylesheet
+      // 'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    $referencia_group_field_id = $cmb_referencia->add_field( array(
+      'id'          => 'referencia_repeat_group',
+      'type'        => 'group',
+      'description' => __( 'Technikai részletek', 'cmb2' ),
+      'options'     => array(
+          'group_title'   => __( 'Részlet {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
+          'add_button'    => __( 'Új részlet hozzáadása', 'cmb2' ),
+          'remove_button' => __( 'Részlet törlése', 'cmb2' ),
+          'sortable'      => true, // beta
+      ),
+    ) );
+
+    $cmb_referencia->add_group_field( $referencia_group_field_id, array(
+      'name' => 'Technikai információ',
+      'description' => 'Néhány paraméter H3 headinggel kezdve',
+      'id'   => 'datagrid',
+      'type' => 'wysiwyg',
+      'options' => array(
+        'textarea_rows' => '7',
+      )
     ) );
 
 

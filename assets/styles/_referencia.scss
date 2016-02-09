@@ -1,0 +1,12 @@
+.params__item {
+  > h3 {
+    margin-top:0;
+    margin-bottom: $paragraph-margin-bottom/2;
+    color:inherit;
+    //text-transform: uppercase;
+  }
+
+  > p {
+    margin-bottom: $paragraph-margin-bottom/2;
+  }
+}

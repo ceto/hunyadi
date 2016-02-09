@@ -1,6 +1,6 @@
 <?php while (have_posts()) : the_post(); ?>
   <header class="banner" role="banner" id="banner">
-    <?php get_template_part('templates/page', 'header'); ?>
+    <?php get_template_part('templates/termek', 'header'); ?>
   </header>
   <main class="main" role="main">
 

@@ -126,6 +126,16 @@ b, strong {
 .pagesection--intro {
   p {
     font-size: 1.125rem;
+
+  }
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+  blockquote {
+    margin-top: $paragraph-margin-bottom;
+  }
+  .button {
+     margin-top: $paragraph-margin-bottom*1.25;
   }
 
 }

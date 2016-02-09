@@ -3,7 +3,7 @@
 </section>
 
 <main class="main" role="main">
-<section class="pagesection pagesection--intro">
+<section class="pagesection pagesection--intro pagesection--darken">
   <div class="row">
     <div class="columns medium-8 columns medium-centered">
       <?php
@@ -13,7 +13,7 @@
     </div>
   </div>
 </section>
-  <section class="pagesection pagesection--termekblokk">
+  <section id="termekblokk" class="pagesection pagesection--lighten pagesection--termekblokk">
     <div class="row">
       <div class="columns medium-10 medium-centered">
         <ul class="block-grid-1 small-block-grid-2 large-block-grid-3 miniprodblock">
