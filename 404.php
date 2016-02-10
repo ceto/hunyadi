@@ -2,7 +2,7 @@
   <?php get_template_part('templates/page', 'header'); ?>
 </section>
 
-<section class="pagesection pagesection--intro">
+<section class="pagesection pagesection--inverse pagesection--intro">
   <div class="row">
     <div class="columns medium-8 medium-centered">
       <div class="alert alert-warning">

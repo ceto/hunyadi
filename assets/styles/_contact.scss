@@ -9,7 +9,7 @@ input:not([type]), input[type=number], input[type=search], input[type=text], inp
 
 .right-off-canvas-menu {
   @media #{$small} {
-    width:rem-calc(320);
+    width:rem-calc(360);
   }
   @media #{$medium} {
     width:rem-calc(450);
@@ -21,7 +21,7 @@ input:not([type]), input[type=number], input[type=search], input[type=text], inp
 
 .move-left > .inner-wrap {
   @media #{$small} {
-    transform: translate3d( - rem-calc(320),0,0);
+    transform: translate3d( - rem-calc(360),0,0);
   }
   @media #{$medium} {
     transform: translate3d( - rem-calc(450),0,0);
@@ -32,8 +32,9 @@ input:not([type]), input[type=number], input[type=search], input[type=text], inp
 }
 
 .contactwrap {
-  padding-top:1em;
-  padding-right: 1em;
+  position: fixed;
+  top:0;
+  padding:1rem 0;
   color:$white;
 
   h2 {
@@ -67,10 +68,7 @@ input:not([type]), input[type=number], input[type=search], input[type=text], inp
       width:85%;
     }
   }
-  @media #{$large} {
-  }
-  @media #{$xlarge} {
-  }
+
 
   label {
     display:none;

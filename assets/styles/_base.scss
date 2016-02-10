@@ -193,3 +193,12 @@ figcaption {
 	margin-top: .5em;
 	font-style: italic;
 }
+
+
+select {
+	background-color: rgba(255,255,255,.125);
+	&:focus {
+		background: rgba(255,255,255,.175);
+		outline:0;
+	}
+}

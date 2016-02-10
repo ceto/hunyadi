@@ -84,6 +84,13 @@ jQuery('[data-menu-toggle]').click(function(e) {
   jQuery('#main-nav').toggleClass('on');
 });
 
+jQuery('.right-off-canvas-toggle').click(function(e) {
+  window.scrollTo(0, 0);
+  return true;
+});
+
+
+
 
   $(document).ready(function(){
     // Target your .container, .wrapper, .post, etc.

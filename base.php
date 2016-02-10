@@ -15,7 +15,7 @@ use Roots\Sage\Wrapper;
       </div>
     <![endif]-->
 
-    <div class="off-canvas-wrap" data-offcanvas>
+    <div id="top" class="off-canvas-wrap" data-offcanvas>
       <div class="inner-wrap">
         <aside class="left-off-canvas-menu">
           <?php do_action('get_header'); get_template_part('templates/header'); ?>

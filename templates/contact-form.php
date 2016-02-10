@@ -68,7 +68,7 @@
     ?>
       <div class="contactwrap">
         <div class="row">
-          <div class="large-12 columns">
+          <div class="columns">
             <h2><?php _e('Várjuk <span>megkeresését</span>','hu'); ?></h2>
             <p>Hívjon a <a href="tel:+36 70 770 5653">(+36) 70 770-5653</a> számon, vagy töltse ki az űrlapot. Munkatársaink rövid időn belül válaszolnak.</p>
           </div>
@@ -77,28 +77,28 @@
         <form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">
 
           <div class="row">
-            <div class="large-12 columns">
+            <div class="columns">
               <label for="message_name"><?php _e('Név','hu'); ?>*</label>
               <input type="text" placeholder="<?php _e('Adja meg nevét','hu'); ?>*" id="message_name" name="message_name" value="<?php echo $_POST['message_name']; ?>">
             </div>
           </div>
 
           <div class="row">
-            <div class="large-12 columns">
+            <div class="columns">
               <label for="message_tel"><?php _e('Telefon','hu'); ?></label>
               <input type="text" placeholder="<?php _e('Adja meg telefonszámát','hu'); ?>" id="message_tel" name="message_tel" value="<?php echo $_POST['message_tel']; ?>">
             </div>
           </div>
 
           <div class="row">
-            <div class="large-12 columns">
+            <div class="columns">
               <label for="message_email"><?php _e('E-Mail cím','hu'); ?>*</label>
               <input type="email" placeholder="<?php _e('E-mail címe','hu'); ?>*" id="message_email" name="message_email" value="<?php echo $_POST['message_email']; ?>">
             </div>
           </div>
 
           <div class="row">
-            <div class="large-12 columns">
+            <div class="columns">
               <label for="message_area">Válasszon szolgáltatást</label>
                 <select id="message_area" name="message_area">
                   <option value="0"><?php _e('Válasszon szolgáltatást','hu'); ?></option>
@@ -113,21 +113,21 @@
           </div>
 
           <div class="row">
-            <div class="large-12 columns">
+            <div class="columns">
               <label for="message_text"><?php _e('Üzenet','hu'); ?>*</label>
               <textarea placeholder="<?php _e('Ha kérdése van itt felteheti ...','hu'); ?>" rows="5" id="message_text" name="message_text"><?php if ($_POST['message_text']!='') {
                   echo $_POST['message_text']; }?></textarea>
             </div>
           </div>
 
-          <div class="actions row">
-            <div class="large-12 columns">
+          <div class="actions row text-center">
+            <div class="columns">
               <input type="hidden" name="ap_id" value="<?php echo $subjecto; ?>">
               <input type="hidden" name="message_page" value="<?php the_title(); ?>">
               <input type="hidden" name="message_human" value="2">
               <input type="hidden" name="submitted" value="1">
-              <button type="submit" class="button small"><?php _e('Mehet','hu'); ?></button>
-              <div id="infopan"><?php echo $response; ?></div>
+              <div class="infopan" id="infopan"><?php echo $response; ?></div>
+              <button type="submit" class="button secondary small expand"><?php _e('Mehet','hu'); ?></button>
               </div>
             </div>
         </form>
