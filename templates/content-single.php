@@ -24,7 +24,7 @@
     </footer>
 
 
-
+    <?php get_template_part('templates/section','servicelist'); ?>
     <?php get_template_part('templates/section','relatedprods'); ?>
     <?php get_template_part('templates/section','postlist'); ?>
     <?php get_template_part('templates/section','reflist'); ?>

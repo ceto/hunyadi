@@ -33,6 +33,8 @@
     <?php endif; ?>
 
 
+    <?php get_template_part('templates/section','servicelist'); ?>
+
     <?php get_template_part('templates/section','reflist'); ?>
 
   </main><!-- /.main -->

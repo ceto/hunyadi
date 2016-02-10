@@ -8,6 +8,7 @@
       <div class="row">
         <div class="columns medium-8 medium-centered">
           <?php the_content(); ?>
+           <a class="right-off-canvas-toggle button small" href="#">Ajánlat kérése</a>
         </div>
       </div>
     </section>

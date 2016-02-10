@@ -365,6 +365,27 @@ function hu_metaboxes() {
     ) );
 
 
+    /***** Page related on Posts and reference ******/
+    $cmb_prelated = new_cmb2_box( array(
+      'id'            => 'prelated_metabox',
+      'title'         => __( 'Kapcsolódó szolgáltatás ajánló', 'cmb2' ),
+      'object_types'  => array( 'referencia', 'post' ), // Post type
+      'context'       => 'normal',
+      'priority'      => 'low',
+      'show_names'    => true, // Show field names on the left
+      // 'cmb_styles' => false, // false to disable the CMB stylesheet
+      // 'closed'     => true, // Keep the metabox closed by default
+    ) );
+
+    $cmb_prelated->add_field( array(
+      'id' => 'related_pages',
+      'name' => __( 'Kapcsolódó szolgáltatás', 'cmb2' ),
+      'type'  => 'multicheck_inline',
+      'select_all_button' => false,
+      'options' => hu_optionlist('page')
+    ) );
+
+
 }
 
 

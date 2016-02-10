@@ -1,5 +1,9 @@
 <section class="banner" role="banner" id="banner">
-  <?php get_template_part('templates/page', 'header'); ?>
+  <?php if (is_archive() || is_search() || is_home()) : ?>
+    <?php get_template_part('templates/archive', 'header'); ?>
+  <?php else: ?>
+    <?php get_template_part('templates/page', 'header'); ?>
+  <?php endif; ?>
 </section>
 <main class="main" role="main">
 <?php if (!have_posts()) : ?>
