@@ -1,10 +1,13 @@
 .homebanner {
   padding:0;
   background-color: $primary-color;
-  background-image: url('../images/nature.jpg');
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
+  background-image: url('../images/hero_home-med.jpg');
+  @media #{$medium} {
+    background-image: url('../images/hero_home.jpg');
+  }
   .row {
     max-width: none;
 

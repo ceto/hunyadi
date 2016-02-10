@@ -5,7 +5,7 @@
 ?>
 
 <?php while (have_posts()) : the_post(); ?>
-
+  <?php get_template_part('templates/banner','bg' ); ?>
   <section class="banner" role="banner" id="banner">
     <?php get_template_part('templates/listpage', 'header'); ?>
   </section>

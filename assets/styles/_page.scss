@@ -117,6 +117,13 @@ b, strong {
   }
 }
 
+.pagesection--details {
+  background-image: url('../images/inversebg-med.jpg');
+  @media #{$medium} {
+    background-image: url('../images/inversebg.jpg');
+  }
+}
+
 .pagesection__title {
   text-transform: uppercase;
 }
@@ -163,13 +170,16 @@ b, strong {
     &:not(:last-child) {
       border-bottom: 1px solid $aluminum;
     }
+    &:hover {
+      //background-color: rgba($white,.25)
+    }
   }
   li > a {
     position: relative;
     display: block;
     padding:.5rem 0 .875rem;
     font-size: 1.25em;
-    //color:$secondary-color;
+    color:$smoke;
     font-weight: 600;
     line-height: 1.125;
     &:after {
@@ -180,7 +190,12 @@ b, strong {
       content:'-->';
     }
     &:hover, &:focus {
-      color:$secondary-color;
+      color:$white;
+      text-shadow:0 0 1px $primary-color;
+      //padding-left: 1rem;
+      &:after {
+
+      }
     }
   }
 }
