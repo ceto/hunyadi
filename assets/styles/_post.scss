@@ -1,6 +1,17 @@
 .post__fig {
-  margin:0 0 1rem;
+  margin:0 0;
   padding:0;
+
+  img {
+    display: block;
+    margin:0 auto 1rem;
+    max-width: 50%;
+    @media #{$medium} {
+      margin:0 0;
+      max-width: 100%;
+    }
+
+  }
 }
 .post__title {
   margin-top: 0;

@@ -28,12 +28,8 @@
 
   <nav class="pagesection pagesection--narrow">
     <div class="row">
-      <div class="columns medium-10 medium-centered">
-        <div class="row">
-          <div class="columns medium-9 medium-push-3">
-            <?php the_posts_navigation(); ?>
-          </div>
-        </div>
+      <div class="columns medium-8 medium-centered">
+        <?php the_posts_navigation(); ?>
       </div>
     </div>
   </nav>

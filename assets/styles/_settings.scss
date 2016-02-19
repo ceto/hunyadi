@@ -218,7 +218,7 @@ $xxlarge: $xxlarge-up;
 // $header-font-family: $body-font-family;
 $header-font-weight: $font-weight-bold;
 // $header-font-style: normal;
-$header-font-color: scale-color($body-font-color, $lightness: 20%);;
+$header-font-color: scale-color($body-font-color, $lightness: 20%);
 $header-line-height: 1.125;
 $header-top-margin: 1.5rem;
 $header-bottom-margin: .5rem;
@@ -301,7 +301,7 @@ $anchor-font-color: $secondary-color;
 // We use these to style blockquotes
 $blockquote-font-color: scale-color($body-font-color, $lightness: 35%);
 $blockquote-padding: rem-calc(0 20 0 20);
-$blockquote-border: 18px solid $secondary-color;
+$blockquote-border: .5rem solid $gainsboro;
 // $blockquote-cite-font-size: rem-calc(13);
 // $blockquote-cite-font-color: scale-color($header-font-color, $lightness: 23%);
 // $blockquote-cite-link-color: $blockquote-cite-font-color;
@@ -469,9 +469,9 @@ $button-sml: rem-calc(14);
 // We use these to control button border styles.
 // $button-border-width: 0;
 // $button-border-style: solid;
-$button-bg-color: $primary-color;
+$button-bg-color: $secondary-color;
 // $button-bg-hover: $green;
-$button-bg-hover: $secondary-color;
+$button-bg-hover: $primary-color;
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
 // $secondary-button-border-color: $secondary-button-bg-hover;
@@ -1349,7 +1349,7 @@ $tabs-navigation-active-bg-color: $gainsboro;
 // $tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -6%);
 // $tabs-navigation-font-color: $jet;
 // $tabs-navigation-active-font-color: $tabs-navigation-font-color;
-$tabs-navigation-font-size: rem-calc(12);
+$tabs-navigation-font-size: rem-calc(14);
 // $tabs-navigation-font-family: $body-font-family;
 
 // $tabs-content-margin-bottom: rem-calc(24);

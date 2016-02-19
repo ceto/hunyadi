@@ -25,7 +25,7 @@
            if ( ! empty( $szakteruletek ) && ! is_wp_error( $szakteruletek ) ) : ?>
             <?php foreach ( $szakteruletek as $field ) :?>
               <li id="termekblokk--<?= sanitize_title( $field->name ); ?>" class="">
-                    <h2 class="termekblokk__title"><?= $field->name; ?></h2>
+                    <h2 class="termekblokk__title"><a href="<?= get_term_link($field->term_id); ?>"><?= $field->name; ?></a></h2>
                     <?= term_description( $field->term_id,'field') ?>
                     <a class="button small" href="<?= get_term_link($field->term_id); ?>#termekblokk">Mutasd a termékeket</a>
              </li>
@@ -37,32 +37,5 @@
     </div>
   </div>
 
-
-
-
   </main><!-- /.main -->
 <?php endwhile; ?>
-
-
-
-
-
-  <?php /*
-    $szakteruletek = get_terms( 'field', array());
-   if ( ! empty( $szakteruletek ) && ! is_wp_error( $szakteruletek ) ) : ?>
-
-
-    <?php foreach ( $szakteruletek as $field ) :?>
-      <section id="termekblokk--<?= sanitize_title( $field->name ); ?>" class="pagesection  pagesection--termekblokk">
-        <div class="row">
-          <div class="columns medium-8 columns medium-centered pagesection--intro">
-            <h2 class="termekblokk__title"><?= $field->name; ?></h2>
-            <?= term_description( $field->term_id,'field') ?>
-            <a class="button small" href="<?= get_term_link($field->term_id); ?>#termekblokk">Mutasd a termékeket</a>
-          </div>
-        </div>
-     </section>
-    <?php endforeach; ?>
-
-
-    <?php endif; */?>

@@ -476,7 +476,7 @@ function hu_gallery_shortcode( $attr ) {
     'icontag'    => $html5 ? 'div'        : 'dt',
     'captiontag' => $html5 ? 'figcaption' : 'dd',
     'columns'    => 5,
-    'size'       => 'thumbnail',
+    'size'       => 'medium11',
     'include'    => '',
     'exclude'    => '',
     'link'       => 'file'

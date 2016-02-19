@@ -1,0 +1,22 @@
+.gallery {
+
+}
+
+.gallery__item {
+  a {
+    display: block;
+    background-color: $gainsboro;
+    padding:2px;
+    &:hover, &:focus{
+      background-color: $secondary-color;
+    }
+    > img {
+      border:2px solid #fff;
+    }
+  }
+  img {
+    display:block;
+    border:4px solid $gainsboro;
+
+  }
+}

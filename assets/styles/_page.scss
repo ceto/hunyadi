@@ -145,6 +145,10 @@ b, strong {
      margin-top: $paragraph-margin-bottom*1.25;
   }
 
+  .single-termek &, .single-post & {
+    padding-top: 0;
+  }
+
 }
 
 .pagesection--berendezesek-0, .pagesection--termekek {
@@ -157,6 +161,10 @@ b, strong {
     //color:white;
 
   }
+}
+
+.pagesection.post, .pagesection.type-page, .pagesection.pagesection--relatedprods, .pagesection.pagesection--prodvariant {
+  background-color: #fff;
 }
 
 

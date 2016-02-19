@@ -1,7 +1,7 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
 
-    <header class="banner" role="banner" id="banner">
+    <header class="banner banner--white" role="banner" id="banner">
       <?php get_template_part('templates/post', 'header'); ?>
     </header>
     <section class="pagesection pagesection--intro">

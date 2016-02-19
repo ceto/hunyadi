@@ -156,6 +156,18 @@ blockquote {
 	}
 }
 
+
+
+img.introimg {
+	max-width: 66.666%;
+	margin:0 auto 2rem auto;
+	display: block;
+	@media #{$medium} {
+    max-width: 100%;
+  }
+}
+
+
 #side-nav {
 	font-weight: 400;
 	text-transform: uppercase;

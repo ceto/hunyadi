@@ -29,6 +29,6 @@
 <?php get_template_part('templates/page', 'sections' ); ?>
 
 <?php get_template_part('templates/section','relatedprods'); ?>
-<?php get_template_part('templates/section','postlist'); ?>
-<?php get_template_part('templates/section','reflist'); ?>
+<?php //get_template_part('templates/section','postlist'); ?>
+<?php //get_template_part('templates/section','reflist'); ?>
 

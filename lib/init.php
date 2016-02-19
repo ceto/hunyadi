@@ -35,6 +35,8 @@ function setup() {
   add_image_size ( 'banner', '1920', '640', true );
 
   add_image_size ( 'thumb43', '640', '480', true );
+  add_image_size ( 'medium11', '768', '768', true );
+  add_image_size ( 'thumb11', '480', '480', true );
 
   update_option( 'thumbnail_size_w', 768 );
   update_option( 'thumbnail_size_h', 256 );

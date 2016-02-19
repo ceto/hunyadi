@@ -1,8 +1,8 @@
 <section class="pagesection pagesection--narrow">
   <div class="row">
-    <div class="columns medium-10 medium-centered">
+    <div class="columns medium-8 medium-centered">
       <nav class="catnav row">
-        <div class="columns medium-9 medium-push-3">
+        <div class="columns">
           <ul class="menu menu--cat">
             <li><a href="<?= get_the_permalink(get_option( 'page_for_posts' )) ?>">Mutasd mindet</a></li>
             <?php
