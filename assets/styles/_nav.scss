@@ -133,3 +133,32 @@
   }
 }
 
+
+.nav-links {
+  @include clearfix();
+  padding: 1rem 0;
+
+  .nav-previous, .nav-next {
+    max-width:48%;
+    margin-right: 2%;
+    display: inline-block;
+    font-size: .875rem;
+    line-height: 1;
+    a {
+      display: inline-block;
+      padding:.75em 1em;
+      background-color: $ghost;
+      color:$steel;
+      border:1px solid $silver;
+      &:hover, &:focus {
+        color:$primary-color;
+        border-color: $gainsboro;
+      }
+    }
+  }
+
+  .nav-next {
+    //float:right;
+  }
+}
+

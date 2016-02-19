@@ -5,7 +5,7 @@
         <div class="columns medium-3">
            <figure class="post__fig">
              <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail('thumbnail'); ?>
+                <?php the_post_thumbnail('thumb43'); ?>
              </a>
            </figure>
         </div>

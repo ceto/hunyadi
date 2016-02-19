@@ -1,9 +1,11 @@
   <?php
     $ok=false;
-    if (is_archive() || is_search() || is_home()) {
+    if ( (is_archive() || is_search() || is_home()) && ( !is_tax() )  ) {
       $ima =  get_post_thumbnail_id(get_option( 'page_for_posts' ));$ok=true;
-    } elseif (is_page_template('template-termekek.php')) {
+    } elseif (is_page_template('template-termekek.php') || is_tax('field') ) {
       $ima =  get_post_thumbnail_id(18); $ok=true;
+    } elseif (is_page_template('template-referencia.php') ) {
+      $ima =  get_post_thumbnail_id(19); $ok=true;
     } elseif (has_post_thumbnail()) {
         $ima =  get_post_thumbnail_id(); $ok=true;
     };
