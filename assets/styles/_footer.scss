@@ -1,0 +1,17 @@
+.content-info {
+  font-size: .875rem;
+}
+
+.footer__madeby {
+  float:right;
+  font-style: italic;
+  color:$gainsboro;
+  a {
+    font-style: normal;
+    font-weight: $font-weight-bold;
+    color:$aluminum;
+    &:hover, &:focus {
+      color:$steel;
+    }
+  }
+}

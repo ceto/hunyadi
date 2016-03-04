@@ -21,7 +21,7 @@
         <h2 class="pagesection__title">Tájékozódjon szolgáltatásainkról</h2>
         <ul class="subpageslist">
           <?php while ($the_relpages->have_posts()) : $the_relpages->the_post(); ?>
-            <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+            <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?> <i class="ion ion-ios-arrow-thin-right"></i></a></li>
           <?php endwhile; ?>
         </ul>
         </div>

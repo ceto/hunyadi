@@ -18,7 +18,11 @@
         <div class="columns medium-8 columns medium-centered">
         <h2 class="pagesection__title">A szolgáltatás részletei</h2>
         <ul class="subpageslist">
-          <?php wp_list_pages('title_li=&child_of='.$post->ID); ?>
+          <?php wp_list_pages(array(
+            'title_li' => '',
+            'link_after' => ' <i class="ion ion-ios-arrow-thin-right"></i>',
+            'child_of' => $post->ID
+          )); ?>
         </ul>
         </div>
       </div>

@@ -26,6 +26,10 @@
   transition: all .4s linear;
   &:hover {
     background-color: rgba( scale-color($secondary-color,$lightness:0),.75);
+    .hometile__more {
+      color:$white;
+      opacity: 1
+    }
   }
 
   @media #{$medium} {
@@ -44,15 +48,15 @@
     color:inherit;
     margin: 0 0 .125em;
     text-transform: uppercase;
-    font-size: 1.125rem;
+    font-size: 1rem;
     @media #{$medium} {
-      font-size:3vw;
+      font-size:1.25rem;
     }
     @media #{$large} {
-      font-size:2vw;
+      //font-size:2vw;
     }
     @media #{$xlarge} {
-      font-size:2.5vw;
+      font-size:2vw;
     }
     a {
       color:inherit;
@@ -68,9 +72,21 @@
   }
 }
 
+.hometile__more {
+  font-size: 2rem;
+  position: absolute;
+  bottom:0;
+  opacity: 0;
+  transition: opacity .2s linear .4s;
+
+  @media #{$large} {
+      font-size:4vw;
+  }
+}
+
 /*** meret kivételek ****/
 .hometile--1, .hometile--4 {
-  @media #{$medium} {
+  @media #{$large} {
     width:66.666%;
     h2, p {
       max-width: 50%;

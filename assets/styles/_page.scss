@@ -190,19 +190,17 @@ b, strong {
     color:$smoke;
     font-weight: 600;
     line-height: 1.125;
-    &:after {
-      display: block;
-      position: absolute;
-      right:0;
-      top:.5rem;
-      content:'-->';
+    i {
+      float:right;
+      margin-right: 0;
+      //display: inline-block;
     }
     &:hover, &:focus {
       color:$white;
       text-shadow:0 0 1px $primary-color;
       //padding-left: 1rem;
-      &:after {
-
+      i {
+        margin-right: 2rem;
       }
     }
   }
