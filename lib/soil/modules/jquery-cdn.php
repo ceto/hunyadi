@@ -10,7 +10,8 @@ namespace Roots\Soil\JqueryCDN;
  */
 function register_jquery() {
   if (!is_admin()) {
-    $jquery_version = $GLOBALS['wp_scripts']->registered['jquery']->ver;
+    //$jquery_version = $GLOBALS['wp_scripts']->registered['jquery']->ver;
+    $jquery_version = '2.2.2';
 
     wp_deregister_script('jquery');
 
