@@ -37,7 +37,7 @@
             <div class="columns">
               <label for="message_area">Válasszon szolgáltatást
                 <select id="message_area" name="message_area">
-                  <option value="0"><?php _e('Válasszon szolgáltatást','hu'); ?></option>
+                  <option value="Nem nevezett meg szolgáltatást"><?php _e('Válasszon szolgáltatást','hu'); ?></option>
                   <option value="Fázisjavítás">Fázisjavítás</option>
                   <option value="Energia audit">Energiaaudit</option>
                   <option value="JANITZA mérőműszerek">JANITZA mérőműszerek</option>

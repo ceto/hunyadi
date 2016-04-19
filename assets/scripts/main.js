@@ -123,6 +123,8 @@ jQuery('.right-off-canvas-toggle').click(function(e) {
         var user_name = $('input[name=message_name]').val();
         var user_email = $('input[name=message_email]').val();
         var user_tel = $('input[name=message_tel]').val();
+        var user_area = $('select[name=message_area]').val();
+        var user_msg = $('textarea[name=message_text]').val();
 
         var proceed = true;
         if (user_name === "") {
@@ -145,7 +147,9 @@ jQuery('.right-off-canvas-toggle').click(function(e) {
             post_data = {
                 'userName': user_name,
                 'userEmail': user_email,
-                'userTel': user_tel
+                'userTel': user_tel,
+                'userArea': user_area,
+                'userMsg': user_msg
             };
 
             //Ajax post data to server

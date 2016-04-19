@@ -1,7 +1,7 @@
 <?php
   $sections = get_post_meta( get_the_ID(), 'page_repeat_group', true );
   foreach ( (array) $sections as $key => $entry ) {
-  if ( isset( $entry['content'] ) ) : ?>
+  if ( $entry['content'] != '' ) : ?>
   <section class="pagesection pagesection--<?= sanitize_title(get_the_title()) .'-'.$key; ?>">
     <div class="row">
       <div class="columns <?= $entry['width']=='wide'?'medium-10':'medium-8' ?> medium-centered">

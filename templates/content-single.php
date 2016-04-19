@@ -15,14 +15,14 @@
     <?php get_template_part('templates/page', 'sections' ); ?>
 
     <?php // comments_template('/templates/comments.php'); ?>
-    <footer class="pagesection pagesection--postfooter">
+<!--     <footer class="pagesection pagesection--postfooter">
       <div class="row">
         <div class="columns medium-8 medium-centered">
           <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
         </div>
       </div>
     </footer>
-
+ -->
 
     <?php get_template_part('templates/section','servicelist'); ?>
     <?php get_template_part('templates/section','relatedprods'); ?>
