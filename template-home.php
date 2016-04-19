@@ -12,9 +12,9 @@
         $homi=0;
         foreach ( (array) $sections as $key => $entry ) : ?>
           <div class="hometile hometile--<?= ++$homi ?>">
-            <h2><a href="<?= $entry['url'] ?>"><?= $entry['ht_title'] ?></a></h2>
+            <h2><a href="<?= $entry['ht_url'] ?>"><?= $entry['ht_title'] ?></a></h2>
             <p><?= $entry['ht_text'] ?></p>
-            <a class="hometile__more" href="<?= $entry['url'] ?>"><i class="ion ion-ios-arrow-thin-right"></i></a>
+            <a class="hometile__more" href="<?= $entry['ht_url'] ?>"><i class="ion ion-ios-arrow-thin-right"></i></a>
           </div>
         <?php endforeach;  ?>
     </div>

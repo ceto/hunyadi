@@ -71,9 +71,28 @@ input:not([type]), input[type=number], input[type=search], input[type=text], inp
 
 
   label {
-    display:none;
+    //display:none;
+  }
+
+  [data-abide] .error label.error {
+    color:inherit;
+
+  }
+
+  // [data-abide] small.error {
+
+  // }
+
+  [data-abide] .error small.error {
+    margin-bottom:0;
+    display: inline;
+    flaot:right;
+  }
+  .error input, .error select, .error textarea {
+    margin-bottom: 1.25rem;
   }
 }
+
 
 
 

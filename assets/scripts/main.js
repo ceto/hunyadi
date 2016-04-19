@@ -114,4 +114,68 @@ jQuery('.right-off-canvas-toggle').click(function(e) {
       }
     });
 
+
+    /*** CONTACT FORM ******/
+    $("#contact_form").on('valid.fndtn.abide', function() {
+        //e.preventDefault();
+
+        //get input field values
+        var user_name = $('input[name=message_name]').val();
+        var user_email = $('input[name=message_email]').val();
+        var user_tel = $('input[name=message_tel]').val();
+
+        var proceed = true;
+        if (user_name === "") {
+            //$('input[name=message_name]').css('border-color', '#e41919');
+            proceed = false;
+        }
+        if (user_email === "") {
+            //$('input[name=message_email]').css('border-color', '#e41919');
+            proceed = false;
+        }
+
+        if (user_tel === "") {
+            //$('input[name=message_tel]').css('border-color', '#e41919');
+            proceed = false;
+        }
+
+        //everything looks good! proceed...
+        if (proceed) {
+            //data to be sent to server
+            post_data = {
+                'userName': user_name,
+                'userEmail': user_email,
+                'userTel': user_tel
+            };
+
+            //Ajax post data to server
+            $.post($('#contact_form').attr('action'), post_data, function(response){
+
+                //load json data from server and output message
+                if (response.type === 'error') {
+                    output = '<p class="error">' + response.text + '</p>';
+                }
+                else {
+
+                    output = '<p class="success">' + response.text + '</p>';
+
+                    //reset values in all input fields
+                    $('#contact_form input').val('');
+                    $('#contact_form textarea').val('');
+                }
+
+                $("#result").hide().html(output).slideDown();
+            }, 'json');
+
+        }
+
+        return false;
+    });
+
+    //reset previously set border colors and hide all message on .keyup()
+    $("#contact_form input, #contact_form textarea").keyup(function(){
+        //$("#contact_form input, #contact_form textarea").css('border-color', '');
+        $("#result").slideUp();
+    });
+
   });
