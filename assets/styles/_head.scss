@@ -27,6 +27,7 @@
   }
 }
 .theleftside {
+  position: relative;
 
   //overflow: hidden;
   //width: 100%;
@@ -39,7 +40,14 @@
   }
 }
 
+.linktoensite {
+  margin-top: 1.5rem;
+  display: block;
 
+  display: block;
+  font-size: .875rem;
+  line-height: 1;
+}
 
 .title-area {
   list-style-type: none;

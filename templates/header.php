@@ -18,4 +18,6 @@
       ?>
   </nav>
 
+  <a class="linktoensite" href="http://old.hunyadi.hu/en/" target="_blank">English version</a>
+
 </header>

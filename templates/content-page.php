@@ -21,7 +21,8 @@
           <?php wp_list_pages(array(
             'title_li' => '',
             'link_after' => ' <i class="ion ion-ios-arrow-thin-right"></i>',
-            'child_of' => $post->ID
+            'child_of' => $post->ID,
+            'sort_column' => 'menu_order'
           )); ?>
         </ul>
         </div>

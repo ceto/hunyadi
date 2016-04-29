@@ -35,7 +35,7 @@
   var map;
   function initialize() {
     var latlng = new google.maps.LatLng(47.411013, 19.036092);
-    var latlngdebro = new google.maps.LatLng(47.545582, 21.569471);
+    var latlngdebro = new google.maps.LatLng(47.544181, 21.573683);
     var centerlatlng = new google.maps.LatLng(47.411013, 20.036092);
     var myOptions = {
       zoom: 8,
@@ -48,7 +48,7 @@
               "featureType": "administrative",
               "elementType": "labels",
               "stylers": [
-                { "visibility": "off" }
+                // { "visibility": "off" }
               ]
             },{
               "featureType": "landscape",
@@ -97,20 +97,20 @@
               "featureType": "administrative.locality",
               "elementType": "labels.text",
               "stylers": [
-                { "color": "#9f9f9f" }
+                { "color": "#4e4e4e" }
               ]
             },{
               "featureType": "road.highway",
               "elementType": "geometry",
               "stylers": [
                 { "color": "#55aa00" },
-                { "weight": 1.1 }
+                { "weight": 0.25 }
               ]
             },{
               "featureType": "road.highway",
               "elementType": "labels.icon",
               "stylers": [
-                { "visibility": "off" }
+                // { "visibility": "off" }
               ]
             }
           ]
