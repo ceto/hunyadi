@@ -135,14 +135,15 @@ b, strong {
     font-size: 1.125rem;
 
   }
-  p:last-of-type {
-    margin-bottom: 0;
+  *:last-child {
+    //margin-bottom: 0;
   }
   blockquote {
     margin-top: $paragraph-margin-bottom;
   }
   .button {
-     margin-top: $paragraph-margin-bottom*1.25;
+     margin-top: $paragraph-margin-bottom;
+     margin-botom:0;
   }
 
   .single-termek &, .single-post & {
@@ -163,7 +164,7 @@ b, strong {
   }
 }
 
-.pagesection.post, .pagesection.type-page, .pagesection.pagesection--relatedprods, .pagesection.pagesection--prodvariant {
+.pagesection.pagesection--kapcsolat-2, .pagesection.post, .pagesection.type-page, .pagesection.pagesection--relatedprods, .pagesection.pagesection--prodvariant {
   background-color: #fff;
 }
 

@@ -3,7 +3,7 @@
 }
 
 .gallery__item {
-  a {
+  > div > a {
     display: block;
     background-color: $gainsboro;
     padding:2px;
@@ -20,3 +20,4 @@
 
   }
 }
+

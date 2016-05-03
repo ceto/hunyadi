@@ -97,7 +97,7 @@ jQuery('.right-off-canvas-toggle').click(function(e) {
     $('.entry-content-asset').fitVids();
 
     $('.gallery').magnificPopup({
-      delegate: 'a',
+      delegate: 'div > a',
       type: 'image',
       tLoading: 'Loading image #%curr%...',
       mainClass: 'mfp-img-mobile',
@@ -107,9 +107,9 @@ jQuery('.right-off-canvas-toggle').click(function(e) {
         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
       },
       image: {
-        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        tError: '<a href="%url%">A kép #%curr%</a> nem található.',
         titleSrc: function(item) {
-          return item.el.children('img').attr('alt') + '<small>hunyadi.hu</small>';
+          return item.el.closest('figure').find('figcaption').html() + '<small>hunyadi.hu</small>';
         }
       }
     });

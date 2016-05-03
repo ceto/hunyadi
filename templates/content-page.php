@@ -31,7 +31,10 @@
   <?php endif; ?>
 
 
+
 <?php get_template_part('templates/page', 'sections' ); ?>
+
+<?php get_template_part('templates/sibling', 'pages' ); ?>
 
 <?php get_template_part('templates/section','relatedprods'); ?>
 <?php //get_template_part('templates/section','postlist'); ?>
