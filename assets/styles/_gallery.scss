@@ -12,12 +12,27 @@
     }
     > img {
       border:2px solid #fff;
+      display: block;
     }
   }
-  img {
-    display:block;
-    border:4px solid $gainsboro;
+  // img {
+  //   display:block;
+  //   border:4px solid $gainsboro;
+  // }
 
+}
+
+.page-template-template-kapcsolat {
+  .gallery__item {
+    > div > a {
+      background-color: transparent;
+      &:hover, &:focus{
+        background-color: transparent;
+      }
+      > img {
+        border-color:transparent;
+      }
+    }
   }
 }
 
