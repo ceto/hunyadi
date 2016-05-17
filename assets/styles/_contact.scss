@@ -9,10 +9,10 @@ input:not([type]), input[type=number], input[type=search], input[type=text], inp
 
 .right-off-canvas-menu {
   @media #{$small} {
-    width:rem-calc(360);
+    width:rem-calc(320);
   }
   @media #{$medium} {
-    width:rem-calc(450);
+    width:rem-calc(430);
   }
   @media #{$xlarge} {
     width:rem-calc(550);
@@ -21,10 +21,10 @@ input:not([type]), input[type=number], input[type=search], input[type=text], inp
 
 .move-left > .inner-wrap {
   @media #{$small} {
-    transform: translate3d( - rem-calc(360),0,0);
+    transform: translate3d( - rem-calc(320),0,0);
   }
   @media #{$medium} {
-    transform: translate3d( - rem-calc(450),0,0);
+    transform: translate3d( - rem-calc(430),0,0);
   }
   @media #{$xlarge} {
     transform: translate3d( - rem-calc(550),0,0);
