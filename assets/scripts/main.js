@@ -97,7 +97,7 @@ jQuery('.right-off-canvas-toggle').click(function(e) {
     $('.entry-content-asset').fitVids();
 
     $('.gallery').magnificPopup({
-      delegate: 'div > a',
+      delegate: '.gallery-icon > a',
       type: 'image',
       tLoading: 'Loading image #%curr%...',
       mainClass: 'mfp-img-mobile',

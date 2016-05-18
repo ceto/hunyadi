@@ -202,10 +202,13 @@ figure {
 }
 figcaption {
 	text-align: center;
-	font-size: .875rem;
+	font-size: .75rem;
 	margin-top: .5em;
 	font-style: italic;
 	line-height: 1.4;
+	@media #{$medium} {
+    font-size: .875rem;
+  }
 }
 
 

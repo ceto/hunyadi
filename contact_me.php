@@ -1,3 +1,4 @@
+
 <?php
   define( 'WP_USE_THEMES', FALSE );
   require( '../../../wp-load.php' );
@@ -43,6 +44,31 @@ if($_POST) {
     die($output);
   }
 
+
+  /**** Szakterület szerinti email címzés ****/
+  switch ($user_Area) {
+    case 'Fázisjavítás':
+      $to_Email='ak.fazisjavitas@hunyadi.hu';
+      break;
+    case 'Energetika':
+      $to_Email='ak.energetika@hunyadi.hu';
+      break;
+    case 'Mérések':
+      $to_Email='ak.meresek@hunyadi.hu';
+      break;
+    case 'Janitza':
+      $to_Email='ak.janitza@hunyadi.hu';
+      break;
+    case 'Berendezésgyártás':
+      $to_Email='ak.bergyartas@hunyadi.hu';
+      break;
+    case 'Kivitelezés és karbantartás':
+      $to_Email='ak.kiv.karb@hunyadi.hu';
+      break;
+    default:
+      $to_Email='szabogabi@gmail.com';
+      break;
+  }
 
   $headers = 'From: '.$user_Email.'' . "\r\n" .
   'Reply-To: '.$user_Email.'' . "\r\n" .

@@ -39,10 +39,12 @@
                 <select id="message_area" name="message_area">
                   <option value="Nem nevezett meg szolgáltatást"><?php _e('Válasszon szolgáltatást','hu'); ?></option>
                   <option value="Fázisjavítás">Fázisjavítás</option>
-                  <option value="Energia audit">Energiaaudit</option>
-                  <option value="JANITZA mérőműszerek">JANITZA mérőműszerek</option>
-                  <option value="Berendezés gyártás">Berendezés gyártás</option>
-                  <option value="Hálózatanalízist szeretnék">Hálózatanalízist szeretnék</option>
+                  <option value="Energetika">Energetika</option>
+                  <option value="Mérések">Mérések</option>
+                  <option value="Janitza">Janitza</option>
+                  <option value="Berendezésgyártás">Berendezésgyártás</option>
+                  <option value="Kivitelezés és karbantartás">Kivitelezés és karbantartás</option>
+                  <option value="Egyéb">Egyéb</option>
                 </select>
               </label>
 

@@ -34,7 +34,7 @@
 <script type="text/javascript">
   var map;
   function initialize() {
-    var latlng = new google.maps.LatLng(47.411013, 19.036092);
+    var latlng = new google.maps.LatLng(47.411100, 19.035659);
     var latlngdebro = new google.maps.LatLng(47.544181, 21.573683);
     var centerlatlng = new google.maps.LatLng(47.411013, 20.036092);
     var myOptions = {
