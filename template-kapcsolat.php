@@ -118,7 +118,7 @@
   var map = new google.maps.Map(document.getElementById('mapcanvas'), myOptions);
 
   var image = new google.maps.MarkerImage('http://vizibalazs.hu/wp-content/themes/vizibalazs/flag.png',
-  new google.maps.Size(23, 31), new google.maps.Point(0,0), new google.maps.Point(1, 15));
+  new google.maps.Size(23, 31), new google.maps.Point(0,0), new google.maps.Point(11, 31));
   //var shadow = new google.maps.MarkerImage('http://miskolczilaw.hu/wp-content/themes/jmt/dist/images/map_zaszlo_shadow.png',
   //new google.maps.Size(95, 49), new google.maps.Point(0,0), new google.maps.Point(1, 49));
 
