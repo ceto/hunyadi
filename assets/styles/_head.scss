@@ -40,6 +40,38 @@
   }
 }
 
+
+#lang_sel_list {
+  ul {
+    position: absolute;
+    top:5.6666%;
+    //text-align: center;
+    width:100%;
+    list-style-type: none;
+    margin:0 0 0 0;
+    text-transform:uppercase;
+    font-size: .875rem;
+    font-weight: $font-weight-bold;
+    color:$aluminum;
+    li {
+      margin:0;
+      display: inline-block;
+      &:not(:last-child):after {
+        content:' | ';
+        display: inline-block;
+
+        margin:0 .25em;
+      }
+      a {
+        color:inherit;
+        &:hover, &:focus {
+          color:$secondary-color;
+        }
+      }
+    }
+  }
+}
+
 .linktoensite {
   margin-top: 1.5rem;
   display: block;

@@ -1,8 +1,10 @@
 <header class="theleftside">
-
+  <?php do_action('wpml_add_language_selector'); ?>
   <div class="titlearea">
     <a href="<?= esc_url(home_url('/')); ?>" class="sitename" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
   </div>
+
+
 
   <nav class="nav nav--side" role="navigation">
       <?php
@@ -18,6 +20,7 @@
       ?>
   </nav>
 
-  <a class="linktoensite" href="http://old.hunyadi.hu/en/" target="_blank">English version</a>
+
+<!--   <a class="linktoensite" href="http://old.hunyadi.hu/en/" target="_blank">English version</a> -->
 
 </header>
