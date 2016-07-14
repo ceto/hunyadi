@@ -4,7 +4,7 @@
   require( '../../../wp-load.php' );
 
 if($_POST) {
-  $to_Email = "szabogabi@gmail.com";
+  $to_Email = "ak.egyeb@hunyadi.hu";
   $subject = 'Webes ajánlatkérés - Hunyadi.hu';
 
   if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
@@ -66,7 +66,7 @@ if($_POST) {
       $to_Email='ak.kiv.karb@hunyadi.hu';
       break;
     default:
-      $to_Email='szabogabi@gmail.com';
+      $to_Email='ak.egyeb@hunyadi.hu';
       break;
   }
 
