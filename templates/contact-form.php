@@ -2,7 +2,7 @@
         <div class="row">
           <div class="columns">
             <h2><?php _e('Várjuk <span>megkeresését</span>','hu'); ?></h2>
-            <p>Hívjon a <a href="tel:003612972020">+36 (1) 297-2020</a> számon, vagy töltse ki az űrlapot. Munkatársaink rövid időn belül válaszolnak.</p>
+            <p><?php _e('Hívjon a <a href="tel:003612972020">+36 (1) 297-2020</a> számon, vagy töltse ki az űrlapot. Munkatársaink rövid időn belül válaszolnak.','hu'); ?></p>
           </div>
         </div>
 
@@ -26,7 +26,7 @@
             </div>
 
             <div class="columns xlarge-6">
-              <label for="message_email"><?php _e('E-Mail cím','hu'); ?>*<small class="error">Megadása kötelező</small>
+              <label for="message_email"><?php _e('E-Mail cím','hu'); ?>*<small class="error">><?php _e('Megadása kötelező','hu'); ?></small>
                 <input type="email" required pattern="email" placeholder="<?php _e('E-mail címe','hu'); ?>*" id="message_email" name="message_email" value="<?php echo $_POST['message_email']; ?>">
               </label>
 
@@ -35,16 +35,16 @@
 
           <div class="row">
             <div class="columns">
-              <label for="message_area">Válasszon szolgáltatást
+              <label for="message_area"><?php _e('Válasszon szolgáltatást','hu'); ?>
                 <select id="message_area" name="message_area">
                   <option value="Nem nevezett meg szolgáltatást"><?php _e('Válasszon szolgáltatást','hu'); ?></option>
-                  <option value="Fázisjavítás">Fázisjavítás</option>
-                  <option value="Energetika">Energetika</option>
-                  <option value="Mérések">Mérések</option>
-                  <option value="Janitza">Janitza</option>
-                  <option value="Berendezésgyártás">Berendezésgyártás</option>
-                  <option value="Kivitelezés és karbantartás">Kivitelezés és karbantartás</option>
-                  <option value="Egyéb">Egyéb</option>
+                  <option value="Fázisjavítás"><?php _e('Fázisjavítás','hu'); ?></option>
+                  <option value="Energetika"><?php _e('Energetika','hu'); ?></option>
+                  <option value="Mérések"><?php _e('Mérések','hu'); ?></option>
+                  <option value="Janitza"><?php _e('Janitza','hu'); ?></option>
+                  <option value="Berendezésgyártás"><?php _e('Berendezésgyártás','hu'); ?></option>
+                  <option value="Kivitelezés és karbantartás"><?php _e('Kivitelezés és karbantartás','hu'); ?></option>
+                  <option value="Egyéb"><?php _e('Egyéb','hu'); ?></option>
                 </select>
               </label>
 

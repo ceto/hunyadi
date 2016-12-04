@@ -17,12 +17,12 @@
   position: relative;
   overflow: hidden;
   margin:0;
-  background-color: rgba(scale-color($primary-color,$lightness:-10%),.5);
+  background-color: rgba(scale-color($primary-color,$lightness:-10%),.25);
   min-height:14em;
   width:50%;
   float:left;
   padding:1rem;
-  color:rgba($white,.85);
+  color:rgba($white,1);
   transition: all .4s linear;
   &:hover {
     background-color: rgba( scale-color($secondary-color,$lightness:0),.75);
@@ -117,12 +117,12 @@
 
 
 .hometile--2, .hometile--5, .hometile--7 {
-  background-color: rgba(scale-color($primary-color,$lightness:-10%),.75);
+  background-color: rgba(scale-color($primary-color,$lightness:-10%),.5);
 }
 .hometile--3 {
-  background-color: rgba(scale-color($primary-color,$lightness:-10%),.666);
+  background-color: rgba(scale-color($primary-color,$lightness:-10%),.416);
 }
 
 .hometile--4 {
-  background-color: rgba(scale-color($primary-color,$lightness:-10%),.875);
+  background-color: rgba(scale-color($primary-color,$lightness:-10%),.655);
 }

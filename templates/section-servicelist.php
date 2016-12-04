@@ -18,7 +18,7 @@
     <aside class="pagesection pagesection--details pagesection--inverse">
       <div class="row">
         <div class="columns medium-8 columns medium-centered">
-        <h2 class="pagesection__title">Tájékozódjon szolgáltatásainkról</h2>
+        <h2 class="pagesection__title"><?php _e('Tájékozódjon szolgáltatásainkról','hu'); ?></h2>
         <ul class="subpageslist">
           <?php while ($the_relpages->have_posts()) : $the_relpages->the_post(); ?>
             <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?> <i class="ion ion-ios-arrow-thin-right"></i></a></li>

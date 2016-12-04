@@ -32,7 +32,7 @@ input:not([type]), input[type=number], input[type=search], input[type=text], inp
 }
 
 .contactwrap {
-  position: fixed;
+  position: relative;
   top:0;
   padding:1rem 0;
   color:$white;
