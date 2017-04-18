@@ -18,6 +18,15 @@
           </div>
 
           <div class="row">
+            <div class="columns">
+              <label for="message_firm"><?php _e('Cégnév','hu'); ?><small class="error">Megadása kötelező</small>
+                <input type="text" placeholder="<?php _e('Adja meg az ajánlatkérő cég nevét','hu'); ?>" id="message_firm" name="message_firm" value="<?php echo $_POST['message_firm']; ?>">
+              </label>
+
+            </div>
+          </div>
+
+          <div class="row">
             <div class="columns xlarge-6">
               <label for="message_tel"><?php _e('Telefon','hu'); ?>*<small class="error">Megadása kötelező</small>
                 <input type="text" required placeholder="<?php _e('Adja meg telefonszámát','hu'); ?>" id="message_tel" name="message_tel" value="<?php echo $_POST['message_tel']; ?>">
@@ -26,7 +35,7 @@
             </div>
 
             <div class="columns xlarge-6">
-              <label for="message_email"><?php _e('E-Mail cím','hu'); ?>*<small class="error">><?php _e('Megadása kötelező','hu'); ?></small>
+              <label for="message_email"><?php _e('E-Mail cím','hu'); ?>*<small class="error"><?php _e('Megadása kötelező','hu'); ?></small>
                 <input type="email" required pattern="email" placeholder="<?php _e('E-mail címe','hu'); ?>*" id="message_email" name="message_email" value="<?php echo $_POST['message_email']; ?>">
               </label>
 

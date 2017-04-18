@@ -25,6 +25,6 @@
     }
   },
   "config": {
-    "devUrl": "http://ceti.no-ip.org/hunyadi/"
+    "devUrl": "http://hunyadi.dev/"
   }
 }

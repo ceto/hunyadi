@@ -24,6 +24,7 @@ if($_POST) {
   }
   $user_Name = filter_var($_POST["userName"], FILTER_SANITIZE_STRING);
   $user_Email = filter_var($_POST["userEmail"], FILTER_SANITIZE_EMAIL);
+  $user_Firm = filter_var($_POST["userFirm"], FILTER_SANITIZE_STRING);
   $user_Tel = filter_var($_POST["userTel"], FILTER_SANITIZE_STRING);
   $user_Message = filter_var($_POST["userMsg"], FILTER_SANITIZE_STRING);
   $user_Area = filter_var($_POST["userArea"], FILTER_SANITIZE_STRING);
@@ -67,6 +68,7 @@ if($_POST) {
       break;
     default:
       $to_Email='ak.egyeb@hunyadi.hu';
+      //$to_Email='szabogabi@gmail.com';
       break;
   }
 
@@ -74,7 +76,7 @@ if($_POST) {
   'Reply-To: '.$user_Email.'' . "\r\n" .
   'X-Mailer: PHP/' . phpversion();
 
-  $sentMail = @wp_mail($to_Email, $subject, 'Név: '.$user_Name. "\r\n". 'E-mail: '.$user_Email. "\r\n" .'Telefon: '.$user_Tel . "\r\n\n"  .'Terület: '.$user_Area. "\r\n" .'-- '.$user_Message, $headers);
+  $sentMail = @wp_mail($to_Email, $subject, 'Név: '.$user_Name. "\r\n". 'Cég: '.$user_Firm. "\r\n". 'E-mail: '.$user_Email. "\r\n" .'Telefon: '.$user_Tel . "\r\n\n"  .'Terület: '.$user_Area. "\r\n" .'-- '.$user_Message, $headers);
 
   if(!$sentMail) {
     $output = json_encode(array('type'=>'error', 'text' => 'Üzenet küldése nem sikerült. Vegye fel velünk a kapcsolatot e-mailben vagy telefonon!'));
