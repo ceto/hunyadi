@@ -2,8 +2,15 @@ input:not([type]), input[type=number], input[type=search], input[type=text], inp
   font-weight: $font-weight-bold;
 }
 
-// select {
-//   box-sizing:border-box;
+select{
+  option {
+    color: #000 !important;
+  }
+}
+
+// select:focus::-ms-value {
+//   background-color: white !important;
+//   color:#000 !important;
 // }
 
 

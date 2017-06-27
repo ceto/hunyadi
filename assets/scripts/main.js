@@ -153,6 +153,9 @@ jQuery('.right-off-canvas-toggle').click(function(e) {
                 'userArea': user_area,
                 'userMsg': user_msg
             };
+            $('#contact_submit').addClass('disabled');
+            $('#contact_submit').attr('disabled','disabled');
+            $('#contact_submit').text('Küldés folyamatban');
 
             //Ajax post data to server
             $.post($('#contact_form').attr('action'), post_data, function(response){
@@ -169,8 +172,10 @@ jQuery('.right-off-canvas-toggle').click(function(e) {
                     $('#contact_form input').val('');
                     $('#contact_form textarea').val('');
                 }
-
                 $("#result").hide().html(output).slideDown();
+                $('#contact_submit').removeClass('disabled');
+                $('#contact_submit').removeAttr('disabled');
+                $('#contact_submit').text('Mehet');
             }, 'json');
 
         }
