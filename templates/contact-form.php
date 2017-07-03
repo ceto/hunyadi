@@ -1,4 +1,5 @@
       <div class="contactwrap">
+                    <a href="#" class="exit-off-canvas ajanlatclose">&times;</a>
         <div class="row">
           <div class="columns">
             <h2><?php _e('Várjuk <span>megkeresését</span>','hu'); ?></h2>
@@ -81,4 +82,3 @@
             </div>
         </form>
       </div><!-- /.contact-wrap -->
-
