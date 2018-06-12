@@ -25,6 +25,6 @@
     }
   },
   "config": {
-    "devUrl": "http://hunyadi.dev/"
+    "devUrl": "http://hunyadien.localhost/"
   }
 }

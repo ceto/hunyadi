@@ -28,7 +28,7 @@ add_filter('body_class', __NAMESPACE__ . '\\body_class');
  * Clean up the_excerpt()
  */
 function excerpt_more() {
-  return ' &hellip;<a class="postsquare__more" href="' . get_permalink() . '">' . __('Tovább', 'hu') . '</a>';
+  return ' &hellip;<a class="postsquare__more" href="' . get_permalink() . '">' . __('Tovább', 'hunyadi') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 

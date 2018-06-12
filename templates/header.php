@@ -14,7 +14,7 @@
         wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu menu--pri']);
       endif;
       ?>
-    <a class="right-off-canvas-toggle sideroctl" href="#">Ajánlat kérése</a>
+    <a class="right-off-canvas-toggle sideroctl" href="#"><?php _e('Ajánlat kérése', 'hunyadi') ?></a>
       <?php
       if (has_nav_menu('secondary_navigation')) :
         wp_nav_menu(['theme_location' => 'secondary_navigation', 'menu_class' => 'menu menu--sec']);

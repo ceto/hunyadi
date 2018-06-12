@@ -4,7 +4,7 @@
       <nav class="catnav row">
         <div class="columns">
           <ul class="menu menu--cat">
-            <li><a href="<?= get_the_permalink(get_option( 'page_for_posts' )) ?>">Mutasd mindet</a></li>
+            <li><a href="<?= get_the_permalink(get_option( 'page_for_posts' )) ?>"><?php _e('Mutasd mindet','hunyadi') ?></a></li>
             <?php
               $args = array(
                 'show_option_all'    => '',

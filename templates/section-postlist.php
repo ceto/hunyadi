@@ -16,7 +16,7 @@
     <aside class="pagesection pagesection--posts">
       <div class="row">
         <div class="columns medium-10 medium-centered">
-          <h2>Kapcsolódó írások a tudástárból</h2>
+          <h2><?php _e('Kapcsolódó írások a tudástárból', 'hunyadi') ?></h2>
           <ul class="block-grid-1 small-block-grid-2 medium-block-grid-3">
           <?php while ($the_relposts->have_posts()) : $the_relposts->the_post(); ?>
             <li><?php get_template_part( 'templates/post', 'square' ); ?></li>
@@ -24,7 +24,7 @@
           </ul>
 
           <div class="row">
-            <div class="columns"><a class="pagesection__readmore" href="<?= get_permalink(39) ?>">További írások a tudástárban</a></div>
+            <div class="columns"><a class="pagesection__readmore" href="<?= get_permalink(39) ?>"><?php _e('További írások a tudástárban', 'hunyadi') ?></a></div>
           </div>
 
         </div>

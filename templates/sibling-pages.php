@@ -5,7 +5,7 @@
     <section class="pagesection pagesection--details pagesection--inverse">
       <div class="row">
         <div class="columns medium-8 columns medium-centered">
-        <h2 class="pagesection__title"><?php _e('Kapcsolódó szolgáltatások','hu'); ?></h2>
+        <h2 class="pagesection__title"><?php _e('Kapcsolódó szolgáltatások','hunyadi'); ?></h2>
         <ul class="subpageslist">
           <?php wp_list_pages(array(
             'title_li' => '',

@@ -5,7 +5,7 @@
 
 if($_POST) {
   $to_Email = "ak.egyeb@hunyadi.hu";
-  $subject = 'Webes ajánlatkérés - Hunyadi.hu';
+  $subject = __('Webes ajánlatkérés - Hunyadi.hu','hunyadi');
 
   if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
 
@@ -19,7 +19,7 @@ if($_POST) {
   }
 
   if(!isset($_POST["userName"]) || !isset($_POST["userEmail"]) || !isset($_POST["userTel"])) {
-    $output = json_encode(array('type'=>'error', 'text' => 'Hiányzó kötelező mező'));
+    $output = json_encode(array('type'=>'error', 'text' => __('Hiányzó kötelező mező','hunyadi') ));
     die($output);
   }
   $user_Name = filter_var($_POST["userName"], FILTER_SANITIZE_STRING);
@@ -33,15 +33,15 @@ if($_POST) {
   $user_Message = str_replace("&#39;", "'", $user_Message);
 
   if(strlen($user_Name)<4) {
-    $output = json_encode(array('type'=>'error', 'text' => 'Teljes név megadása kötelező'));
+    $output = json_encode(array('type'=>'error', 'text' => __('Teljes név megadása kötelező','hunyadi')));
     die($output);
   }
   if(!filter_var($user_Email, FILTER_VALIDATE_EMAIL)) {
-    $output = json_encode(array('type'=>'error', 'text' => 'Érvénytelen e-mail cím'));
+    $output = json_encode(array('type'=>'error', 'text' => __('Érvénytelen e-mail cím','hunyadi')));
     die($output);
   }
   if(strlen($user_Tel)<6) {
-    $output = json_encode(array('type'=>'error', 'text' => 'Telefonszám megadása kötelező'));
+    $output = json_encode(array('type'=>'error', 'text' => __('Telefonszám megadása kötelező','hunyadi')));
     die($output);
   }
 
@@ -79,7 +79,7 @@ if($_POST) {
   $sentMail = @wp_mail($to_Email, $subject, 'Név: '.$user_Name. "\r\n". 'Cég: '.$user_Firm. "\r\n". 'E-mail: '.$user_Email. "\r\n" .'Telefon: '.$user_Tel . "\r\n\n"  .'Terület: '.$user_Area. "\r\n" .'-- '.$user_Message, $headers);
 
   if(!$sentMail) {
-    $output = json_encode(array('type'=>'error', 'text' => 'Üzenet küldése nem sikerült. Vegye fel velünk a kapcsolatot e-mailben vagy telefonon!'));
+    $output = json_encode(array('type'=>'error', 'text' => __('Üzenet küldése nem sikerült. Vegye fel velünk a kapcsolatot e-mailben vagy telefonon!','hunyadi')));
     die($output);
   } else {
 
@@ -87,11 +87,11 @@ if($_POST) {
     'Reply-To: '.$to_Email.'' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
-    $resp_text="Tisztelt ".$user_Name."\r\n\n".
-    "Köszönjük megtisztelő ajánlatkérését! Levelét továbbítottuk az illetékes kollégánknak, aki hamarosan felveszi Önnel a kapcsolatot."."\r\n\n".
-    "Tisztelettel"."\r\n"."Hunyadi Kft."."\r\n"."1222 Budapest, Gyár u. 14."."\r\n"."Tel: +36 (1) 297-2020";
+    $resp_text=__('Tisztelt','hunyadi').' '.$user_Name."\r\n\n".
+    __('Köszönjük megtisztelő ajánlatkérését! Levelét továbbítottuk az illetékes kollégánknak, aki hamarosan felveszi Önnel a kapcsolatot.','hunyadi')."\r\n\n".
+    __('Tisztelettel','hunyadi')."\r\n"."Hunyadi Kft."."\r\n"."1222 Budapest, Gyár u. 14."."\r\n"."Tel: +36 (1) 297-2020";
     @wp_mail($user_Email, $subject, $resp_text, $resp_headers);
-    $output = json_encode(array('type'=>'message', 'text' => 'Tisztelt '.$user_Name .'! Köszönjük. Ajánlatkérését továbbítottuk az illetékes kollégánknak, aki hamarosan felveszi Önnel a kapcsolatot.'));
+    $output = json_encode(array('type'=>'message', 'text' => _('Tisztelt','hunyadi').' '.$user_Name ._('! Köszönjük. Ajánlatkérését továbbítottuk az illetékes kollégánknak, aki hamarosan felveszi Önnel a kapcsolatot.','hunyadi')));
     die($output);
   }
 }

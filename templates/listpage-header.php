@@ -4,9 +4,9 @@
   <div class="row">
     <div class="columns medium-8 columns medium-centered">
       <?php if (is_page_template('template-termekek.php') || is_page_template('template-referencia.php') || is_page_template('template-kapcsolat.php') ) : ?>
-        <span class="banner__parentlink"><?= __('Hunyadi','hu'); ?></span>
+        <span class="banner__parentlink"><?= __('Hunyadi','hunyadi'); ?></span>
       <?php else: ?>
-        <a href="<?= get_the_permalink(18) ?>" class="banner__parentlink"><?= __('Termékek','hu'); ?></a>
+        <a href="<?= get_the_permalink(18) ?>" class="banner__parentlink"><?= __('Termékek','hunyadi'); ?></a>
       <?php endif; ?>
       <h1 class="banner__title"><?= Titles\title(); ?></h1>
     </div>

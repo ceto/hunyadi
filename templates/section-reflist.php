@@ -16,13 +16,13 @@
     <aside class="pagesection pagesection--refs">
       <div class="row">
         <div class="columns medium-10 columns medium-centered">
-        <h2 class="pagesection__title"><?php _e('Kapcsolódó referencia','hu'); ?></h2>
+        <h2 class="pagesection__title"><?php _e('Kapcsolódó referencia','hunyadi'); ?></h2>
           <ul class="block-grid-1 small-block-grid-2 medium-block-grid-3">
             <?php while ($the_relrefs->have_posts()) : $the_relrefs->the_post(); ?>
             <li><?php get_template_part( 'templates/referencia', 'square' ); ?></li>
             <?php endwhile; ?>
           </ul>
-          <a href="<?= get_permalink(19) ?>" class="pagesection__readmore"><?php _e('Teljes referencialista itt','hu'); ?></a>
+          <a href="<?= get_permalink(19) ?>" class="pagesection__readmore"><?php _e('Teljes referencialista itt','hunyadi'); ?></a>
         </div>
       </div>
     </aside>

@@ -29,5 +29,5 @@
         <?php endforeach; ?>
     </ul>
   <?php endif ?>
-  <a class="miniprod__more" href="<?php the_permalink() ?>"><?php _e('Részletek','hu') ?></a>
+  <a class="miniprod__more" href="<?php the_permalink() ?>"><?php _e('Részletek','hunyadi') ?></a>
 </li>

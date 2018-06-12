@@ -10,7 +10,7 @@
         $akterm= get_term_by( 'slug', get_query_var('term'), 'field');
       ?>
       <?= term_description(  $akterm->term_id ,'field') ?>
-       <a class="right-off-canvas-toggle button small" href="#"><?php _e('Ajánlat kérése','hu'); ?></a>
+       <a class="right-off-canvas-toggle button small" href="#"><?php _e('Ajánlat kérése','hunyadi'); ?></a>
     </div>
   </div>
 </section>

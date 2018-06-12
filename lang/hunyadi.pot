@@ -1,0 +1,271 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Hunyadi Theme\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-12 12:09+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: contact_me.php:8
+msgid "Webes ajánlatkérés - Hunyadi.hu"
+msgstr ""
+
+#: contact_me.php:22
+msgid "Hiányzó kötelező mező"
+msgstr ""
+
+#: contact_me.php:36
+msgid "Teljes név megadása kötelező"
+msgstr ""
+
+#: contact_me.php:40
+msgid "Érvénytelen e-mail cím"
+msgstr ""
+
+#: contact_me.php:44
+msgid "Telefonszám megadása kötelező"
+msgstr ""
+
+#: contact_me.php:82
+msgid ""
+"Üzenet küldése nem sikerült. Vegye fel velünk a kapcsolatot e-mailben vagy "
+"telefonon!"
+msgstr ""
+
+#: contact_me.php:90
+msgid "Tisztelt"
+msgstr ""
+
+#: contact_me.php:91
+msgid ""
+"Köszönjük megtisztelő ajánlatkérését! Levelét továbbítottuk az illetékes "
+"kollégánknak, aki hamarosan felveszi Önnel a kapcsolatot."
+msgstr ""
+
+#: contact_me.php:92
+msgid "Tisztelettel"
+msgstr ""
+
+#: taxonomy-field.php:13 template-kapcsolat.php:18 templates/content-page.php:6
+#: templates/header-mobile.php:6 templates/header.php:17
+msgid "Ajánlat kérése"
+msgstr ""
+
+#. Name of the template
+msgid "Custom Template"
+msgstr ""
+
+#. Name of the template
+msgid "Home Template"
+msgstr ""
+
+#. Name of the template
+msgid "Kapcsolat Template"
+msgstr ""
+
+#. Name of the template
+msgid "Referencia Template"
+msgstr ""
+
+#. Name of the template
+msgid "Termekek Template"
+msgstr ""
+
+#: lib/extras.php:31
+msgid "Tovább"
+msgstr ""
+
+#: templates/archive-header.php:9 templates/page-header.php:7
+#: templates/post-header.php:6
+msgid "Tudástár"
+msgstr ""
+
+#: templates/catnav.php:7
+msgid "Mutasd mindet"
+msgstr ""
+
+#: templates/contact-form.php:5
+msgid "Várjuk <span>megkeresését</span>"
+msgstr ""
+
+#: templates/contact-form.php:6
+msgid ""
+"Hívjon a <a href=\"tel:003612972020\">+36 (1) 297-2020</a> számon, vagy "
+"töltse ki az űrlapot. Munkatársaink rövid időn belül válaszolnak."
+msgstr ""
+
+#: templates/contact-form.php:14
+msgid "Név"
+msgstr ""
+
+#: templates/contact-form.php:14 templates/contact-form.php:23
+#: templates/contact-form.php:32 templates/contact-form.php:39
+msgid "Megadása kötelező"
+msgstr ""
+
+#: templates/contact-form.php:15
+msgid "Adja meg nevét"
+msgstr ""
+
+#: templates/contact-form.php:23
+msgid "Cégnév"
+msgstr ""
+
+#: templates/contact-form.php:24
+msgid "Adja meg az ajánlatkérő cég nevét"
+msgstr ""
+
+#: templates/contact-form.php:32
+msgid "Telefon"
+msgstr ""
+
+#: templates/contact-form.php:33
+msgid "Adja meg telefonszámát"
+msgstr ""
+
+#: templates/contact-form.php:39
+msgid "E-Mail cím"
+msgstr ""
+
+#: templates/contact-form.php:40
+msgid "E-mail címe"
+msgstr ""
+
+#: templates/contact-form.php:48 templates/contact-form.php:50
+msgid "Válasszon szolgáltatást"
+msgstr ""
+
+#: templates/contact-form.php:51
+msgid "Fázisjavítás"
+msgstr ""
+
+#: templates/contact-form.php:52
+msgid "Energetika"
+msgstr ""
+
+#: templates/contact-form.php:53
+msgid "Mérések"
+msgstr ""
+
+#: templates/contact-form.php:54
+msgid "Janitza"
+msgstr ""
+
+#: templates/contact-form.php:55
+msgid "Berendezésgyártás"
+msgstr ""
+
+#: templates/contact-form.php:56
+msgid "Kivitelezés és karbantartás"
+msgstr ""
+
+#: templates/contact-form.php:57
+msgid "Egyéb"
+msgstr ""
+
+#: templates/contact-form.php:66
+msgid "Üzenet"
+msgstr ""
+
+#: templates/contact-form.php:67
+msgid "Ha kérdése van itt felteheti ..."
+msgstr ""
+
+#: templates/contact-form.php:80
+msgid "Mehet"
+msgstr ""
+
+#: templates/content-page.php:19
+msgid "A szolgáltatás részletei"
+msgstr ""
+
+#: templates/footer.php:3
+msgid "Minden jog fenntartva."
+msgstr ""
+
+#: templates/header-mobile.php:4
+msgid "Menü"
+msgstr ""
+
+#: templates/listpage-header.php:7
+msgid "Hunyadi"
+msgstr ""
+
+#: templates/listpage-header.php:9 templates/termek-header.php:10
+msgid "Termékek"
+msgstr ""
+
+#: templates/mini-prod.php:32 templates/termek-square.php:9
+msgid "Részletek"
+msgstr ""
+
+#: templates/refpage-header.php:6
+msgid "Referencia"
+msgstr ""
+
+#: templates/section-postlist.php:19
+msgid "Kapcsolódó írások a tudástárból"
+msgstr ""
+
+#: templates/section-postlist.php:27
+msgid "További írások a tudástárban"
+msgstr ""
+
+#: templates/section-reflist.php:19
+msgid "Kapcsolódó referencia"
+msgstr ""
+
+#: templates/section-reflist.php:25
+msgid "Teljes referencialista itt"
+msgstr ""
+
+#: templates/section-relatedprods.php:22
+msgid "Kapcsolódó műszerek, berendezések"
+msgstr ""
+
+#: templates/section-relatedprods.php:28 templates/section-termeklist.php:20
+msgid "Teljes termékkatalógus itt"
+msgstr ""
+
+#: templates/section-servicelist.php:21
+msgid "Tájékozódjon szolgáltatásainkról"
+msgstr ""
+
+#: templates/section-termeklist.php:14
+msgid "Kapcsolódó termékek"
+msgstr ""
+
+#: templates/sibling-pages.php:8
+msgid "Kapcsolódó szolgáltatások"
+msgstr ""
+
+#: templates/termek-square.php:8
+msgid "Fázisjavítás | Energetika"
+msgstr ""
+
+#. Name of the theme
+msgid "Hunyadi Theme"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Hunyadi WordPress theme. <a href=\"https://github.com/ceto/hunyadi\">"
+"Contribute on GitHub</a>"
+msgstr ""
+
+#. URI of the theme
+#. Author URI of the theme
+msgid "http://hydrogene.hu/"
+msgstr ""
+
+#. Author of the theme
+msgid "Hydrogene"
+msgstr ""

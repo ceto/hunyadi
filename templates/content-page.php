@@ -3,7 +3,7 @@
   <div class="row">
     <div class="columns medium-8 columns medium-centered">
       <?php the_content(); ?>
-      <a class="right-off-canvas-toggle button small" href="#top"><?php _e('Ajánlat kérése','hu'); ?></a>
+      <a class="right-off-canvas-toggle button small" href="#top"><?php _e('Ajánlat kérése','hunyadi'); ?></a>
 
     </div>
   </div>
@@ -16,7 +16,7 @@
     <section class="pagesection pagesection--details pagesection--inverse">
       <div class="row">
         <div class="columns medium-8 columns medium-centered">
-        <h2 class="pagesection__title">A szolgáltatás részletei</h2>
+        <h2 class="pagesection__title"><?php _e('A szolgáltatás részletei','hunyadi') ?></h2>
         <ul class="subpageslist">
           <?php wp_list_pages(array(
             'title_li' => '',

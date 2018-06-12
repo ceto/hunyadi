@@ -11,13 +11,13 @@
 <aside class="pagesection pagesection--termekek">
   <div class="row">
     <div class="columns medium-10 columns medium-centered">
-    <h2 class="pagesection__title"><?php _e('Kapcsolódó termékek','hu'); ?></h2>
+    <h2 class="pagesection__title"><?php _e('Kapcsolódó termékek','hunyadi'); ?></h2>
       <ul class="block-grid-1 small-block-grid-2 medium-block-grid-3">
         <?php while ($the_relprods->have_posts()) : $the_relprods->the_post(); ?>
           <li><?php get_template_part( 'templates/termek', 'square' ); ?></li>
         <?php endwhile; ?>
       </ul>
-      <a href="<?= get_permalink(18) ?>" class="button"><?php _e('Teljes termékkatalógus itt','hu'); ?></a>
+      <a href="<?= get_permalink(18) ?>" class="button"><?php _e('Teljes termékkatalógus itt','hunyadi'); ?></a>
     </div>
   </div>
 </aside>
