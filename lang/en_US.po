@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Hunyadi Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-12 12:09+0000\n"
-"PO-Revision-Date: 2018-06-12 12:13+0000\n"
+"POT-Creation-Date: 2018-06-12 12:32+0000\n"
+"PO-Revision-Date: 2018-06-12 12:34+0000\n"
 "Last-Translator: ceto <szabogabi@gmail.com>\n"
 "Language-Team: English (United States)\n"
 "Language: en_US\n"
@@ -52,6 +52,13 @@ msgstr "Thank you. Your message has been sent. Our colleague will reply soon."
 #: contact_me.php:92
 msgid "Tisztelettel"
 msgstr "Best regards"
+
+#: contact_me.php:94
+msgid ""
+"! Köszönjük. Ajánlatkérését továbbítottuk az illetékes kollégánknak, aki "
+"hamarosan felveszi Önnel a kapcsolatot."
+msgstr ""
+"! Thank you. Your message has been sent. Our colleague will reply soon."
 
 #: taxonomy-field.php:13 template-kapcsolat.php:18 templates/content-page.php:6
 #: templates/header-mobile.php:6 templates/header.php:17

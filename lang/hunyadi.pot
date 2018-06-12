@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Hunyadi Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-12 12:09+0000\n"
+"POT-Creation-Date: 2018-06-12 12:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -52,6 +52,12 @@ msgstr ""
 
 #: contact_me.php:92
 msgid "Tisztelettel"
+msgstr ""
+
+#: contact_me.php:94
+msgid ""
+"! Köszönjük. Ajánlatkérését továbbítottuk az illetékes kollégánknak, aki "
+"hamarosan felveszi Önnel a kapcsolatot."
 msgstr ""
 
 #: taxonomy-field.php:13 template-kapcsolat.php:18 templates/content-page.php:6
