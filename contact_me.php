@@ -91,7 +91,7 @@ if($_POST) {
     __('Köszönjük megtisztelő ajánlatkérését! Levelét továbbítottuk az illetékes kollégánknak, aki hamarosan felveszi Önnel a kapcsolatot.','hunyadi')."\r\n\n".
     __('Tisztelettel','hunyadi')."\r\n"."Hunyadi Kft."."\r\n"."1222 Budapest, Gyár u. 14."."\r\n"."Tel: +36 (1) 297-2020";
     @wp_mail($user_Email, $subject, $resp_text, $resp_headers);
-    $output = json_encode(array('type'=>'message', 'text' => _('Tisztelt','hunyadi').' '.$user_Name ._('! Köszönjük. Ajánlatkérését továbbítottuk az illetékes kollégánknak, aki hamarosan felveszi Önnel a kapcsolatot.','hunyadi')));
+    $output = json_encode(array('type'=>'message', 'text' => _('Tisztelt','hunyadi').' '.$user_Name .__('! Köszönjük. Ajánlatkérését továbbítottuk az illetékes kollégánknak, aki hamarosan felveszi Önnel a kapcsolatot.','hunyadi')));
     die($output);
   }
 }
