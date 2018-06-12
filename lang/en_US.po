@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Hunyadi Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-12 12:32+0000\n"
-"PO-Revision-Date: 2018-06-12 12:34+0000\n"
+"POT-Creation-Date: 2018-06-12 13:02+0000\n"
+"PO-Revision-Date: 2018-06-12 13:03+0000\n"
 "Last-Translator: ceto <szabogabi@gmail.com>\n"
 "Language-Team: English (United States)\n"
 "Language: en_US\n"
@@ -198,6 +198,10 @@ msgstr "Service's details"
 #: templates/footer.php:3
 msgid "Minden jog fenntartva."
 msgstr "All rights reserved."
+
+#: templates/footer.php:3
+msgid "Adatvédelem"
+msgstr "Privacy policy"
 
 #: templates/header-mobile.php:4
 msgid "Menü"
