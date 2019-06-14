@@ -130,3 +130,39 @@
 
 
 }
+
+.promoblockwrap {
+  background-color: $smoke;
+  border-bottom: 1px solid $gainsboro;
+}
+
+.promoblock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:1rem 0;
+  color:$jet;
+
+  h3 {
+    margin:0 0 .125em;
+    font-size: 1.5rem;
+  }
+  p {
+    margin:0;
+    line-height: 1.2;
+  }
+  .button {
+    margin:0;
+  }
+
+
+
+}
+
+.promoblock__content {
+  padding:1rem 0;
+}
+.promoblock__action {
+  text-align: center;
+
+}
