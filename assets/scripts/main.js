@@ -189,4 +189,10 @@ jQuery('.right-off-canvas-toggle').click(function(e) {
         $("#result").slideUp();
     });
 
+    $(".stoggle").on('click', function(e) {
+        e.preventDefault();
+        $('.headsearch').toggleClass('is-open');
+    });
+
+
   });

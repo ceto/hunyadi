@@ -85,6 +85,19 @@
                       </label>
                   </div>
               </div>
+              <div class="row">
+                  <div class="columns">
+                      <label for="accept">
+                          <input id="accept" name="accept" value="1" type="checkbox" required />
+                          Elolvastam és megértettem az <a target="_blank"
+                              href="<?= get_the_permalink(464) ?>">adatvédelmi szabályzatot.</a>
+                          <small class="error">
+                              <br>Adatvédelmi szabályzat elfogadása kötelező<br><br>
+                          </small>
+                      </label>
+
+                  </div>
+              </div>
 
               <div class="actions row text-center">
                   <div class="columns">

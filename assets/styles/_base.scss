@@ -223,3 +223,56 @@ select {
 .screen-reader-text {
 	display: none;
 }
+
+
+
+.headsearch {
+    @include clearfix();
+    form {
+        display:none;
+        .is-open & {
+            display:block;
+        }
+    }
+
+    &.is-open form {
+            display:block;
+    }
+
+
+    input[type="search"] {
+        max-width:75%;
+        float:left;
+    }
+    button {
+        float:left;
+        //width:5rem;
+        padding:.75em .5em;
+    }
+}
+
+.stoggle {
+    display:inline-block;
+    opacity:.75;
+    line-height:2em;
+    svg {
+        width:1.333em;
+    }
+
+    &:hover {
+        opacity:1;
+    }
+
+    .is-open & {
+            display:none;
+    }
+
+    span {
+        display:none;
+        font-weight: bold;
+        transform: translateY(-.5em);
+        font-size:.875rem;
+        color:#fff;
+        //float:left;
+    }
+}

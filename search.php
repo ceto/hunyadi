@@ -10,7 +10,7 @@
           <div class="row">
             <div class="columns medium-9 medium-push-3">
               <div class="alert alert-warning">
-                <?php _e('Sorry, no results were found.', 'sage'); ?>
+                <?php _e('Nincs találat', 'sage'); ?>
               </div>
               <?php get_search_form(); ?>
             </div>
